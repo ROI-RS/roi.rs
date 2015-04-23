@@ -2,30 +2,34 @@
 layout: default
 ---
 
-<div class="welcome" style="background-image: url({{"/assets/images/backgrounds/main.jpg" | prepend: site.baseurl }});">
+<div class="welcome" full-height style="background-image: url({{"/assets/images/backgrounds/main.jpg" | prepend: site.baseurl }});">
   <section>
-    <h2>
+    <h2 spark-scroll-animate="{bottomCenter: {scale: 1, opacity: 1}, 'topTop-180': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       Прозрачная эффективность<br />
       <span>каждого этапа воронки продаж<br />вашего бизнеса</span>
     </h2>
-    <a href="#">Подключить</a>
+    <p spark-scroll-animate="{centerCenter: {scale: 1, opacity: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
+      <a href="#">Подключить</a>
+    </a>
   </section>
-  {% include icons/mouse.svg %}
+  <div class="mouse" spark-scroll-animate="{bottomBottom: {opacity: 1}, topCenter: {opacity: 0}}">
+    {% include icons/mouse.svg %}
+  </div>
 </div>
 <div class="info">
-  <h2>Автоматизация бизнес-аналитики</h2>
-  <p>
+  <h2 spark-scroll-animate="{topBottom: {scale: 0, opacity: 0}, 'centerCenter-300': {scale: 1, opacity: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">Автоматизация бизнес-аналитики</h2>
+  <p spark-scroll-animate="{topBottom: {scale: 0, opacity: 0}, 'centerCenter-300': {scale: 1, opacity: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
     Оценивайте отдачу от маркетинговых затрат и эффективность всех бизнес-процессов<br />
     компании. Надстройка над IT-инфраструктурой бизнеса, интеграция которой<br />
     не требует изменения существующей архитектуры.
   </p>
-  <p>
+  <p spark-scroll-animate="{topBottom: {scale: 0, opacity: 0}, 'centerCenter-300': {scale: 1, opacity: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
     Сервис собирает информацию из всех источников данных, от Google.Analytics до 1С.<br />
     И формирует прозрачные и понятные отчеты, которые позволят быстро найти<br />
     проблемные места в воронке продаж.
   </p>
   <ul>
-    <li>
+    <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'topCenter-300': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       {% include icons/dashboard.svg %}
       <h3>Все цифры в одном отчете</h3>
       <p>
@@ -33,7 +37,7 @@ layout: default
         файлов, не связанных друг с другом.
       </p>
     </li>
-    <li>
+    <li spark-scroll-animate="{topBottom: {translateX: '200%', opacity: 0}, 'bottomCenter-200': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       {% include icons/globe.svg %}
       <h3>Всегда готовы к просмотру</h3>
       <p>
@@ -41,7 +45,7 @@ layout: default
         реального времени из любой точки мира.
       </p>
     </li>
-    <li>
+    <li spark-scroll-animate="{topBottom: {translateX: '-300%', opacity: 0}, 'topCenter-100': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       {% include icons/report.svg %}
       <h3>Тонкая настройка отчетов</h3>
       <p>
@@ -49,7 +53,7 @@ layout: default
         конкретных бизнес-задач.
       </p>
     </li>
-    <li>
+    <li spark-scroll-animate="{topBottom: {translateX: '400%', opacity: 0}, 'bottomCenter': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       {% include icons/lock.svg %}
       <h3>Данные под защитой</h3>
       <p>
@@ -58,67 +62,75 @@ layout: default
       </p>
     </li>
   </ul>
-  <h3>
+  <h3 spark-scroll-animate="{topBottom: {scale: 0, opacity: 0}, 'centerCenter+200': {scale: 1, opacity: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
     Интеграция всех источников, сбор данных и создание первого отчета<br />
     занимает <span>от 3 дней до 1 месяца</span>. Ежемесячная стоимость сервиса<br />
     для одного проекта <span>от 20 000 до 80 000 рублей</span>.
   </h3>
 </div>
 <div class="how-it-works">
-  <h2><span>Как это всё работает?</span></h2>
+  <h2 spark-scroll-animate="{topBottom: {scale: 0}, 'centerCenter+100': {scale: 1}, 'topTop-90': {scale: 1}, bottomTop: {scale: 0}}">
+    <span>Как это всё работает?</span>
+  </h2>
   <nav>
-    <a href="#" class="active">у автодилеров</a>
-    <a href="#">в частных клиниках</a>
-    <a href="#">в вашей компании</a>
+    <li spark-scroll-animate="{topBottom: {translateX: '-300%', opacity: 0}, 'centerCenter+100': {translateX: '0', opacity: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
+      <a href="#" class="active">у автодилеров</a>
+    </li>
+    <li spark-scroll-animate="{topBottom: {translateY: '300%', opacity: 0}, 'centerCenter+100': {translateY: '0', opacity: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
+      <a href="#">в частных клиниках</a>
+    </li>
+    <li spark-scroll-animate="{topBottom: {translateX: '300%', opacity: 0}, 'centerCenter+100': {translateX: '0', opacity: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
+      <a href="#">в вашей компании</a>
+    </li>
   </nav>
 </div>
 <div class="step first" style="background-image: url({{"/assets/images/backgrounds/step1.jpg" | prepend: site.baseurl }});">
   <section>
-    <h2>
+    <h2 spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       {% include icons/dollar.svg %}
       <span>
         Не хватает понимания эффективности<br />
         рекламы и бизнес процессов?
       </span>
     </h2>
-    <p>
+    <p spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       Много рекламных каналов, коллцентр, отдел продаж,<br />
       отдел сервиса, но нет единой картины?
     </p>
     <ul class="funnels">
-      <li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-700%', opacity: 0}, 'topCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
         <div style="background-image: url({{"/assets/images/backgrounds/step1_funnel.jpg" | prepend: site.baseurl }});">
           <span>Рекламный бюджет</span>
           <p>844 305 р</p>
         </div>
       </li>
     </ul>
-    <h3>
+    <h3 spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       Собираем всю информацию<br />
       и строим единый отчет до ROI:
     </h3>
     <ul class="list">
-      <li>по каждому рекламному каналу,</li>
-      <li>по каждому менеджеру,</li>
-      <li>по доходности каждой модели автомобиля.</li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">по каждому рекламному каналу,</li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">по каждому менеджеру,</li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">по доходности каждой модели автомобиля.</li>
     </ul>
   </section>
 </div>
 <div class="step second" style="background-image: url({{"/assets/images/backgrounds/step2.jpg" | prepend: site.baseurl }});">
   <section>
-    <h2>
+    <h2 spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       {% include icons/lamp.svg %}
       <span>
         Полное понимание отдачи<br />
         от маркетинговых затрат
       </span>
     </h2>
-    <p>
+    <p spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       Считаем ROI в разрезе каждой рекламной кампании<br />
       и медийного баннера.
     </p>
     <ul class="funnels">
-      <li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-700%', opacity: 0}, 'topCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
         <ul class="cut-bottom">
           <li>
             <span>Рекламный бюджет</span>
@@ -150,29 +162,29 @@ layout: default
         </ul>
       </li>
     </ul>
-    <h3>
+    <h3 spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       Отвечаем на главный вопросы отдела<br />
       маркетинга вашей компании:
     </h3>
     <ul class="list">
-      <li>почему упала отдача от рекламы?</li>
-      <li>кто из подрядчиков работает недостаточно хорошо?</li>
-      <li>как составить максимально эффективный медиаплан?</li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">почему упала отдача от рекламы?</li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">кто из подрядчиков работает недостаточно хорошо?</li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">как составить максимально эффективный медиаплан?</li>
     </ul>
   </section>
 </div>
 <div class="step third" style="background-image: url({{"/assets/images/backgrounds/step3.jpg" | prepend: site.baseurl }});">
   <section>
-    <h2>
+    <h2 spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       {% include icons/details.svg %}
       <span>
         Детализация каждого этапа<br />
         воронки на стороне бизнеса
       </span>
     </h2>
-    <p>Выясняем, на каких этапах теряются клиенты и прибыль.</p>
+    <p spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">Выясняем, на каких этапах теряются клиенты и прибыль.</p>
     <ul class="funnels">
-      <li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-700%', opacity: 0}, 'topCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
         <ul class="cut-top">
           <li>
             <span>Контракты</span>
@@ -206,32 +218,32 @@ layout: default
         </ul>
       </li>
     </ul>
-    <h3>
+    <h3 spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       Строим индивидуальную отчетность,<br />
       которая помогает оценить эффективность бизнес-процессов:
     </h3>
     <ul class="list">
-      <li>сколько звонков в месяц теряет колл-центр?</li>
-      <li>какая модель авто имеет самый высокий показатель ROI?</li>
-      <li>как можно улучшить показатели отдела продаж?</li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">сколько звонков в месяц теряет колл-центр?</li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">какая модель авто имеет самый высокий показатель ROI?</li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">как можно улучшить показатели отдела продаж?</li>
     </ul>
   </section>
 </div>
 <div class="step fourth" style="background-image: url({{"/assets/images/backgrounds/step4.jpg" | prepend: site.baseurl }});">
   <section>
-    <h2>
+    <h2 spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       {% include icons/brilliant.svg %}
       <span>
         Помогаем бизнесу<br />
         увеличить чистую прибыль
       </span>
     </h2>
-    <p>
+    <p spark-scroll-animate="{topBottom: {translateX: '-100%', opacity: 0}, 'centerCenter+150': {translateX: '0', opacity: 1, scale: 1}, 'topTop-90': {scale: 1, opacity: 1}, bottomTop: {scale: 0, opacity: 0}}">
       Каждый этап становится прозрачным. Решения принимаются,<br />
       опираясь не на домыслы или «экспертные мнения», а на реальные цифры.
     </p>
     <ul class="funnels">
-      <li>
+      <li spark-scroll-animate="{topBottom: {translateX: '-700%', opacity: 0}, 'topCenter+150': {translateX: '0', opacity: 1}, 'topTop-90': {opacity: 1}, topTop: {opacity: 0.3}}">
         <p>
           Собрали данные,<br />
           задали правильные вопросы,<br />
@@ -283,7 +295,7 @@ layout: default
           </li>
         </ul>
       </li>
-      <li>
+      <li spark-scroll-animate="{'topCenter+250': {translateX: '-100%', opacity: 0}, 'topCenter+300': {translateX: '0', opacity: 1}}">
         <p>
           Оптимизировали проблемные<br />
           места, увеличили ROI, переходим<br />

@@ -2,8 +2,24 @@
 $header: $baseline * 4.5
 $logo: $ninesixty_gutter_width * 11
 
+@-webkit-keyframes fadeIn
+  0%
+    +opacity(0)
+  
+  100%
+    +opacity(1)
+
+@keyframes fadeIn
+  0%
+    +opacity(0)
+  
+  100%
+    +opacity(1)
+
 #container > header
   :position relative
+  :position -webkit-sticky
+  :top 0
   :z-index 10
   :height $header
   :border
@@ -11,6 +27,10 @@ $logo: $ninesixty_gutter_width * 11
   :margin
     :left $ninesixty_gutter_width * 4
     :right $ninesixty_gutter_width * 4
+  :-webkit-animation fadeIn 0.5s linear
+  :animation fadeIn 0.5s linear
+  :-webkit-animation-fill-mode backwards
+  :animation-fill-mode backwards
   
   > section, > aside
     :height $header

@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ROI">
   {% include head.html %}
   <body>
     <div id="container">
       {% include header.html %}
-      <section>
+      <section id="content">
         {{ content }}
         {% include footer.html %}
       </section>
     </div>
+    <script type='text/javascript' src="{{ "/assets/js/angular.min.js" | prepend: site.baseurl }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/rekapi-lodash-shifty.min.js" | prepend: site.baseurl }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/spark-scroll.js" | prepend: site.baseurl }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/AnimationFrame.min.js" | prepend: site.baseurl }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/application.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>

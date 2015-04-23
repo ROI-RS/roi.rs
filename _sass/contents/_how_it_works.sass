@@ -27,26 +27,28 @@
   > nav
     +children-inline
     
-    > a
-      :height $baseline * 1.5
-      :padding
-        :top calc(#{$baseline / 4} - 1px)
-        :bottom calc(#{$baseline / 4} - 1px)
-        :left calc(#{$ninesixty_gutter_width * 1.5} - 1px)
-        :right calc(#{$ninesixty_gutter_width * 1.5} - 1px)
-      :color $grey
-      :font
-        :size $baseline * 0.7
-      :border 1px solid $grey
-      +border-radius($baseline * 0.75)
-      +hover-opacity
+    > li
+      > a
+        :display block
+        :height $baseline * 1.5
+        :padding
+          :top calc(#{$baseline / 4} - 1px)
+          :bottom calc(#{$baseline / 4} - 1px)
+          :left calc(#{$ninesixty_gutter_width * 1.5} - 1px)
+          :right calc(#{$ninesixty_gutter_width * 1.5} - 1px)
+        :color $grey
+        :font
+          :size $baseline * 0.7
+        :border 1px solid $grey
+        +border-radius($baseline * 0.75)
+        +hover-opacity
       
-      &.active
-        :color $brown
-        :background $yellow
-        :border-color $yellow
-        :cursor default
-        +opacity(1)
+        &.active
+          :color $brown
+          :background $yellow
+          :border-color $yellow
+          :cursor default
+          +opacity(1)
       
       & + *
         :margin
