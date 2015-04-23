@@ -1,0 +1,82 @@
+/* info
+
+#container > section > .info
+  :padding
+    :top $baseline * 6
+    :bottom $baseline * 6
+  :min-height 100%
+  :border
+    :top 1px solid rgba(159, 145, 132, .25)
+  :text-align center
+  
+  > h2
+    :line-height $baseline * 2
+    :font
+      :family "Lato Light", sans-serif
+      :size $baseline * 1.8
+    :color $yellow
+    
+    & + *
+      :margin
+        :top $baseline
+  
+  > p
+    :line-height $baseline * 1.2
+    :color $grey
+    :font
+      :size $baseline * 0.9
+    
+    & + p
+      :margin
+        :top $baseline
+  
+  > ul
+    +grid-container($ninesixty_gutter_width * 85)
+    :text-align left
+    +children-inline
+    
+    > li
+      :position relative
+      :width 50%
+      :height $baseline * 4
+      :margin
+        :top $baseline * 3
+      :padding
+        :left $ninesixty_gutter_width * 10
+        :top $baseline / 2
+        :bottom $baseline / 2
+      
+      > svg
+        :position absolute
+        :width $baseline * 4
+        :height $baseline * 4
+        :top 0
+        :left 0
+        :border 2px solid $grey
+        +border-radius($baseline * 2)
+        
+        path
+          :fill $grey
+      
+      > h3
+        :color $yellow
+        :font
+          :size $baseline * 0.9
+      
+      > p
+        :color $grey
+        :font
+          :size $baseline * 0.7
+    
+    & + *
+      :margin
+        :top $baseline * 3
+  
+  > h3
+    :line-height $baseline * 1.5
+    :font
+      :size $baseline * 1.2
+    :color $grey
+    
+    > span
+      :color $yellow

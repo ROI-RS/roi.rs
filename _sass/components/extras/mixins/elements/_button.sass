@@ -1,0 +1,24 @@
+/* button
+$button: $baseline
+
+= button($height: $button, $gutter: 16px, $border: 1px, $border_color: #666666)
+  :position relative
+  :white-space nowrap
+  :height 16px
+  :line-height 16px
+  :padding
+    :top ($height - $border * 2 - 16) / 2
+    :left ($gutter - $border * 2) / 2
+    :right ($gutter - $border * 2) / 2
+    :bottom ($height - $border * 2 - 16) / 2
+  :border $border solid $border_color
+  +hover-opacity
+  &.active
+    :margin
+      :top 1px
+    :height 15px
+    +box-shadow(none)
+  &.working
+    :cursor default
+    &:before
+      :display block

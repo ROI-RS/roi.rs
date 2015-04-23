@@ -1,0 +1,9 @@
+= opacity($value, $important: false)
+  @if $important
+    :opacity $value !important
+    :-moz-opacity $value !important
+    :-ms-filter "progid:DXImageTransform.Microsoft.Alpha(opacity=#{$value * 100})" !important
+  @else  
+    :opacity $value
+    :-moz-opacity $value
+    :-ms-filter "progid:DXImageTransform.Microsoft.Alpha(opacity=#{$value * 100})"

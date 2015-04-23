@@ -1,0 +1,63 @@
+/* welcome
+
+#container > section > .welcome
+  :position relative
+  :height 100%
+  :min-height $baseline * 30
+  :padding
+    :top $header
+  :background url("/assets/images/backgrounds/main.jpg") no-repeat center
+  +background-size(cover)
+  
+  > section
+    :width 100%
+    :position absolute
+    :left 0
+    :top 50%
+    :margin
+      :top -$baseline * 7.5
+    :height $baseline * 15
+    :text-align center
+    
+    > h2
+      :top 50%
+      :width 100%
+      :font
+        :family "Lato Light", sans-serif
+        :size $baseline * 2.4
+      :line-height $baseline * 3
+      
+      > span
+        :color $yellow
+      
+      & + *
+        :margin
+          :top $baseline * 3
+    
+    > a
+      +inline-block
+      :height $baseline * 3
+      :color $black
+      :font
+        :size $baseline * 1.2
+      :padding
+        :top $baseline
+        :bottom $baseline
+        :left $ninesixty_gutter_width * 4
+        :right $ninesixty_gutter_width * 4
+      :background $yellow
+      +border-radius($baseline * 1.5)
+      +hover-opacity
+  
+  > svg
+    :position absolute
+    :top 100%
+    :left 50%
+    :margin
+      :left -$ninesixty_gutter_width * 1.5
+      :top -$baseline * 4
+    :width $ninesixty_gutter_width * 3
+    :height $baseline * 3
+    
+    path
+      :fill $white

@@ -1,0 +1,57 @@
+/* how it works
+
+#container > section > .how-it-works
+  :position relative
+  :z-index 10
+  :text-align center
+  
+  > h2
+    :line-height $baseline * 2
+    :font
+      :family "Lato Light", sans-serif
+    :color $yellow
+    +children-inline
+    
+    > span
+      :padding
+        :left $ninesixty_gutter_width * 2
+        :right $ninesixty_gutter_width * 2
+      :background $brown
+      :font
+        :size $baseline * 1.8
+    
+    & + *
+      :margin
+        :top $baseline
+  
+  > nav
+    +children-inline
+    
+    > a
+      :height $baseline * 1.5
+      :padding
+        :top calc(#{$baseline / 4} - 1px)
+        :bottom calc(#{$baseline / 4} - 1px)
+        :left calc(#{$ninesixty_gutter_width * 1.5} - 1px)
+        :right calc(#{$ninesixty_gutter_width * 1.5} - 1px)
+      :color $grey
+      :font
+        :size $baseline * 0.7
+      :border 1px solid $grey
+      +border-radius($baseline * 0.75)
+      +hover-opacity
+      
+      &.active
+        :color $brown
+        :background $yellow
+        :border-color $yellow
+        :cursor default
+        +opacity(1)
+      
+      & + *
+        :margin
+          :left $ninesixty_gutter_width
+  
+  & + *
+    :margin
+      :top -$baseline * 3.5
