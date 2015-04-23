@@ -3,7 +3,26 @@
 
 @import "components/extras"
 @import "components/colors"
-@import "components/fonts"
+
+/* fonts
+
+@font-face
+  :font-family "Lato"
+  :font-style normal
+  :font-weight normal
+  :src local("Lato") , url({{"/assets/fonts/Lato-Regular.eot" | prepend: site.baseurl}}) format("oet"), local("Lato"), url({{"/assets/fonts/Lato-Regular.woff" | prepend: site.baseurl}}) format("woff"), local("Lato"), url({{"/assets/fonts/Lato-Regular.ttf" | prepend: site.baseurl}}) format("truetype"), url({{"/assets/fonts/Lato-Regular.svg" | prepend: site.baseurl}}) format('svg')
+
+@font-face
+  :font-family "Lato Light"
+  :font-style normal
+  :font-weight light
+  :src local("Lato Light") , url({{"/assets/fonts/Lato-Light.eot" | prepend: site.baseurl}}) format("oet"), local("Lato Light"), url({{"/assets/fonts/Lato-Light.woff" | prepend: site.baseurl}}) format("woff"), local("Lato Light"), url({{"/assets/fonts/Lato-Light.ttf" | prepend: site.baseurl}}) format("truetype"), url({{"/assets/fonts/Lato-Light.svg" | prepend: site.baseurl}}) format('svg')
+
+@font-face
+  :font-family "Lato Bold"
+  :font-style normal
+  :font-weight bold
+  :src local("Lato Bold") , url({{"/assets/fonts/Lato-Bold.eot" | prepend: site.baseurl}}) format("oet"), local("Lato Bold"), url({{"/assets/fonts/Lato-Bold.woff" | prepend: site.baseurl}}) format("woff"), local("Lato Bold"), url({{"/assets/fonts/Lato-Bold.ttf" | prepend: site.baseurl}}) format("truetype"), url({{"/assets/fonts/Lato-Bold.svg" | prepend: site.baseurl}}) format('svg')
 
 $base: 1.25em
 $baseline: 1rem
