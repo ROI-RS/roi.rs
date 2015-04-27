@@ -94,14 +94,16 @@ layout: default
         Много рекламных каналов, коллцентр, отдел продаж,<br />
         отдел сервиса, но нет единой картины?
       </p>
-      <ul class="funnels">
-        <li>
-          <div style="background-image: url({{"/assets/images/backgrounds/step1_funnel.jpg" | prepend: site.baseurl }});">
-            <span>Рекламный бюджет</span>
-            <p>844 305<span> р</span></p>
-          </div>
-        </li>
-      </ul>
+      <div class="funnels">
+        <ul>
+          <li>
+            <div style="background-image: url({{"/assets/images/backgrounds/step1_funnel.jpg" | prepend: site.baseurl }});">
+              <span>Рекламный бюджет</span>
+              <p>844 305<span> р</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
       <h3>
         Собираем всю информацию<br />
         и строим единый отчет до ROI:
@@ -126,39 +128,206 @@ layout: default
         Считаем ROI в разрезе каждой рекламной кампании<br />
         и медийного баннера.
       </p>
-      <ul class="funnels">
-        <li>
-          <ul class="cut-bottom">
-            <li>
-              <span>Рекламный бюджет</span>
-              <p>1 218 708<span> р</span></p>
-              <b>10,17 р — цена клика</b>
-              <i class="plus">5.2%</i>
-            </li>
-            <li>
-              <span>Клики</span>
-              <p>119 808</p>
-              <b>4,22% — конверсия в коммуникации</b>
-              <i class="minus">7.3%</i>
-              <a href="#"><span>Почему так?</span></a>
-            </li>
-            <li>
-              <span>Коммуникации</span>
-              <p>5 061</p>
-              <b>1,77% — конверсия в уник. коммуникации</b>
-              <i class="minus">9.6%</i>
-              <a href="#"><span>Как так получилось?</span></a>
-            </li>
-            <li>
-              <span>Уникальные коммуникации</span>
-              <p>2 122</p>
-              <b>7% — конверсия в контракты</b>
-              <i class="minus">5.7%</i>
-            </li>
-            <li class="empty"></li>
-          </ul>
-        </li>
-      </ul>
+      <div class="funnels">
+        <ul>
+          <li>
+            <ul class="cut-bottom">
+              <li>
+                <span>Рекламный бюджет</span>
+                <p>1 218 708<span> р</span></p>
+                <b>10,17 р — цена клика</b>
+                <i class="plus">5.2%</i>
+              </li>
+              <li>
+                <span>Клики</span>
+                <p>119 808</p>
+                <b>4,22% — конверсия в коммуникации</b>
+                <i class="minus">7.3%</i>
+                <a href="#" ng-click="whyClicksGoDown = true"><span>Почему так?</span></a>
+              </li>
+              <li>
+                <span>Коммуникации</span>
+                <p>5 061</p>
+                <b>1,77% — конверсия в уник. коммуникации</b>
+                <i class="minus">9.6%</i>
+                <a href="#" ng-click="whyCommunicationsGoDown = true"><span>Как так получилось?</span></a>
+              </li>
+              <li>
+                <span>Уникальные коммуникации</span>
+                <p>2 122</p>
+                <b>7% — конверсия в контракты</b>
+                <i class="minus">5.7%</i>
+              </li>
+              <li class="empty"></li>
+            </ul>
+          </li>
+        </ul>
+        <section ng-class="{active: whyClicksGoDown}">
+          <a href="#" class="close" ng-click="whyClicksGoDown = false">{% include icons/close.svg %}</a>
+          <h3>Почему же клики упали на 7,3% при росте бюджета?</h3>
+          <p>
+            Упал трафик по SEO. В отчете по позициям мы видим отрицательную<br />
+            динамику позиций к прошлому месяцу.
+          </p>
+          <p><span>Пора поговорить с подрядчиком по SEO продвижению.</span></p>
+          <table>
+            <tr class="grey">
+              <td class="request">Запрос</td>
+              <td class="position">Позиция</td>
+              <td class="dinamyc">Динамика</td>
+              <td class="position">Позиция</td>
+              <td class="dinamyc">Динамика</td>
+            </tr>
+            <tr class="big">
+              <td class="request">Итого</td>
+              <td class="position">12</td>
+              <td class="dinamyc">34</td>
+              <td class="position">9</td>
+              <td class="dinamyc">4</td>
+            </tr>
+            <tr>
+              <td class="request">бмв купить</td>
+              <td class="position">11</td>
+              <td class="dinamyc">2</td>
+              <td class="position">7</td>
+              <td class="dinamyc">1</td>
+            </tr>
+            <tr>
+              <td class="request">бмв цены</td>
+              <td class="position">7</td>
+              <td class="dinamyc">11</td>
+              <td class="position">10</td>
+              <td class="dinamyc">7</td>
+            </tr>
+            <tr>
+              <td class="request">bmw цены</td>
+              <td class="position">7</td>
+              <td class="dinamyc">3</td>
+              <td class="position">11</td>
+              <td class="dinamyc">7</td>
+            </tr>
+            <tr>
+              <td class="request">купить bmw в москве</td>
+              <td class="position">18</td>
+              <td class="dinamyc">1</td>
+              <td class="position">4</td>
+              <td class="dinamyc">1</td>
+            </tr>
+            <tr>
+              <td class="request">дилеры bmw в москве</td>
+              <td class="position">23</td>
+              <td class="dinamyc">6</td>
+              <td class="position">18</td>
+              <td class="dinamyc">0</td>
+            </tr>
+            <tr>
+              <td class="request">официальный дилер бмв в москве</td>
+              <td class="position">4</td>
+              <td class="dinamyc">4</td>
+              <td class="position">14</td>
+              <td class="dinamyc">0</td>
+            </tr>
+            <tr>
+              <td class="request">дилер бмв</td>
+              <td class="position">3</td>
+              <td class="dinamyc">0</td>
+              <td class="position">12</td>
+              <td class="dinamyc">0</td>
+            </tr>
+            <tr>
+              <td class="request">бмв новая цена</td>
+              <td class="position">7</td>
+              <td class="dinamyc">1</td>
+              <td class="position">4</td>
+              <td class="dinamyc">2</td>
+            </tr>
+          </table>
+        </section>
+        <section ng-class="{active: whyCommunicationsGoDown}">
+          <a href="#" class="close" ng-click="whyCommunicationsGoDown = false">{% include icons/close.svg %}</a>
+          <h3>
+            <span>Хорошо. С кликами разобрались.</span>
+            Но почему коммуникации упали на 9.3%?
+          </h3>
+          <p>
+            Эффективность Яндекс.Директ упала, конверсия площадки стала ниже,<br />
+            чем у Google.Adwords. Нужно принять меры по оптимизации. 
+          </p>
+          <p><span>А пока бюджет можно перераспределить в пользу Google.Adwords.</span></p>
+          <table>
+            <tr class="grey">
+              <td class="request">Запрос</td>
+              <td class="position">Позиция</td>
+              <td class="dinamyc">Динамика</td>
+              <td class="position">Позиция</td>
+              <td class="dinamyc">Динамика</td>
+            </tr>
+            <tr class="big">
+              <td class="request">Итого</td>
+              <td class="position">12</td>
+              <td class="dinamyc">34</td>
+              <td class="position">9</td>
+              <td class="dinamyc">4</td>
+            </tr>
+            <tr>
+              <td class="request">бмв купить</td>
+              <td class="position">11</td>
+              <td class="dinamyc">2</td>
+              <td class="position">7</td>
+              <td class="dinamyc">1</td>
+            </tr>
+            <tr>
+              <td class="request">бмв цены</td>
+              <td class="position">7</td>
+              <td class="dinamyc">11</td>
+              <td class="position">10</td>
+              <td class="dinamyc">7</td>
+            </tr>
+            <tr>
+              <td class="request">bmw цены</td>
+              <td class="position">7</td>
+              <td class="dinamyc">3</td>
+              <td class="position">11</td>
+              <td class="dinamyc">7</td>
+            </tr>
+            <tr>
+              <td class="request">купить bmw в москве</td>
+              <td class="position">18</td>
+              <td class="dinamyc">1</td>
+              <td class="position">4</td>
+              <td class="dinamyc">1</td>
+            </tr>
+            <tr>
+              <td class="request">дилеры bmw в москве</td>
+              <td class="position">23</td>
+              <td class="dinamyc">6</td>
+              <td class="position">18</td>
+              <td class="dinamyc">0</td>
+            </tr>
+            <tr>
+              <td class="request">официальный дилер бмв в москве</td>
+              <td class="position">4</td>
+              <td class="dinamyc">4</td>
+              <td class="position">14</td>
+              <td class="dinamyc">0</td>
+            </tr>
+            <tr>
+              <td class="request">дилер бмв</td>
+              <td class="position">3</td>
+              <td class="dinamyc">0</td>
+              <td class="position">12</td>
+              <td class="dinamyc">0</td>
+            </tr>
+            <tr>
+              <td class="request">бмв новая цена</td>
+              <td class="position">7</td>
+              <td class="dinamyc">1</td>
+              <td class="position">4</td>
+              <td class="dinamyc">2</td>
+            </tr>
+          </table>
+        </section>
+      </div>
       <h3>
         Отвечаем на главный вопросы отдела<br />
         маркетинга вашей компании:
@@ -180,41 +349,124 @@ layout: default
         </span>
       </h2>
       <p>Выясняем, на каких этапах теряются клиенты и прибыль.</p>
-      <ul class="funnels">
-        <li>
-          <ul class="cut-top">
-            <li>
-              <span>Контракты</span>
-              <p>149</p>
-              <b>76% — конверсия в оплату</b>
-              <i class="minus">6.0%</i>
-            </li>
-            <li>
-              <span>Оплаченные контракты</span>
-              <p>113</p>
-              <b>1 340 000 р — средний чек</b>
-              <i class="minus">3.4%</i>
-            </li>
-            <li>
-              <span>Оборот</span>
-              <p>151 420 000<span> р</span></p>
-              <b>4,01% — маржинальность</b>
-              <i class="plus">5.2%</i>
-            </li>
-            <li>
-              <span>Доход</span>
-              <p>6 056 800<span> р</span></p>
-              <i class="minus">6.0%</i>
-              <a href="#"><span>Почему так?</span></a>
-            </li>
-            <li class="orange">
-              <span>ROI</span>
-              <p>398%</p>
-              <i class="minus">11.6%</i>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <div class="funnels">
+        <ul>
+          <li>
+            <ul class="cut-top">
+              <li>
+                <span>Контракты</span>
+                <p>149</p>
+                <b>76% — конверсия в оплату</b>
+                <i class="minus">6.0%</i>
+              </li>
+              <li>
+                <span>Оплаченные контракты</span>
+                <p>113</p>
+                <b>1 340 000 р — средний чек</b>
+                <i class="minus">3.4%</i>
+              </li>
+              <li>
+                <span>Оборот</span>
+                <p>151 420 000<span> р</span></p>
+                <b>4,01% — маржинальность</b>
+                <i class="plus">5.2%</i>
+              </li>
+              <li>
+                <span>Доход</span>
+                <p>6 056 800<span> р</span></p>
+                <i class="minus">6.0%</i>
+                <a href="#" ng-click="whyBudgetGoDown = true"><span>Почему так?</span></a>
+              </li>
+              <li class="orange">
+                <span>ROI</span>
+                <p>398%</p>
+                <i class="minus">11.6%</i>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <section ng-class="{active: whyBudgetGoDown}">
+          <a href="#" class="close" ng-click="whyBudgetGoDown = false">{% include icons/close.svg %}</a>
+          <h3>Если оборот вырос на 5,2%, почему же снизился доход?</h3>
+          <p>
+            Кто-то из менеджеров по продажам стал давать слишком большие скидки,<br />
+            стараясь выполнить план по количеству продаж.
+          </p>
+          <p><span>Возможно, стоит пересмотреть систему KPI у продажников?</span></p>
+          <table>
+            <tr class="grey">
+              <td class="request">Запрос</td>
+              <td class="position">Позиция</td>
+              <td class="dinamyc">Динамика</td>
+              <td class="position">Позиция</td>
+              <td class="dinamyc">Динамика</td>
+            </tr>
+            <tr class="big">
+              <td class="request">Итого</td>
+              <td class="position">12</td>
+              <td class="dinamyc">34</td>
+              <td class="position">9</td>
+              <td class="dinamyc">4</td>
+            </tr>
+            <tr>
+              <td class="request">бмв купить</td>
+              <td class="position">11</td>
+              <td class="dinamyc">2</td>
+              <td class="position">7</td>
+              <td class="dinamyc">1</td>
+            </tr>
+            <tr>
+              <td class="request">бмв цены</td>
+              <td class="position">7</td>
+              <td class="dinamyc">11</td>
+              <td class="position">10</td>
+              <td class="dinamyc">7</td>
+            </tr>
+            <tr>
+              <td class="request">bmw цены</td>
+              <td class="position">7</td>
+              <td class="dinamyc">3</td>
+              <td class="position">11</td>
+              <td class="dinamyc">7</td>
+            </tr>
+            <tr>
+              <td class="request">купить bmw в москве</td>
+              <td class="position">18</td>
+              <td class="dinamyc">1</td>
+              <td class="position">4</td>
+              <td class="dinamyc">1</td>
+            </tr>
+            <tr>
+              <td class="request">дилеры bmw в москве</td>
+              <td class="position">23</td>
+              <td class="dinamyc">6</td>
+              <td class="position">18</td>
+              <td class="dinamyc">0</td>
+            </tr>
+            <tr>
+              <td class="request">официальный дилер бмв в москве</td>
+              <td class="position">4</td>
+              <td class="dinamyc">4</td>
+              <td class="position">14</td>
+              <td class="dinamyc">0</td>
+            </tr>
+            <tr>
+              <td class="request">дилер бмв</td>
+              <td class="position">3</td>
+              <td class="dinamyc">0</td>
+              <td class="position">12</td>
+              <td class="dinamyc">0</td>
+            </tr>
+            <tr>
+              <td class="request">бмв новая цена</td>
+              <td class="position">7</td>
+              <td class="dinamyc">1</td>
+              <td class="position">4</td>
+              <td class="dinamyc">2</td>
+            </tr>
+          </table>
+        </section>
+      </div>
       <h3>
         Строим индивидуальную отчетность,<br />
         которая помогает оценить эффективность бизнес-процессов:
@@ -239,121 +491,123 @@ layout: default
         Каждый этап становится прозрачным. Решения принимаются,<br />
         опираясь не на домыслы или «экспертные мнения», а на реальные цифры.
       </p>
-      <ul class="funnels">
-        <li>
-          <p>
-            Собрали данные,<br />
-            задали правильные вопросы,<br />
-            нашли проблемы.
-          </p>
-          <ul>
-            <li>
-              <span>Рекламный бюджет</span>
-              <p>1 218 708<span> р</span></p>
-              <b>10,17 р — цена клика</b>
-            </li>
-            <li>
-              <span>Клики</span>
-              <p>119 808</p>
-              <b>4,22% — конверсия в коммуникации</b>
-            </li>
-            <li>
-              <span>Коммуникации</span>
-              <p>5 061</p>
-              <b>1,77% — конверсия в уник. коммуникации</b>
-            </li>
-            <li>
-              <span>Уникальные коммуникации</span>
-              <p>2 122</p>
-              <b>7% — конверсия в контракты</b>
-            </li>
-            <li>
-              <span>Контракты</span>
-              <p>149</p>
-              <b>76% — конверсия в оплату</b>
-            </li>
-            <li>
-              <span>Оплаченные контракты</span>
-              <p>113</p>
-              <b>1 340 000 р — средний чек</b>
-            </li>
-            <li>
-              <span>Оборот</span>
-              <p>151 420 000<span> р</span></p>
-              <b>4,01% — маржинальность</b>
-            </li>
-            <li>
-              <span>Доход</span>
-              <p>6 056 800<span> р</span></p>
-            </li>
-            <li class="orange">
-              <span>ROI</span>
-              <p>398%</p>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <p>
-            Оптимизировали проблемные<br />
-            места, увеличили ROI, переходим<br />
-            к следующим вопросам.
-          </p>
-          <ul>
-            <li>
-              <span>Рекламный бюджет</span>
-              <p>1 365 200<span> р</span></p>
-              <b>9,59 р — цена клика</b>
-              <i class="plus">12,02%</i>
-            </li>
-            <li>
-              <span>Клики</span>
-              <p>142 350</p>
-              <b>4,74% — конверсия в коммуникации</b>
-              <i class="plus">18,82%</i>
-            </li>
-            <li>
-              <span>Коммуникации</span>
-              <p>6 752</p>
-              <b>1,99% — конверсия в уник. коммуникации</b>
-              <i class="plus">33,41%</i>
-            </li>
-            <li>
-              <span>Уникальные коммуникации</span>
-              <p>2 834</p>
-              <b>7% — конверсия в контракты</b>
-              <i class="plus">33,55%</i>
-            </li>
-            <li>
-              <span>Контракты</span>
-              <p>198</p>
-              <b>77% — конверсия в оплату</b>
-              <i class="plus">33,13%</i>
-            </li>
-            <li>
-              <span>Оплаченные контракты</span>
-              <p>153</p>
-              <b>1 310 000 р — средний чек</b>
-              <i class="plus">35,17%</i>
-            </li>
-            <li>
-              <span>Оборот</span>
-              <p>200 094 713<span> р</span></p>
-              <b>4,20% — маржинальность</b>
-              <i class="plus">32,15%</i>
-            </li>
-            <li>
-              <span>Доход</span>
-              <p>8 403 978<span> р</span></p>
-              <i class="plus">38,41%</i>
-            </li>
-            <li class="orange">
-              <span>ROI</span>
-              <p>516%</p>
-              <i class="plus">29,47%</i>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <div class="funnels">
+        <ul>
+          <li>
+            <p>
+              Собрали данные,<br />
+              задали правильные вопросы,<br />
+              нашли проблемы.
+            </p>
+            <ul>
+              <li>
+                <span>Рекламный бюджет</span>
+                <p>1 218 708<span> р</span></p>
+                <b>10,17 р — цена клика</b>
+              </li>
+              <li>
+                <span>Клики</span>
+                <p>119 808</p>
+                <b>4,22% — конверсия в коммуникации</b>
+              </li>
+              <li>
+                <span>Коммуникации</span>
+                <p>5 061</p>
+                <b>1,77% — конверсия в уник. коммуникации</b>
+              </li>
+              <li>
+                <span>Уникальные коммуникации</span>
+                <p>2 122</p>
+                <b>7% — конверсия в контракты</b>
+              </li>
+              <li>
+                <span>Контракты</span>
+                <p>149</p>
+                <b>76% — конверсия в оплату</b>
+              </li>
+              <li>
+                <span>Оплаченные контракты</span>
+                <p>113</p>
+                <b>1 340 000 р — средний чек</b>
+              </li>
+              <li>
+                <span>Оборот</span>
+                <p>151 420 000<span> р</span></p>
+                <b>4,01% — маржинальность</b>
+              </li>
+              <li>
+                <span>Доход</span>
+                <p>6 056 800<span> р</span></p>
+              </li>
+              <li class="orange">
+                <span>ROI</span>
+                <p>398%</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p>
+              Оптимизировали проблемные<br />
+              места, увеличили ROI, переходим<br />
+              к следующим вопросам.
+            </p>
+            <ul>
+              <li>
+                <span>Рекламный бюджет</span>
+                <p>1 365 200<span> р</span></p>
+                <b>9,59 р — цена клика</b>
+                <i class="plus">12,02%</i>
+              </li>
+              <li>
+                <span>Клики</span>
+                <p>142 350</p>
+                <b>4,74% — конверсия в коммуникации</b>
+                <i class="plus">18,82%</i>
+              </li>
+              <li>
+                <span>Коммуникации</span>
+                <p>6 752</p>
+                <b>1,99% — конверсия в уник. коммуникации</b>
+                <i class="plus">33,41%</i>
+              </li>
+              <li>
+                <span>Уникальные коммуникации</span>
+                <p>2 834</p>
+                <b>7% — конверсия в контракты</b>
+                <i class="plus">33,55%</i>
+              </li>
+              <li>
+                <span>Контракты</span>
+                <p>198</p>
+                <b>77% — конверсия в оплату</b>
+                <i class="plus">33,13%</i>
+              </li>
+              <li>
+                <span>Оплаченные контракты</span>
+                <p>153</p>
+                <b>1 310 000 р — средний чек</b>
+                <i class="plus">35,17%</i>
+              </li>
+              <li>
+                <span>Оборот</span>
+                <p>200 094 713<span> р</span></p>
+                <b>4,20% — маржинальность</b>
+                <i class="plus">32,15%</i>
+              </li>
+              <li>
+                <span>Доход</span>
+                <p>8 403 978<span> р</span></p>
+                <i class="plus">38,41%</i>
+              </li>
+              <li class="orange">
+                <span>ROI</span>
+                <p>516%</p>
+                <i class="plus">29,47%</i>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </section>
   </div>
 </div>

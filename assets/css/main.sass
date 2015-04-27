@@ -60,6 +60,7 @@ body
 
 #container
   :position relative
+  :overflow hidden
   :min-width $min_width
   :height 100%
   :line-height $baseline
@@ -93,6 +94,7 @@ body
   
   > .steps
     :position absolute
+    :z-index 50
     :height $baseline * 19
     :top 50%
     :right $ninesixty_gutter_width * 4
@@ -101,7 +103,7 @@ body
     :text-align right
     +opacity(0)
     +translate-x(300%)
-    +transition(all .5s ease-out)
+    +transition(all .75s ease-out)
     +transition-property(transform, opacity)
     
     > li
@@ -136,6 +138,7 @@ body
         :height $baseline * 2.4
         :line-height calc(#{$baseline * 2.4} - 2px)
         :color $grey
+        :text-indent -1px
         :background $white
         :border 1px solid $white
         +border-radius($baseline * 1.2)
@@ -155,14 +158,14 @@ body
       
       &.active
         > span
-          +opacity(1)
-          :visibility visible
-          :color $white
+          +opacity(1, true)
+          :visibility visible !important
+          :color $white !important
         
         > b
-          :border-color $white
-          :background $white
-          :color $brown
+          :border-color $white !important
+          :background $white !important
+          :color $brown !important
         
         & ~ *
           > span
@@ -187,9 +190,9 @@ body
         &.active:before
           :background $white
     
-    &.active
-      +translate-x(0)
-      +opacity(1)
+  > #content.active + .steps
+    +translate-x(0)
+    +opacity(1)
 
 @import "parts/header"
 @import "parts/footer"

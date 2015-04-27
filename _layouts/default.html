@@ -2,9 +2,9 @@
 <html ng-app="ROI">
   {% include head.html %}
   <body>
-    <div id="container">
+    <div id="container" du-scroll-container="content">
       {% include header.html %}
-      <section id="content">
+      <section id="content" du-scrollspy="steps" du-spy-context>
         {{ content }}
         {% include footer.html %}
       </section>
