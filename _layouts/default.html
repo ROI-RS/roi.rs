@@ -8,11 +8,11 @@
         {{ content }}
         {% include footer.html %}
       </section>
+      {% include steps.html %}
+      {% include connect.html %}
     </div>
     <script type='text/javascript' src="{{ "/assets/js/angular.min.js" | prepend: site.baseurl }}"></script>
-    <script type='text/javascript' src="{{ "/assets/js/rekapi-lodash-shifty.min.js" | prepend: site.baseurl }}"></script>
-    <script type='text/javascript' src="{{ "/assets/js/spark-scroll.js" | prepend: site.baseurl }}"></script>
-    <script type='text/javascript' src="{{ "/assets/js/AnimationFrame.min.js" | prepend: site.baseurl }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/angular-scroll.min.js" | prepend: site.baseurl }}"></script>
     <script type='text/javascript' src="{{ "/assets/js/application.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>

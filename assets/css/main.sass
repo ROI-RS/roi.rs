@@ -36,6 +36,7 @@ $max_width: $ninesixty_gutter_width * 144
 
 html
   :min-height 100%
+  :height 100%
   :background $brown
   :font
     :size $base
@@ -58,9 +59,137 @@ body
   :min-height 100%
 
 #container
+  :position relative
   :min-width $min_width
   :height 100%
   :line-height $baseline
+  
+  > form
+    :position absolute
+    :z-index 100
+    :top $baseline * 8
+    :left 50%
+    :margin
+      :left -$ninesixty_gutter_width * 30
+    :padding $ninesixty_gutter_width * 4
+    :width $ninesixty_gutter_width * 60
+    :background $white
+    
+    > label
+      :display block
+      :font
+        :size $baseline * 0.7
+      :color $black
+    
+    > input, > textarea
+      :display block
+      :background $grey
+      :color $brown
+      :width 100%
+      
+      & + *
+        :margin
+          :top $baseline
+  
+  > .steps
+    :position absolute
+    :height $baseline * 19
+    :top 50%
+    :right $ninesixty_gutter_width * 4
+    :margin
+      :top -$baseline * 9.5
+    :text-align right
+    +opacity(0)
+    +translate-x(300%)
+    +transition(all .5s ease-out)
+    +transition-property(transform, opacity)
+    
+    > li
+      :position relative
+      :height $baseline * 2.5
+      :padding
+        :top $baseline * 0.05
+        :bottom $baseline * 0.05
+      +children-inline
+    
+      > span
+        :margin
+          :top $baseline * 0.2
+          :bottom $baseline * 0.2
+        :font
+          :size $baseline * 0.9
+        +opacity(1)
+        :visibility visible
+        :color $grey
+        +transition(all .25s ease-out)
+        +transition-property(opacity, visibility)
+      
+        & + *
+          :margin
+            :left $ninesixty_gutter_width
+    
+      > b
+        :font
+          :weigt normal
+        :text-align center
+        :width $baseline * 2.4
+        :height $baseline * 2.4
+        :line-height calc(#{$baseline * 2.4} - 2px)
+        :color $grey
+        :background $white
+        :border 1px solid $white
+        +border-radius($baseline * 1.2)
+        +transition(all .25s ease-out)
+        +transition-property(background, border, color)
+      
+      &:before
+        :display none
+        :content ''
+        :position absolute
+        :width 1px
+        :height $baseline * 2.5
+        :background $white
+        :right $baseline * 1.2
+        :top -$baseline * 3.05
+        +transition(background .25s ease-out)
+      
+      &.active
+        > span
+          +opacity(1)
+          :visibility visible
+          :color $white
+        
+        > b
+          :border-color $white
+          :background $white
+          :color $brown
+        
+        & ~ *
+          > span
+            +opacity(0)
+            :visibility hidden
+          
+          > b
+            :color $grey
+            :background none
+            :border-color $grey
+          
+          &:before
+            :background $grey
+      
+      & + *
+        :margin
+          :top $baseline * 3
+        
+        &:before
+          :display block
+        
+        &.active:before
+          :background $white
+    
+    &.active
+      +translate-x(0)
+      +opacity(1)
 
 @import "parts/header"
 @import "parts/footer"
