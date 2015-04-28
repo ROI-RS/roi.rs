@@ -2,7 +2,7 @@
 
 #container > section
   :height 100%
-  :overflow overlay
+  :overflow auto
   
   > #steps
     :margin
@@ -24,16 +24,6 @@
           :bottom $baseline * 6
         :border
           :top 1px solid rgba(151, 151, 151, .25)
-        
-        > h2, > p, > .funnels > ul > li, > h3, > .list > li
-          +opacity(0)
-          +scale(0.7)
-          +transition(all .5s ease-out)
-          +transition-property(opacity, transform)
-          
-          &.active
-            +opacity(1)
-            +scale(1)
       
         > h2
           +grid-container($ninesixty_gutter_width * 85)
@@ -419,41 +409,43 @@
                         :border
                           :top $ninesixty_gutter_width * 0.9 solid $red
               
-                  > a
+                  > .button
                     :position absolute
                     :top 50%
                     :left 100%
                     :margin
                       :top -$baseline * 0.75
                       :left $ninesixty_gutter_width * 11
-                    :display block
                     :height $baseline * 1.5
-                    :color $white
-                    :font
-                      :size $baseline * 0.7
-                    :padding
-                      :top $baseline / 4
-                      :bottom $baseline / 4
-                      :left $ninesixty_gutter_width * 1.5
-                      :right $ninesixty_gutter_width * 1.5
-                    :background $red
-                    :white-space nowrap
-                    +border-radius($baseline * 0.75)
-                    +hover-opacity
-                
-                    > span
-                      :height $baseline * 0.8
-                      :line-height $baseline * 0.8
-                      :margin
-                        :top $baseline * 0.1
-                        :bottom $baseline * 0.1
+                    
+                    > a
                       :display block
-                      :border
-                        :bottom 1px dashed $white
-                      +transition-property(opacity, border-color)
+                      :color $white
+                      :font
+                        :size $baseline * 0.7
+                      :padding
+                        :top $baseline / 4
+                        :bottom $baseline / 4
+                        :left $ninesixty_gutter_width * 1.5
+                        :right $ninesixty_gutter_width * 1.5
+                      :background $red
+                      :white-space nowrap
+                      +border-radius($baseline * 0.75)
+                      +hover-opacity
                 
-                    &:hover > span
-                      :border-color $red
+                      > span
+                        :height $baseline * 0.8
+                        :line-height $baseline * 0.8
+                        :margin
+                          :top $baseline * 0.1
+                          :bottom $baseline * 0.1
+                        :display block
+                        :border
+                          :bottom 1px dashed $white
+                        +transition-property(opacity, border-color)
+                
+                      &:hover > span
+                        :border-color $red
               
                   &.orange
                     :background $yellow
@@ -533,6 +525,9 @@
               & + *
                 :margin
                   :left $ninesixty_gutter_width * 4
+            
+            &.active > li:first-child
+              +opacity(0.5)
         
           & + *
             :margin
@@ -573,6 +568,16 @@
               :height $baseline * 0.3
               :background $grey
               +border-radius($baseline * 0.15)
+        
+        > h2, > p, > .funnels > ul > li, > .funnels > ul > li > ul > li > i, > .funnels > ul > li > ul > li > .button, > h3, > .list > li
+          +opacity(0)
+          +scale(0.7)
+          +transition(all .5s ease-out)
+          +transition-property(opacity, transform)
+          
+          &.active
+            +opacity(1)
+            +scale(1)
   
       &:before, &:after
         :content ''
