@@ -142,7 +142,10 @@
                   :top $baseline
             
             > table
+              :margin
+                :top $baseline * 2
               :width 100%
+              :white-space nowrap
               
               tr
                 td
@@ -153,14 +156,86 @@
                     :top $baseline * 0.2
                     :bottom $baseline * 0.2
                   :text-align center
+                  :width $ninesixty_gutter_width * 9
+                  
+                  > .icon
+                    :height $baseline * 1.2
+                    
+                    > svg
+                      +inline-block
+                      :height $baseline * 1.4
+                      :width 100%
+                      :border
+                        :bottom 1px solid $grey
+                      
+                      path
+                        :fill $grey
+                        :transform translateY(-0.1rem)
+                  
+                  > span
+                    :position relative
+                    +inline-block
+                    :width $ninesixty_gutter_width * 4
+                    :padding
+                      :left $ninesixty_gutter_width * 1.5
+                    :text-align left
+                    
+                    &:before
+                      :content ''
+                      :position absolute
+                      :top 50%
+                      :left 0
+                      :margin
+                        :top -$ninesixty_gutter_width * 0.3
+                      :width 0
+                      :height 0
+                      :border
+                        :left $ninesixty_gutter_width * 0.4 solid transparent
+                        :right $ninesixty_gutter_width * 0.4 solid transparent
+                    
+                    &.plus
+                      :color $green
+                      
+                      &:before
+                        :border
+                          :bottom $ninesixty_gutter_width * 0.6 solid $green
+                    
+                    &.minus
+                      :color $red
+                      
+                      &:before
+                        :border
+                          :top $ninesixty_gutter_width * 0.6 solid $red
+                    
+                    &.zero
+                      :color $grey
+                      
+                      &:before
+                        :border
+                          :bottom $ninesixty_gutter_width * 0.6 solid $grey
                   
                   &:first-child
                     :text-align left
+                    :width $ninesixty_gutter_width * 25
+                  
+                  &.dinamyc + .position
+                    :padding
+                      :left $ninesixty_gutter_width * 5
+                  
+                  &.grey
+                    :color $grey
                 
-                &.grey td
-                  :color $grey
-                  :padding
-                    :bottom $baseline / 2
+                &.grey
+                  td
+                    :color $grey
+                    :padding
+                      :bottom $baseline / 2
+                  
+                  &:not(.icons) + tr td
+                    :padding
+                      :top $baseline / 2
+                    :border
+                      :top 1px solid $grey
                 
                 &.big
                   td
@@ -177,10 +252,57 @@
                   & + tr td
                     :padding
                       :top $baseline / 2
+                
+                &.head
+                  td
+                    :height $baseline * 2.5
+                    :padding
+                      :top $baseline !important
+                      :bottom $baseline / 2
+                    :border
+                      :bottom 1px solid $grey
+                    :font
+                      :family "Lato Bold", sans-serif
+                  
+                  & + tr td
+                    :padding
+                      :top $baseline / 2
+              
+              &.right td:not(:first-child)
+                :text-align right
+                :padding
+                  :left $ninesixty_gutter_width * 3
+                
+                > span
+                  :width auto
+              
+              &.auto td
+                :padding
+                  :left $ninesixty_gutter_width
+                  :right $ninesixty_gutter_width
+                
+                > span
+                  :width auto
+                
+                &:first-child
+                  :padding
+                    :left 0
+                    :right 0
+                
+                &:last-child
+                  :padding
+                    :left 0
+                    :right 0
+                  :text-align right
+              
+              &.no-top
+                :margin
+                  :top $baseline
             
             &:before
               :content ''
               :position absolute
+              :z-index 1
               :left 0
               :bottom 0
               :width 100%
