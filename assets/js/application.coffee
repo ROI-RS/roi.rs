@@ -5,6 +5,16 @@ ROI = angular.module 'ROI', ['duScroll'], ($interpolateProvider)->
   $interpolateProvider.startSymbol('//')
   $interpolateProvider.endSymbol('//')
 
+ROI.value 'duScrollOffset', 400
+ROI.value 'duScrollGreedy', true
+
+ROI.controller 'WelcomeCtrl', ['$scope', ($scope)->
+  $scope.whyClicksGoDown = false
+  $scope.whyBudgetGoDown = false
+  $scope.whyCommunicationsGoDown = false
+  $scope.toggle = (name, state)-> $scope[name] = state
+]
+
 ROI.controller 'ContactFormCtrl', ['$scope', '$http', ($scope, $http)->
   $scope.message =
     form: 0

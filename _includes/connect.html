@@ -1,4 +1,4 @@
-<form name="contactForm" ng-if="showConnect" ng-controller="ContactFormCtrl" ng-submit="send(message)">
+<form name="contactForm" ng-class="{active: showConnect}" ng-controller="ContactFormCtrl" ng-submit="send(message)">
   <label for="name">Name</label>
   <input
     type="text"

@@ -4,7 +4,7 @@
   <body>
     <div id="container" du-scroll-container="content">
       {% include header.html %}
-      <section id="content" du-scrollspy="steps" du-spy-context>
+      <section id="content" ng-controller="WelcomeCtrl">
         {{ content }}
         {% include footer.html %}
       </section>

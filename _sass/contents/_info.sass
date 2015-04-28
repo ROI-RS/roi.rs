@@ -1,6 +1,8 @@
 /* info
 
 #container > section > .info
+  :position relative
+  :z-index 51
   :overflow hidden
   :padding
     :top $baseline * 6
@@ -8,6 +10,7 @@
   :min-height 100%
   :border
     :top 1px solid rgba(159, 145, 132, .25)
+  :background $brown
   :text-align center
   
   > h2
@@ -46,6 +49,10 @@
         :left $ninesixty_gutter_width * 10
         :top $baseline / 2
         :bottom $baseline / 2
+      +opacity(0)
+      +scale(0.7)
+      +transition(all .5s ease-out)
+      +transition-property(opacity, transform)
       
       > svg
         :position absolute
@@ -82,6 +89,10 @@
         :-o-transform-origin left center
         :-ms-transform-origin left center
         :transform-origin left center
+      
+      &.active
+        +opacity(1)
+        +scale(1)
     
     & + *
       :margin
@@ -95,3 +106,13 @@
     
     > span
       :color $yellow
+  
+  > *:not(ul)
+    +opacity(0)
+    +scale(0.7)
+    +transition(all .5s ease-out)
+    +transition-property(opacity, transform)
+  
+    &.active
+      +opacity(1)
+      +scale(1)

@@ -1,7 +1,6 @@
 /* content
 
 #container > section
-  :position relative
   :height 100%
   :overflow overlay
   
@@ -25,6 +24,16 @@
           :bottom $baseline * 6
         :border
           :top 1px solid rgba(151, 151, 151, .25)
+        
+        > h2, > p, > .funnels > ul > li, > h3, > .list > li
+          +opacity(0)
+          +scale(0.7)
+          +transition(all .5s ease-out)
+          +transition-property(opacity, transform)
+          
+          &.active
+            +opacity(1)
+            +scale(1)
       
         > h2
           +grid-container($ninesixty_gutter_width * 85)
@@ -86,7 +95,7 @@
             +scale(0.7)
             +opacity(0)
             :visibility hidden
-            +transition(all .3s ease-out)
+            +transition(all .4s ease-out)
             +transition-property(opacity, visibility, transform)
             
             > .close

@@ -13,19 +13,19 @@ layout: default
   <div class="mouse">{% include icons/mouse.svg %}</div>
 </div>
 <div class="info">
-  <h2>Автоматизация бизнес-аналитики</h2>
-  <p>
+  <h2 id="info-header1" du-scrollspy="info-header1" du-spy-context>Автоматизация бизнес-аналитики</h2>
+  <p id="info-text1" du-scrollspy="info-text1" du-spy-context>
     Оценивайте отдачу от маркетинговых затрат и эффективность всех бизнес-процессов<br />
     компании. Надстройка над IT-инфраструктурой бизнеса, интеграция которой<br />
     не требует изменения существующей архитектуры.
   </p>
-  <p>
+  <p id="info-text2" du-scrollspy="info-text2" du-spy-context>
     Сервис собирает информацию из всех источников данных, от Google.Analytics до 1С.<br />
     И формирует прозрачные и понятные отчеты, которые позволят быстро найти<br />
     проблемные места в воронке продаж.
   </p>
   <ul>
-    <li>
+    <li id="info-list1" du-scrollspy="info-list1" du-spy-context offset="450">
       {% include icons/dashboard.svg %}
       <h3>Все цифры в одном отчете</h3>
       <p>
@@ -33,7 +33,7 @@ layout: default
         файлов, не связанных друг с другом.
       </p>
     </li>
-    <li>
+    <li id="info-list2" du-scrollspy="info-list2" du-spy-context>
       {% include icons/globe.svg %}
       <h3>Всегда готовы к просмотру</h3>
       <p>
@@ -41,7 +41,7 @@ layout: default
         реального времени из любой точки мира.
       </p>
     </li>
-    <li>
+    <li id="info-list3" du-scrollspy="info-list3" du-spy-context offset="450">
       {% include icons/report.svg %}
       <h3>Тонкая настройка отчетов</h3>
       <p>
@@ -49,7 +49,7 @@ layout: default
         конкретных бизнес-задач.
       </p>
     </li>
-    <li>
+    <li id="info-list4" du-scrollspy="info-list4" du-spy-context>
       {% include icons/lock.svg %}
       <h3>Данные под защитой</h3>
       <p>
@@ -58,24 +58,24 @@ layout: default
       </p>
     </li>
   </ul>
-  <h3>
+  <h3 id="info-header2" du-scrollspy="info-header2" du-spy-context>
     Интеграция всех источников, сбор данных и создание первого отчета<br />
     занимает <span>от 3 дней до 1 месяца</span>. Ежемесячная стоимость сервиса<br />
     для одного проекта <span>от 20 000 до 80 000 рублей</span>.
   </h3>
 </div>
 <div class="how-it-works">
-  <h2>
+  <h2 id="how-it-works-header" du-scrollspy="how-it-works-header" du-spy-context>
     <span>Как это всё работает?</span>
   </h2>
   <nav>
-    <li>
+    <li id="how-it-works-list1" du-scrollspy="how-it-works-list1" du-spy-context>
       <a href="#" class="active">у автодилеров</a>
     </li>
-    <li>
+    <li id="how-it-works-list2" du-scrollspy="how-it-works-list2" du-spy-context>
       <a href="#">в частных клиниках</a>
     </li>
-    <li>
+    <li id="how-it-works-list3" du-scrollspy="how-it-works-list3" du-spy-context>
       <a href="#">в вашей компании</a>
     </li>
   </nav>
@@ -83,20 +83,20 @@ layout: default
 <div id="steps">
   <div class="step first" id="step1" style="background-image: url({{"/assets/images/backgrounds/step1.jpg" | prepend: site.baseurl }});">
     <section>
-      <h2>
+      <h2 id="step1-header1" du-scrollspy="step1-header1" du-spy-context>
         {% include icons/dollar.svg %}
         <span>
           Не хватает понимания эффективности<br />
           рекламы и бизнес процессов?
         </span>
       </h2>
-      <p>
+      <p id="step1-text" du-scrollspy="step1-text" du-spy-context>
         Много рекламных каналов, коллцентр, отдел продаж,<br />
         отдел сервиса, но нет единой картины?
       </p>
       <div class="funnels">
         <ul>
-          <li>
+          <li id="step1-funnels1" du-scrollspy="step1-funnels1" du-spy-context>
             <div style="background-image: url({{"/assets/images/backgrounds/step1_funnel.jpg" | prepend: site.baseurl }});">
               <span>Рекламный бюджет</span>
               <p>844 305<span> р</span></p>
@@ -104,33 +104,33 @@ layout: default
           </li>
         </ul>
       </div>
-      <h3>
+      <h3 id="step1-header2" du-scrollspy="step1-header2" du-spy-context>
         Собираем всю информацию<br />
         и строим единый отчет до ROI:
       </h3>
       <ul class="list">
-        <li>по каждому рекламному каналу,</li>
-        <li>по каждому менеджеру,</li>
-        <li>по доходности каждой модели автомобиля.</li>
+        <li id="step1-list1" du-scrollspy="step1-list1" du-spy-context>по каждому рекламному каналу,</li>
+        <li id="step1-list2" du-scrollspy="step1-list2" du-spy-context>по каждому менеджеру,</li>
+        <li id="step1-list3" du-scrollspy="step1-list3" du-spy-context>по доходности каждой модели автомобиля.</li>
       </ul>
     </section>
   </div>
   <div class="step second" id="step2" style="background-image: url({{"/assets/images/backgrounds/step2.jpg" | prepend: site.baseurl }});">
     <section>
-      <h2>
+      <h2 id="step2-header1" du-scrollspy="step2-header1" du-spy-context>
         {% include icons/lamp.svg %}
         <span>
           Полное понимание отдачи<br />
           от маркетинговых затрат
         </span>
       </h2>
-      <p>
+      <p id="step2-text1" du-scrollspy="step2-text1" du-spy-context>
         Считаем ROI в разрезе каждой рекламной кампании<br />
         и медийного баннера.
       </p>
       <div class="funnels">
         <ul>
-          <li>
+          <li id="step2-funnels1" du-scrollspy="step2-funnels1" du-spy-context>
             <ul class="cut-bottom">
               <li>
                 <span>Рекламный бюджет</span>
@@ -143,14 +143,14 @@ layout: default
                 <p>119 808</p>
                 <b>4,22% — конверсия в коммуникации</b>
                 <i class="minus">7.3%</i>
-                <a href="#" ng-click="whyClicksGoDown = true"><span>Почему так?</span></a>
+                <a href="#" ng-click="toggle('whyClicksGoDown', true)"><span>Почему так?</span></a>
               </li>
               <li>
                 <span>Коммуникации</span>
                 <p>5 061</p>
                 <b>1,77% — конверсия в уник. коммуникации</b>
                 <i class="minus">9.6%</i>
-                <a href="#" ng-click="whyCommunicationsGoDown = true"><span>Как так получилось?</span></a>
+                <a href="#" ng-click="toggle('whyCommunicationsGoDown', true)"><span>Как так получилось?</span></a>
               </li>
               <li>
                 <span>Уникальные коммуникации</span>
@@ -163,7 +163,7 @@ layout: default
           </li>
         </ul>
         <section ng-class="{active: whyClicksGoDown}">
-          <a href="#" class="close" ng-click="whyClicksGoDown = false">{% include icons/close.svg %}</a>
+          <a href="#" class="close" ng-click="toggle('whyClicksGoDown', false)">{% include icons/close.svg %}</a>
           <h3>Почему же клики упали на 7,3% при росте бюджета?</h3>
           <p>
             Упал трафик по SEO. В отчете по позициям мы видим отрицательную<br />
@@ -249,7 +249,7 @@ layout: default
           </table>
         </section>
         <section ng-class="{active: whyCommunicationsGoDown}">
-          <a href="#" class="close" ng-click="whyCommunicationsGoDown = false">{% include icons/close.svg %}</a>
+          <a href="#" class="close" ng-click="toggle('whyCommunicationsGoDown', false)">{% include icons/close.svg %}</a>
           <h3>
             <span>Хорошо. С кликами разобрались.</span>
             Но почему коммуникации упали на 9.3%?
@@ -319,30 +319,30 @@ layout: default
           </table>
         </section>
       </div>
-      <h3>
+      <h3 id="step2-header2" du-scrollspy="step2-header2" du-spy-context>
         Отвечаем на главный вопросы отдела<br />
         маркетинга вашей компании:
       </h3>
       <ul class="list">
-        <li>почему упала отдача от рекламы?</li>
-        <li>кто из подрядчиков работает недостаточно хорошо?</li>
-        <li>как составить максимально эффективный медиаплан?</li>
+        <li id="step2-list1" du-scrollspy="step2-list1" du-spy-context>почему упала отдача от рекламы?</li>
+        <li id="step2-list2" du-scrollspy="step2-list2" du-spy-context>кто из подрядчиков работает недостаточно хорошо?</li>
+        <li id="step2-list3" du-scrollspy="step2-list3" du-spy-context>как составить максимально эффективный медиаплан?</li>
       </ul>
     </section>
   </div>
   <div class="step third" id="step3" style="background-image: url({{"/assets/images/backgrounds/step3.jpg" | prepend: site.baseurl }});">
     <section>
-      <h2>
+      <h2 id="step3-header1" du-scrollspy="step3-header1" du-spy-context>
         {% include icons/details.svg %}
         <span>
           Детализация каждого этапа<br />
           воронки на стороне бизнеса
         </span>
       </h2>
-      <p>Выясняем, на каких этапах теряются клиенты и прибыль.</p>
+      <p id="step3-text1" du-scrollspy="step3-text1" du-spy-context>Выясняем, на каких этапах теряются клиенты и прибыль.</p>
       <div class="funnels">
         <ul>
-          <li>
+          <li id="step3-funnels1" du-scrollspy="step3-funnels1" du-spy-context>
             <ul class="cut-top">
               <li>
                 <span>Контракты</span>
@@ -366,7 +366,7 @@ layout: default
                 <span>Доход</span>
                 <p>6 056 800<span> р</span></p>
                 <i class="minus">6.0%</i>
-                <a href="#" ng-click="whyBudgetGoDown = true"><span>Почему так?</span></a>
+                <a href="#" ng-click="toggle('whyBudgetGoDown', true)"><span>Почему так?</span></a>
               </li>
               <li class="orange">
                 <span>ROI</span>
@@ -377,7 +377,7 @@ layout: default
           </li>
         </ul>
         <section ng-class="{active: whyBudgetGoDown}">
-          <a href="#" class="close" ng-click="whyBudgetGoDown = false">{% include icons/close.svg %}</a>
+          <a href="#" class="close" ng-click="toggle('whyBudgetGoDown', false)">{% include icons/close.svg %}</a>
           <h3>Если оборот вырос на 5,2%, почему же снизился доход?</h3>
           <p>
             Кто-то из менеджеров по продажам стал давать слишком большие скидки,<br />
@@ -444,33 +444,33 @@ layout: default
           </table>
         </section>
       </div>
-      <h3>
+      <h3 id="step3-header2" du-scrollspy="step3-header2" du-spy-context>
         Строим индивидуальную отчетность,<br />
         которая помогает оценить эффективность бизнес-процессов:
       </h3>
       <ul class="list">
-        <li>сколько звонков в месяц теряет колл-центр?</li>
-        <li>какая модель авто имеет самый высокий показатель ROI?</li>
-        <li>как можно улучшить показатели отдела продаж?</li>
+        <li id="step3-list1" du-scrollspy="step3-list1" du-spy-context>сколько звонков в месяц теряет колл-центр?</li>
+        <li id="step3-list2" du-scrollspy="step3-list2" du-spy-context>какая модель авто имеет самый высокий показатель ROI?</li>
+        <li id="step3-list3" du-scrollspy="step3-list3" du-spy-context>как можно улучшить показатели отдела продаж?</li>
       </ul>
     </section>
   </div>
   <div class="step fourth" id="step4" style="background-image: url({{"/assets/images/backgrounds/step4.jpg" | prepend: site.baseurl }});">
     <section>
-      <h2>
+      <h2 id="step4-header1" du-scrollspy="step4-header1" du-spy-context>
         {% include icons/brilliant.svg %}
         <span>
           Помогаем бизнесу<br />
           увеличить чистую прибыль
         </span>
       </h2>
-      <p>
+      <p id="step4-text1" du-scrollspy="step4-text1" du-spy-context>
         Каждый этап становится прозрачным. Решения принимаются,<br />
         опираясь не на домыслы или «экспертные мнения», а на реальные цифры.
       </p>
       <div class="funnels">
         <ul>
-          <li>
+          <li id="step4-funnels1" du-scrollspy="step4-funnels1" du-spy-context offset="500">
             <p>
               Собрали данные,<br />
               задали правильные вопросы,<br />
@@ -522,7 +522,7 @@ layout: default
               </li>
             </ul>
           </li>
-          <li>
+          <li id="step4-funnels2" du-scrollspy="step4-funnels2" du-spy-context>
             <p>
               Оптимизировали проблемные<br />
               места, увеличили ROI, переходим<br />

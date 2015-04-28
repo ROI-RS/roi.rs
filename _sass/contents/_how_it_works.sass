@@ -2,14 +2,19 @@
 
 #container > section > .how-it-works
   :position relative
-  :z-index 5
+  :z-index 55
   :text-align center
+  +gradient(rgba(52, 41, 32, 1), rgba(52, 41, 32, 0))
   
   > h2
     :line-height $baseline * 2
     :font
       :family "Lato Light", sans-serif
     :color $yellow
+    +opacity(0)
+    +scale(0.7)
+    +transition(all .5s ease-out)
+    +transition-property(opacity, transform)
     +children-inline
     
     > span
@@ -19,6 +24,10 @@
       :background $brown
       :font
         :size $baseline * 1.8
+  
+    &.active
+      +opacity(1)
+      +scale(1)
     
     & + *
       :margin
@@ -28,6 +37,11 @@
     +children-inline
     
     > li
+      +opacity(0)
+      +scale(0.7)
+      +transition(all .5s ease-out)
+      +transition-property(opacity, transform)
+      
       > a
         :display block
         :height $baseline * 1.5
@@ -49,6 +63,10 @@
           :border-color $yellow
           :cursor default
           +opacity(1)
+        
+      &.active
+        +opacity(1)
+        +scale(1)
       
       & + *
         :margin
