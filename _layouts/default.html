@@ -2,9 +2,9 @@
 <html ng-app="ROI">
   {% include head.html %}
   <body>
-    <div id="container" du-scroll-container="content">
+    <div id="container" du-scroll-container="content" ng-controller="WelcomeCtrl">
       {% include header.html %}
-      <section id="content" ng-controller="WelcomeCtrl">
+      <section id="content">
         {{ content }}
         {% include footer.html %}
       </section>
