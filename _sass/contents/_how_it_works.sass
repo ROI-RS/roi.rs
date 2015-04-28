@@ -36,6 +36,9 @@
     +children-inline
     
     > li
+      :margin
+        :left $ninesixty_gutter_width / 2
+        :right $ninesixty_gutter_width / 2
       +opacity(0)
       +scale(0.7)
       +transition(all .5s ease-out)
@@ -69,10 +72,6 @@
       &.active
         +opacity(1)
         +scale(1)
-      
-      & + *
-        :margin
-          :left $ninesixty_gutter_width
   
   & + *
     :margin
