@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="ROI">
   {% include head.html %}
-  <body>
-    <div id="container" du-scroll-container="content" ng-controller="WelcomeCtrl">
+  <body du-scroll-container="container" ng-controller="WelcomeCtrl">
+    <div id="container">
       {% include header.html %}
-      <section id="content">
-        {{ content }}
-        {% include footer.html %}
-      </section>
-      {% include steps.html %}
-      {% include connect.html %}
+      {{ content }}
+      {% include footer.html %}
     </div>
+    {% include steps.html %}
+    {% include connect.html %}
     <script type='text/javascript' src="{{ "/assets/js/angular.min.js" | prepend: site.baseurl }}"></script>
     <script type='text/javascript' src="{{ "/assets/js/angular-scroll.min.js" | prepend: site.baseurl }}"></script>
     <script type='text/javascript' src="{{ "/assets/js/application.js" | prepend: site.baseurl }}"></script>

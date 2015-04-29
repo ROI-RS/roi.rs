@@ -2,13 +2,14 @@
 $footer: $baseline * 4.5
 $logo_small: $ninesixty_gutter_width * 7.5
 
-#container > section > footer
+#container > footer
   :position relative
   :z-index 10
   :height $footer
   :border
     :top 1px solid rgba(255, 255, 255, 0.1)
   :margin
+    :top -$footer
     :left $ninesixty_gutter_width * 4
     :right $ninesixty_gutter_width * 4
   

@@ -1,12 +1,14 @@
 /* how it works
 
-#container > section > .how-it-works
+#container > .how-it-works
   :position relative
   :z-index 55
   :text-align center
   +gradient(rgba(52, 41, 32, 1), rgba(52, 41, 32, 0))
   
   > h2
+    :position relative
+    +grid-container($ninesixty_gutter_width * 90)
     :line-height $baseline * 2
     :font
       :family "Lato Light", sans-serif
@@ -14,15 +16,29 @@
     +opacity(0)
     +scale(0.7)
     +transition(all .5s ease-out)
+    +transition-property(opacity, -webkit-transform, transform)
     +children-inline
     
     > span
       :padding
         :left $ninesixty_gutter_width * 2
         :right $ninesixty_gutter_width * 2
-      :background $brown
       :font
         :size $baseline * 1.8
+      
+      &:before, &:after
+        :content ''
+        :position absolute
+        :width $ninesixty_gutter_width * 25
+        :height 1px
+        :top 50%
+        :background rgba(151, 151, 151, .25)
+      
+      &:before
+        :left 0
+      
+      &:after
+        :right 0
   
     &.active
       +opacity(1)
@@ -42,6 +58,7 @@
       +opacity(0)
       +scale(0.7)
       +transition(all .5s ease-out)
+      +transition-property(opacity, -webkit-transform, transform)
       
       > a
         :display block

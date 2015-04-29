@@ -103,16 +103,18 @@ layout: default
             </div>
           </li>
         </ul>
+        <aside>
+          <h3 id="step1-header2" du-scrollspy="step1-header2" du-spy-context offset="//getOffset()//">
+            Собираем всю информацию<br />
+            и строим единый отчет до ROI:
+          </h3>
+          <ul class="list">
+            <li id="step1-list1" du-scrollspy="step1-list1" du-spy-context offset="//getOffset()//">по каждому рекламному каналу,</li>
+            <li id="step1-list2" du-scrollspy="step1-list2" du-spy-context offset="//getOffset()//">по каждому менеджеру,</li>
+            <li id="step1-list3" du-scrollspy="step1-list3" du-spy-context offset="//getOffset()//">по доходности каждой модели автомобиля.</li>
+          </ul>
+        </aside>
       </div>
-      <h3 id="step1-header2" du-scrollspy="step1-header2" du-spy-context offset="//getOffset()//">
-        Собираем всю информацию<br />
-        и строим единый отчет до ROI:
-      </h3>
-      <ul class="list">
-        <li id="step1-list1" du-scrollspy="step1-list1" du-spy-context offset="//getOffset()//">по каждому рекламному каналу,</li>
-        <li id="step1-list2" du-scrollspy="step1-list2" du-spy-context offset="//getOffset()//">по каждому менеджеру,</li>
-        <li id="step1-list3" du-scrollspy="step1-list3" du-spy-context offset="//getOffset()//">по доходности каждой модели автомобиля.</li>
-      </ul>
     </section>
   </div>
   <div class="step second" id="step2" style="background-image: url({{"/assets/images/backgrounds/step2.jpg" | prepend: site.baseurl }});">
@@ -144,7 +146,7 @@ layout: default
                 <b>4,22% — конверсия в коммуникации</b>
                 <i class="minus" du-scrollspy="step2-funnels1" du-spy-context offset="//getOffset() / 2 - 50//">7.3%</i>
                 <div class="button" du-scrollspy="step2-funnels1" du-spy-context offset="//getOffset() / 2 - 75//">
-                  <a href="#" ng-click="toggle('whyClicksGoDown', true)">
+                  <a ng-click="toggle('whyClicksGoDown', true)">
                     <span>Почему так?</span>
                   </a>
                 </div>
@@ -155,7 +157,7 @@ layout: default
                 <b>1,77% — конверсия в уник. коммуникации</b>
                 <i class="minus" du-scrollspy="step2-funnels1" du-spy-context offset="//getOffset() / 2 - 100//">9.6%</i>
                 <div class="button" du-scrollspy="step2-funnels1" du-spy-context offset="//getOffset() / 2 - 125//">
-                  <a href="#" ng-click="toggle('whyCommunicationsGoDown', true)">
+                  <a ng-click="toggle('whyCommunicationsGoDown', true)">
                     <span>Как так получилось?</span>
                   </a>
                 </div>
@@ -171,7 +173,7 @@ layout: default
           </li>
         </ul>
         <section ng-class="{active: whyClicksGoDown}">
-          <a href="#" class="close" ng-click="toggle('whyClicksGoDown', false)">{% include icons/close.svg %}</a>
+          <a class="close" ng-click="toggle('whyClicksGoDown', false)">{% include icons/close.svg %}</a>
           <h3>Почему же клики упали на 7,3% при росте бюджета?</h3>
           <p>
             Упал трафик по SEO. В отчете по позициям мы видим отрицательную<br />
@@ -257,7 +259,7 @@ layout: default
           </table>
         </section>
         <section ng-class="{active: whyCommunicationsGoDown}">
-          <a href="#" class="close" ng-click="toggle('whyCommunicationsGoDown', false)">{% include icons/close.svg %}</a>
+          <a class="close" ng-click="toggle('whyCommunicationsGoDown', false)">{% include icons/close.svg %}</a>
           <h3>
             <span>Хорошо. С кликами разобрались.</span>
             Но почему коммуникации упали на 9.3%?
@@ -326,16 +328,19 @@ layout: default
             </tr>
           </table>
         </section>
+        <aside class="far big">
+          <h3 id="step2-header2" du-scrollspy="step2-header2" du-spy-context offset="//getOffset()//">
+            Отвечаем на главные<br />
+            вопросы отдела маркетинга<br />
+            вашей компании:
+          </h3>
+          <ul class="list">
+            <li id="step2-list1" du-scrollspy="step2-list1" du-spy-context offset="//getOffset()//">почему упала отдача от рекламы?</li>
+            <li id="step2-list2" du-scrollspy="step2-list2" du-spy-context offset="//getOffset()//">кто из подрядчиков работает недостаточно хорошо?</li>
+            <li id="step2-list3" du-scrollspy="step2-list3" du-spy-context offset="//getOffset()//">как составить максимально эффективный медиаплан?</li>
+          </ul>
+        </aside>
       </div>
-      <h3 id="step2-header2" du-scrollspy="step2-header2" du-spy-context offset="//getOffset()//">
-        Отвечаем на главный вопросы отдела<br />
-        маркетинга вашей компании:
-      </h3>
-      <ul class="list">
-        <li id="step2-list1" du-scrollspy="step2-list1" du-spy-context offset="//getOffset()//">почему упала отдача от рекламы?</li>
-        <li id="step2-list2" du-scrollspy="step2-list2" du-spy-context offset="//getOffset()//">кто из подрядчиков работает недостаточно хорошо?</li>
-        <li id="step2-list3" du-scrollspy="step2-list3" du-spy-context offset="//getOffset()//">как составить максимально эффективный медиаплан?</li>
-      </ul>
     </section>
   </div>
   <div class="step third" id="step3" style="background-image: url({{"/assets/images/backgrounds/step3.jpg" | prepend: site.baseurl }});">
@@ -375,7 +380,7 @@ layout: default
                 <p>6 056 800<span> р</span></p>
                 <i class="minus" du-scrollspy="step3-funnels1" du-spy-context offset="//getOffset() / 2 - 150//">6.0%</i>
                 <div class="button" du-scrollspy="step3-funnels1" du-spy-context offset="//getOffset() / 2 - 175//">
-                  <a href="#" ng-click="toggle('whyBudgetGoDown', true)"><span>Почему так?</span></a>
+                  <a ng-click="toggle('whyBudgetGoDown', true)"><span>Почему так?</span></a>
                 </div>
               </li>
               <li class="orange">
@@ -387,7 +392,7 @@ layout: default
           </li>
         </ul>
         <section ng-class="{active: whyBudgetGoDown}">
-          <a href="#" class="close" ng-click="toggle('whyBudgetGoDown', false)">{% include icons/close.svg %}</a>
+          <a class="close" ng-click="toggle('whyBudgetGoDown', false)">{% include icons/close.svg %}</a>
           <h3>Если оборот вырос на 5,2%, почему же снизился доход?</h3>
           <p>
             Кто-то из менеджеров по продажам стал давать слишком большие скидки,<br />
@@ -453,16 +458,20 @@ layout: default
             </tr>
           </table>
         </section>
+        <aside class="far bigest">
+          <h3 id="step3-header2" du-scrollspy="step3-header2" du-spy-context offset="//getOffset()//">
+            Строим индивидуальную<br />
+            отчетность, которая помогает<br />
+            оценить эффективность<br />
+            бизнес-процессов:
+          </h3>
+          <ul class="list">
+            <li id="step3-list1" du-scrollspy="step3-list1" du-spy-context offset="//getOffset()//">сколько звонков в месяц теряет колл-центр?</li>
+            <li id="step3-list2" du-scrollspy="step3-list2" du-spy-context offset="//getOffset()//">какая модель авто имеет самый высокий показатель ROI?</li>
+            <li id="step3-list3" du-scrollspy="step3-list3" du-spy-context offset="//getOffset()//">как можно улучшить показатели отдела продаж?</li>
+          </ul>
+        </aside>
       </div>
-      <h3 id="step3-header2" du-scrollspy="step3-header2" du-spy-context offset="//getOffset()//">
-        Строим индивидуальную отчетность,<br />
-        которая помогает оценить эффективность бизнес-процессов:
-      </h3>
-      <ul class="list">
-        <li id="step3-list1" du-scrollspy="step3-list1" du-spy-context offset="//getOffset()//">сколько звонков в месяц теряет колл-центр?</li>
-        <li id="step3-list2" du-scrollspy="step3-list2" du-spy-context offset="//getOffset()//">какая модель авто имеет самый высокий показатель ROI?</li>
-        <li id="step3-list3" du-scrollspy="step3-list3" du-spy-context offset="//getOffset()//">как можно улучшить показатели отдела продаж?</li>
-      </ul>
     </section>
   </div>
   <div class="step fourth" id="step4" style="background-image: url({{"/assets/images/backgrounds/step4.jpg" | prepend: site.baseurl }});">
@@ -481,6 +490,7 @@ layout: default
       <div class="funnels">
         <ul du-scrollspy="step4-funnels2" du-spy-context offset="//getOffset() / 2 + 75//">
           <li id="step4-funnels1" du-scrollspy="step4-funnels1" du-spy-context offset="//getOffset()//">
+            <h3>До</h3>
             <p>
               Собрали данные,<br />
               задали правильные вопросы,<br />
@@ -533,12 +543,13 @@ layout: default
             </ul>
           </li>
           <li id="step4-funnels2" du-scrollspy="step4-funnels2" du-spy-context offset="//getOffset() / 2 + 75//">
+            <h3>После</h3>
             <p>
               Оптимизировали проблемные<br />
               места, увеличили ROI, переходим<br />
               к следующим вопросам.
             </p>
-            <ul>
+            <ul class="far">
               <li>
                 <span>Рекламный бюджет</span>
                 <p>1 365 200<span> р</span></p>
@@ -598,3 +609,6 @@ layout: default
     </section>
   </div>
 </div>
+<nav>
+  <p><a href="#">Подключить</a></p>
+</nav>

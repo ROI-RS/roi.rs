@@ -6,6 +6,7 @@ ROI = angular.module 'ROI', ['duScroll'], ($interpolateProvider)->
   $interpolateProvider.endSymbol('//')
 
 ROI.value 'duScrollGreedy', true
+ROI.value 'duScrollDuration', 2000
 
 ROI.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window)->
   $scope.whyClicksGoDown = false
@@ -14,7 +15,7 @@ ROI.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window)->
   $scope.toggle = (name, state)-> $scope[name] = state
   
   offset = $window.innerHeight
-  $scope.getOffset = (plus = 0)-> offset + plus - 75
+  $scope.getOffset = (plus = 0)-> offset + plus - 25
 ]
 
 ROI.controller 'ContactFormCtrl', ['$scope', '$http', ($scope, $http)->

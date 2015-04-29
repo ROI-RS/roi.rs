@@ -7,7 +7,7 @@ $base_transition: all .25s ease-in-out !default
   :-ms-transition $value
   :transition $value
 
-= transition-property($value: $base_transition_property, $value2: false, $value3: false)
+= transition-property($value: $base_transition_property, $value2: false, $value3: false, $value4: false)
   :-webkit-transition-property $value
   :-moz-transition-property $value
   :-o-transition-property $value
@@ -27,3 +27,10 @@ $base_transition: all .25s ease-in-out !default
     :-o-transition-property $value, $value2, $value3
     :-ms-transition-property $value, $value2, $value3
     :transition-property $value, $value2, $value3
+
+  @if $value2 && $value3 && $value4
+    :-webkit-transition-property $value, $value2, $value3, $value4
+    :-moz-transition-property $value, $value2, $value3, $value4
+    :-o-transition-property $value, $value2, $value3, $value4
+    :-ms-transition-property $value, $value2, $value3, $value4
+    :transition-property $value, $value2, $value3, $value4

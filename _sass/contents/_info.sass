@@ -1,6 +1,6 @@
 /* info
 
-#container > section > .info
+#container > .info
   :position relative
   :z-index 51
   :overflow hidden
@@ -52,6 +52,7 @@
       +opacity(0)
       +scale(0.7)
       +transition(all .5s ease-out)
+      +transition-property(opacity, -webkit-transform, transform)
       
       > svg
         :position absolute
@@ -96,6 +97,7 @@
     +opacity(0)
     +scale(0.7)
     +transition(all .5s ease-out)
+    +transition-property(opacity, -webkit-transform, transform)
   
     &.active
       +opacity(1)
