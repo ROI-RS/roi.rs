@@ -50,7 +50,7 @@
   100%
     +opacity(1)
 
-body > .popup
+#container-wrapper > .popup
   +absoluted
   :z-index 100
   :background rgba(0, 0, 0, 0.9)
@@ -226,6 +226,16 @@ body > .popup
               :fill $white
               +transition(fill .4s ease-out)
           
+          > input, > textarea
+            &::-webkit-input-placeholder, &::-moz-placeholdercolor, &:-moz-placeholder, &:-ms-input-placeholder
+              :color $grey
+              +transition(opacity .4s ease-out)
+            
+            &:focus
+              &::-webkit-input-placeholder, &::-moz-placeholdercolor, &:-moz-placeholder, &:-ms-input-placeholder
+                +opacity(0)
+                +transition(opacity .4s ease-out)
+          
           > input:not([type=submit]), > textarea
             :display block
             :background none
@@ -248,19 +258,11 @@ body > .popup
             :text-align center
             +transition(all .4s ease-out)
             +transition-property(border, background, color, opacity)
-          
-            &::-webkit-input-placeholder, &::-moz-placeholdercolor, &:-moz-placeholder, &:-ms-input-placeholder
-              :color $grey
-              +transition(opacity .4s ease-out)
   
             &:focus
               :border-color $white
               :background $white
               :color $brown
-          
-              &::-webkit-input-placeholder, &::-moz-placeholdercolor, &:-moz-placeholder, &:-ms-input-placeholder
-                +opacity(0)
-                +transition(opacity .4s ease-out)
               
               & + svg path
                 :fill $brown

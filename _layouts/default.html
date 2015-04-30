@@ -2,15 +2,17 @@
 <html ng-app="ROI">
   {% include head.html %}
   <body du-scroll-container="container" ng-controller="WelcomeCtrl">
-    <div id="container">
-      {% include header.html %}
-      {{ content }}
-      {% include footer.html %}
+    <div id="container-wrapper">
+      <div id="container">
+        {% include header.html %}
+        {{ content }}
+        {% include footer.html %}
+      </div>
+      {% include steps.html %}
+      {% include popups/connect.html %}
+      {% include popups/login.html %}
+      {% include popups/thank_you.html %}
     </div>
-    {% include steps.html %}
-    {% include popups/connect.html %}
-    {% include popups/login.html %}
-    {% include popups/thank_you.html %}
     <script type='text/javascript' src="{{ "/assets/js/angular.min.js" | prepend: site.baseurl }}"></script>
     <script type='text/javascript' src="{{ "/assets/js/angular-scroll.min.js" | prepend: site.baseurl }}"></script>
     <script type='text/javascript' src="{{ "/assets/js/angular-animate.min.js" | prepend: site.baseurl }}"></script>
