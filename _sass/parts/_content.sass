@@ -82,8 +82,8 @@
             :background $light_yellow
             :padding $ninesixty_gutter_width * 4
             :color $brown
-            +scale(1)
-            +opacity(1)
+            +scale(0.7)
+            +opacity(0)
             +transition(all .4s ease-out)
             +transition-property(opacity, -webkit-transform, transform)
           
@@ -306,6 +306,10 @@
               :width 100%
               :height $baseline * 5
               +gradient(rgba(255, 251, 246, 0), rgba(255, 251, 246, 1))
+            
+            &.active
+              +scale(1)
+              +opacity(1)
             
             &.ng-leave
               +opacity(1)

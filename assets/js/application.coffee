@@ -9,6 +9,7 @@ ROI.value 'duScrollGreedy', true
 ROI.value 'duScrollDuration', 2000
 
 ROI.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window)->
+  $scope.active = true
   $scope.whyClicksGoDown = false
   $scope.whyBudgetGoDown = false
   $scope.whyCommunicationsGoDown = false

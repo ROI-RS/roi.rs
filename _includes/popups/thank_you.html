@@ -1,4 +1,4 @@
-<div class="popup" ng-if="get('showThankYou')">
+<div class="popup" ng-if="get('showThankYou')" ng-class="{active: get('active')}">
   <a class="close" ng-click="set('showThankYou', false)">{% include icons/close.svg %}</a>
   {% include logo.html %}
   <section class="small">

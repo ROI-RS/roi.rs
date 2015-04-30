@@ -1,4 +1,4 @@
-<div class="popup" ng-if="get('showLogin')" ng-controller="LoginFormCtrl">
+<div class="popup" ng-if="get('showLogin')" ng-class="{active: get('active')}" ng-controller="LoginFormCtrl">
   <a class="close" ng-click="set('showLogin', false)">{% include icons/close.svg %}</a>
   <section>
     <div>
