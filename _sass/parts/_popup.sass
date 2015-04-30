@@ -1,0 +1,310 @@
+/* popup
+
+@-webkit-keyframes loading
+  0%
+    +opacity(1)
+  
+  50%
+    +opacity(0.1)
+  
+  100%
+    +opacity(1)
+
+@-moz-keyframes loading
+  0%
+    +opacity(1)
+  
+  50%
+    +opacity(0.1)
+  
+  100%
+    +opacity(1)
+
+@-ms-keyframes loading
+  0%
+    +opacity(1)
+  
+  50%
+    +opacity(0.1)
+  
+  100%
+    +opacity(1)
+
+@-o-keyframes loading
+  0%
+    +opacity(1)
+  
+  50%
+    +opacity(0.1)
+  
+  100%
+    +opacity(1)
+
+@keyframes loading
+  0%
+    +opacity(1)
+  
+  50%
+    +opacity(0.1)
+  
+  100%
+    +opacity(1)
+
+body > .popup
+  +absoluted
+  :z-index 100
+  :background rgba(0, 0, 0, 0.9)
+  +scale(0.7)
+  +opacity(0)
+  :visibility hidden
+  +transition(all .5s ease-out)
+  +transition-property(opacity, -webkit-transform, transform, visibility)
+  
+  > .close
+    :position absolute
+    :z-index 1
+    :width $baseline * 1.5
+    :height $baseline * 1.5
+    :top $baseline * 1.5
+    :right $baseline * 1.5
+    +hover-opacity
+    
+    > svg
+      :width 100%
+      :height 100%
+      
+      path
+        :fill $grey
+
+  > h1
+    :position absolute
+    :width $logo
+    :height $baseline * 1.5
+    :left 50%
+    :top $baseline * 1.5
+    :margin
+      :left -$logo / 2
+
+    > a
+      :display block
+      :width 100%
+      :height 100%
+      +hover-opacity
+
+      > svg
+        +inline-block
+        :width 100%
+        :height 100%
+
+        path
+          :fill $grey
+
+        & + span
+          :margin
+            :top -$baseline * 1.5
+
+      > span
+        :width 100%
+        :height 100%
+        :display block
+        :visibility hidden
+        +indented
+  
+  > section
+    +absoluted
+    :overflow auto
+    :overflow overlay
+    
+    > div
+      +absoluted
+      :min-height $ninesixty_gutter_width * 52
+      
+      > section
+        :position absolute
+        :top 50%
+        :left 0
+        :width 100%
+        :height $baseline * 3
+        :margin
+          :top -$baseline * 1.5
+        :text-align center
+        
+        > h2
+          :font
+            :size $baseline * 1.4
+          :line-height $baseline * 1.5
+          :color $yellow
+        
+        > p
+          :line-height $baseline * 1.5
+          :font
+            :size $baseline * 1.2
+          :color $grey
+
+      > form
+        :position absolute
+        :top 50%
+        :left 50%
+        :margin
+          :left -$ninesixty_gutter_width * 20
+          :top -$ninesixty_gutter_width * 26
+        :width $ninesixty_gutter_width * 40
+        :height $ninesixty_gutter_width * 52
+        :padding
+          :top $baseline * 3
+          :bottom $baseline * 3
+        :line-height $baseline
+        :text-align center
+
+        > h1
+          +grid-container($logo)
+          :height $baseline * 1.5
+
+          > a
+            :display block
+            :width 100%
+            :height 100%
+            +hover-opacity
+  
+            > svg
+              +inline-block
+              :width 100%
+              :height 100%
+    
+              path
+                :fill $yellow
+    
+              & + span
+                :margin
+                  :top -$baseline * 1.5
+  
+            > span
+              :width 100%
+              :height 100%
+              :display block
+              :visibility hidden
+              +indented
+
+          & + *
+            :margin
+              :top $baseline * 2
+
+        > label, > p > a
+          :cursor pointer
+          :display block
+          :height $baseline * 1.5
+          :line-height $baseline * 1.5
+          :font
+            :size $baseline * 0.7
+          :color $grey
+
+        > p
+          > a
+            +inline-block
+            +inverse-hover-underline
+  
+          & + *
+            :margin
+              :top $baseline * 2
+
+        > input:not([type=submit]), > textarea
+          :display block
+          :background none
+          :color $white
+          :width 100%
+          :height $baseline * 3
+          :padding
+            :top $baseline * 0.6
+            :top calc(#{$baseline * 0.6} - 1px)
+            :bottom $baseline * 0.6
+            :bottom calc(#{$baseline * 0.6} - 1px)
+            :left $ninesixty_gutter_width * 2
+            :left calc(#{$ninesixty_gutter_width * 2} - 1px)
+            :right $ninesixty_gutter_width * 2
+            :right calc(#{$ninesixty_gutter_width * 2} - 1px)
+          :line-height $baseline * 1.8
+          :font
+            :size $baseline * 1.2
+          :border 1px solid $grey
+          :text-align center
+          +transition(all .4s ease-out)
+          +transition-property(border, background, color)
+  
+          &:focus
+            :border-color $white
+            :background $white
+            :color $brown
+
+          & + *
+            :margin
+              :top $baseline / 2
+        
+          & + footer
+            :margin
+              :top $baseline * 2
+      
+        > textarea
+          :height $baseline * 5.5
+
+        > footer
+          +children-inline
+          
+          > section
+            :position relative
+              
+            > input
+              :display block
+              :cursor pointer
+              :height $baseline * 3
+              :line-height $baseline
+              :color $brown
+              :font
+                :size $baseline * 1.2
+              :padding
+                :top $baseline
+                :bottom $baseline
+                :left $ninesixty_gutter_width * 4
+                :right $ninesixty_gutter_width * 4
+              :background $white
+              +border-radius($baseline * 1.5)
+              +hover-opacity
+              +transition(all .4s ease-out)
+              +transition-property(opacity, color)
+            
+            > svg
+              :position absolute
+              :z-index -1
+              :width 100%
+              :height 80%
+              :left 0
+              :top 10%
+              +opacity(0)
+              +transition(opacity .4s ease-out)
+              
+              path
+                :fill $brown
+            
+            &.busy
+              > input
+                :color $white
+              
+              > svg
+                +opacity(1)
+                :z-index 3
+                +animation(loading 1.5s linear infinite .2s)
+    
+    &.big > div
+      :min-height $ninesixty_gutter_width * 83
+      
+      > form
+        :margin
+          :top -$ninesixty_gutter_width * 41.5
+        :height $ninesixty_gutter_width * 83
+    
+    &.small > div
+      :min-height $baseline * 3
+  
+  &.active
+    +scale(1)
+    +opacity(1)
+    :visibility visible

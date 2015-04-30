@@ -1,0 +1,67 @@
+<section ng-class="{active: get('whyBudgetGoDown')}">
+  <a class="close" ng-click="set('whyBudgetGoDown', false)">{% include icons/close.svg %}</a>
+  <h3>Если оборот вырос на 5,2%, почему же снизился доход?</h3>
+  <p>
+    Кто-то из менеджеров по продажам стал давать слишком большие скидки,<br />
+    стараясь выполнить план по количеству продаж.
+  </p>
+  <p><span>Возможно, стоит пересмотреть систему KPI у продажников?</span></p>
+  <table class="auto">
+    <tr class="grey">
+      <td class="employee">Сотрудник</td>
+      <td class="contracts">Контракты</td>
+      <td class="payments">Оплаты</td>
+      <td class="downloads">Отгрузки</td>
+      <td class="sum">Сумма</td>
+      <td class="discount">Средняя скидка</td>
+    </tr>
+    <tr class="head">
+      <td class="employee">Аклимов Артур</td>
+      <td class="contracts"><span class="plus">131.25%</span></td>
+      <td class="payments"><span class="plus">160.63%</span></td>
+      <td class="downloads"><span class="plus">140.00%</span></td>
+      <td class="sum"><span class="plus">132.19%</span></td>
+      <td class="discount"><span class="minus">215.56%</span></td>
+    </tr>
+    <tr>
+      <td class="employee">Октябрь 2014</td>
+      <td class="contracts">16</td>
+      <td class="payments">11</td>
+      <td class="downloads">10</td>
+      <td class="sum">15 375 483 р</td>
+      <td class="discount">4.50%</td>
+    </tr>
+    <tr>
+      <td class="employee">Ноябрь 2014</td>
+      <td class="contracts">21</td>
+      <td class="payments">17</td>
+      <td class="downloads">14</td>
+      <td class="sum">20 328 210 р</td>
+      <td class="discount">9.70%</td>
+    </tr>
+    <tr class="head">
+      <td class="employee">Незалежная Мария</td>
+      <td class="contracts"><span class="minus">16.67%</span></td>
+      <td class="payments"><span class="minus">9.47%</span></td>
+      <td class="downloads"><span class="plus">110.00%</span></td>
+      <td class="sum"><span class="plus">104.16%</span></td>
+      <td class="discount"><span class="plus">1.82%</span></td>
+    </tr>
+    <tr>
+      <td class="employee">Октябрь 2014</td>
+      <td class="contracts">14</td>
+      <td class="payments">11</td>
+      <td class="downloads">10</td>
+      <td class="sum">13 560 000 р</td>
+      <td class="discount">5.60%</td>
+    </tr>
+    <tr>
+      <td class="employee">Ноябрь 2014</td>
+      <td class="contracts">12</td>
+      <td class="payments">10</td>
+      <td class="downloads">11</td>
+      <td class="sum">14 124 000 р</td>
+      <td class="discount">5.50%</td>
+    </tr>
+  </table>
+</section>

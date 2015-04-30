@@ -1,0 +1,31 @@
+<div class="popup" ng-class="{active: get('showLogin')}" ng-controller="LoginFormCtrl">
+  <a class="close" ng-click="set('showLogin', false)">{% include icons/close.svg %}</a>
+  <section>
+    <div>
+      <form name="loginForm" ng-submit="send(login)">
+        {% include logo.html %}
+        <label for="email">Электронная почта</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          ng-model="login.email"
+        />
+        <label for="password">Пароль</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          ng-model="login.password"
+        />
+        <p><a href="#">Забыли пароль?</a></p>
+        <footer>
+          <section ng-class="{busy: busy}">
+            <input type="submit" value="Войти" />
+            {% include icons/logo_single.svg %}
+          </section>
+        </footer>
+      </form>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,233 @@
+/* steps
+
+body > .steps-wrapper > .steps-top-wrapper
+  > .steps-middle-wrapper
+    > .steps-bottom-wrapper
+      > .steps
+        :position absolute
+        :z-index 70
+        :line-height $baseline
+        :height $baseline * 19
+        :top 50%
+        :right $ninesixty_gutter_width * 4
+        :margin
+          :top -$baseline * 9.5
+        :text-align right
+        +opacity(0)
+        +translate-x(300%)
+        +transition(all .5s ease-out)
+        +transition-property(opacity, -webkit-transform, transform)
+  
+        > li
+          :position relative
+          :height $baseline * 2.5
+          :padding
+            :top $baseline * 0.05
+            :bottom $baseline * 0.05
+          +children-inline
+  
+          > span
+            :margin
+              :top $baseline * 0.2
+              :bottom $baseline * 0.2
+            :font
+              :size $baseline * 0.9
+            +scale(1)
+            +opacity(1)
+            :visibility visible
+            :color $grey
+            +transition(all .5s ease-out)
+            +transition-property(opacity, -webkit-transform, transform, visibility)
+    
+            & + *
+              :margin
+                :left $ninesixty_gutter_width
+  
+          > a
+            :text-align center
+            :width $baseline * 2.4
+            :height $baseline * 2.4
+            :line-height $baseline * 2.4
+            :line-height calc(#{$baseline * 2.4} - 2px)
+            :color $grey
+            :text-indent -1px
+            :background $white
+            :border 1px solid $white
+            +border-radius($baseline * 1.2)
+            +transition(all .5s ease-out)
+            +transition-property(background, border, color)
+    
+          &:before
+            :display none
+            :content ''
+            :position absolute
+            :width 1px
+            :height $baseline * 2.5
+            :background $white
+            :right $baseline * 1.2
+            :top -$baseline * 3.05
+            +transition(background .5s ease-out)
+          
+          & + *
+            :margin
+              :top $baseline * 3
+
+            &:before
+              :display block
+    
+        &.active
+          +opacity(1)
+          +translate-x(0)
+    
+          > .step1, > .step2, > .step3
+            > span
+              +scale(1)
+              +opacity(1)
+              :visibility visible
+              :color $grey
+
+            > a
+              :border-color $white
+              :background $white
+              :color $grey
+              
+            &:before
+              :background $white
+    
+          > .step4
+            > span
+              +scale(1)
+              +opacity(1)
+              :visibility visible
+              :color $white
+
+            > a
+              :border-color $white
+              :background $white
+              :color $brown
+              
+            &:before
+              :background $white
+    
+      &.active > .steps
+        +opacity(1)
+        +translate-x(0)
+    
+        > .step1, > .step2
+          > span
+            +scale(1)
+            +opacity(1)
+            :visibility visible
+            :color $grey
+
+          > a
+            :border-color $white
+            :background $white
+            :color $grey
+              
+          &:before
+            :background $white
+    
+        > .step3
+          > span
+            +scale(1)
+            +opacity(1)
+            :visibility visible
+            :color $white
+
+          > a
+            :border-color $white
+            :background $white
+            :color $brown
+              
+          &:before
+            :background $white
+
+          & ~ *
+            > span
+              +scale(0)
+              +opacity(0)
+              :visibility hidden
+
+            > a
+              :color $grey
+              :background none
+              :border-color $grey
+
+            &:before
+              :background $grey
+    
+    &.active > .steps-bottom-wrapper > .steps
+      +opacity(1)
+      +translate-x(0)
+    
+      > .step1
+        > span
+          +scale(1)
+          +opacity(1)
+          :visibility visible
+          :color $grey
+
+        > a
+          :border-color $white
+          :background $white
+          :color $grey
+    
+      > .step2
+        > span
+          +scale(1)
+          +opacity(1)
+          :visibility visible
+          :color $white
+
+        > a
+          :border-color $white
+          :background $white
+          :color $brown
+        
+        &:before
+          :background $white
+
+        & ~ *
+          > span
+            +scale(0)
+            +opacity(0)
+            :visibility hidden
+
+          > a
+            :color $grey
+            :background none
+            :border-color $grey
+
+          &:before
+            :background $grey
+    
+  &.active > .steps-middle-wrapper > .steps-bottom-wrapper > .steps
+    +opacity(1)
+    +translate-x(0)
+    
+    > .step1
+      > span
+        +scale(1)
+        +opacity(1)
+        :visibility visible
+        :color $white
+
+      > a
+        :border-color $white
+        :background $white
+        :color $brown
+
+      & ~ *
+        > span
+          +scale(0)
+          +opacity(0)
+          :visibility hidden
+
+        > a
+          :color $grey
+          :background none
+          :border-color $grey
+
+        &:before
+          :background $grey

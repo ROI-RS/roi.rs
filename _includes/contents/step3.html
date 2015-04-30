@@ -1,0 +1,73 @@
+<div class="step third" id="step3" style="background-image: url({{"/assets/images/backgrounds/step3.jpg" | prepend: site.baseurl }});">
+  <section>
+    <h2 id="step3-header1" du-scrollspy="step3-header1" du-spy-context offset="//getOffset()//">
+      {% include icons/details.svg %}
+      <span>
+        Детализация каждого этапа<br />
+        воронки на стороне бизнеса
+      </span>
+    </h2>
+    <p id="step3-text1" du-scrollspy="step3-text1" du-spy-context offset="//getOffset()//">Выясняем, на каких этапах теряются клиенты и прибыль.</p>
+    <div class="funnels">
+      <ul>
+        <li id="step3-funnels1" du-scrollspy="step3-funnels1" du-spy-context offset="//getOffset()//">
+          <ul class="cut-top">
+            <li>
+              <span>Контракты</span>
+              <p>149</p>
+              <b>76% — конверсия в оплату</b>
+              <i class="minus" du-scrollspy="step3-funnels1" du-spy-context offset="//getOffset() / 2//">6.0%</i>
+            </li>
+            <li>
+              <span>Оплаченные контракты</span>
+              <p>113</p>
+              <b>1 340 000 р — средний чек</b>
+              <i class="minus" du-scrollspy="step3-funnels1" du-spy-context offset="//getOffset() / 2 - 50//">3.4%</i>
+            </li>
+            <li>
+              <span>Оборот</span>
+              <p>151 420 000<span> р</span></p>
+              <b>4,01% — маржинальность</b>
+              <i class="plus" du-scrollspy="step3-funnels1" du-spy-context offset="//getOffset() / 2 - 100//">5.2%</i>
+            </li>
+            <li>
+              <span>Доход</span>
+              <p>6 056 800<span> р</span></p>
+              <i class="minus" du-scrollspy="step3-funnels1" du-spy-context offset="//getOffset() / 2 - 150//">6.0%</i>
+              <div class="button" du-scrollspy="step3-funnels1" du-spy-context offset="//getOffset() / 2 - 175//">
+                <a ng-click="set('whyBudgetGoDown', true)"><span>Почему так?</span></a>
+              </div>
+            </li>
+            <li class="orange">
+              <span>ROI</span>
+              <p>398%</p>
+              <i class="minus" du-scrollspy="step3-funnels1" du-spy-context offset="//getOffset() / 2 - 200//">11.6%</i>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      {% include popups/why_budget_go_down.html %}
+      <aside class="far bigest">
+        <h3 id="step3-header2" du-scrollspy="step3-header2" du-spy-context offset="//getOffset()//">
+          Строим индивидуальную<br />
+          отчетность, которая помогает<br />
+          оценить эффективность<br />
+          бизнес-процессов:
+        </h3>
+        <ul class="list">
+          <li id="step3-list1" du-scrollspy="step3-list1" du-spy-context offset="//getOffset()//">
+            сколько звонков в месяц теряет колл-центр?
+          </li>
+          <li id="step3-list2" du-scrollspy="step3-list2" du-spy-context offset="//getOffset()//">
+            какая модель авто имеет<br />
+            самый высокий показатель ROI?
+          </li>
+          <li id="step3-list3" du-scrollspy="step3-list3" du-spy-context offset="//getOffset()//">
+            как можно улучшить показатели<br />
+            отдела продаж?
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</div>

@@ -1,11 +1,6 @@
 <header>
   <section>
-    <h1>
-      <a href="/">
-        {% include icons/logo.svg %}
-        <span>{{site.title}}</span>
-      </a>
-    </h1>
+    {% include logo.html %}
     <nav>
       <a href="callto:+74956486639">
         {% include icons/phone.svg %}
@@ -23,7 +18,7 @@
         {% include icons/connect.svg %}
         <span>Подключить</span>
       </a>
-      <a href="#">
+      <a href="#" ng-click="showLogin = !showLogin">
         {% include icons/login.svg %}
         <span>Вход для клиентов</span>
       </a>

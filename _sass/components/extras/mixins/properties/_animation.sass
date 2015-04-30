@@ -1,12 +1,15 @@
 /* animation
 
-= animation
-  :display block
-  &[hidden]
-    :display none
+= animation($value)
+  :-webkit-animation $value
+  :-moz-animation $value
+  :-ms-animation $value
+  :-o-animation $value
+  :animation $value
 
-= animation-height
-  +animation
-  :overflow hidden
-  &[hidden]
-    :height 0
+= animation-direction($value)
+  :-webkit-animation-direction $value
+  :-moz-animation-direction $value
+  :-ms-animation-direction $value
+  :-o-animation-direction $value
+  :animation-direction $value
