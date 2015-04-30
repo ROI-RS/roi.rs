@@ -84,6 +84,7 @@
             :color $brown
             +scale(0.7)
             +opacity(0)
+            :visibility hidden
             +transition(all .4s ease-out)
             +transition-property(opacity, -webkit-transform, transform)
           
@@ -310,6 +311,7 @@
             &.active
               +scale(1)
               +opacity(1)
+              :visibility visible
             
             &.ng-leave
               +opacity(1)
