@@ -54,11 +54,10 @@ body > .popup
   +absoluted
   :z-index 100
   :background rgba(0, 0, 0, 0.9)
-  +scale(0.7)
-  +opacity(0)
-  :visibility hidden
+  +scale(1)
+  +opacity(1)
   +transition(all .5s ease-out)
-  +transition-property(opacity, -webkit-transform, transform, visibility)
+  +transition-property(opacity, -webkit-transform, transform)
   
   > .close
     :position absolute
@@ -356,7 +355,18 @@ body > .popup
     &.small > div
       :min-height $baseline * 3
   
-  &.active
-    +scale(1)
+  &.ng-leave
     +opacity(1)
-    :visibility visible
+    +scale(1)
+    
+    &.ng-leave-active
+      +opacity(0)
+      +scale(0.7)
+
+  &.ng-enter
+    +scale(0.7)
+    +opacity(0)
+  
+    &.ng-enter-active
+      +opacity(1)
+      +scale(1)

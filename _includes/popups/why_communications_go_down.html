@@ -1,4 +1,4 @@
-<section ng-class="{active: get('whyCommunicationsGoDown')}">
+<section ng-if="get('whyCommunicationsGoDown')">
   <a class="close" ng-click="set('whyCommunicationsGoDown', false)">{% include icons/close.svg %}</a>
   <h3>
     <span>Хорошо. С кликами разобрались.</span>

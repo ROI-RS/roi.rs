@@ -1,7 +1,7 @@
 ---
 ---
 
-ROI = angular.module 'ROI', ['duScroll'], ($interpolateProvider)->
+ROI = angular.module 'ROI', ['duScroll', 'ngAnimate'], ($interpolateProvider)->
   $interpolateProvider.startSymbol('//')
   $interpolateProvider.endSymbol('//')
 

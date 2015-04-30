@@ -82,11 +82,10 @@
             :background $light_yellow
             :padding $ninesixty_gutter_width * 4
             :color $brown
-            +scale(0.7)
-            +opacity(0)
-            :visibility hidden
+            +scale(1)
+            +opacity(1)
             +transition(all .4s ease-out)
-            +transition-property(opacity, -webkit-transform, transform, visibility)
+            +transition-property(opacity, -webkit-transform, transform)
           
             > .close
               :position absolute
@@ -307,11 +306,22 @@
               :width 100%
               :height $baseline * 5
               +gradient(rgba(255, 251, 246, 0), rgba(255, 251, 246, 1))
-          
-            &.active
-              +scale(1)
+            
+            &.ng-leave
               +opacity(1)
-              :visibility visible
+              +scale(1)
+              
+              &.ng-leave-active
+                +opacity(0)
+                +scale(0.7)
+            
+            &.ng-enter
+              +scale(0.7)
+              +opacity(0)
+              
+              &.ng-enter-active
+                +opacity(1)
+                +scale(1)
         
           > ul
             +children-inline

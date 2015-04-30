@@ -1,4 +1,4 @@
-<section ng-class="{active: get('whyBudgetGoDown')}">
+<section ng-if="get('whyBudgetGoDown')">
   <a class="close" ng-click="set('whyBudgetGoDown', false)">{% include icons/close.svg %}</a>
   <h3>Если оборот вырос на 5,2%, почему же снизился доход?</h3>
   <p>

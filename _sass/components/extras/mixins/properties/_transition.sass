@@ -34,3 +34,10 @@ $base_transition: all .25s ease-in-out !default
     :-o-transition-property $value, $value2, $value3, $value4
     :-ms-transition-property $value, $value2, $value3, $value4
     :transition-property $value, $value2, $value3, $value4
+
+= transition-duration($value: $base_transition_duration)
+  :-webkit-transition-duration $value
+  :-moz-transition-duration $value
+  :-o-transition-duration $value
+  :-ms-transition-duration $value
+  :transition-duration $value

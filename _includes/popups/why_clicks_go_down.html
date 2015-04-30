@@ -1,4 +1,4 @@
-<section ng-class="{active: get('whyClicksGoDown')}">
+<section ng-if="get('whyClicksGoDown')">
   <a class="close" ng-click="set('whyClicksGoDown', false)">{% include icons/close.svg %}</a>
   <h3>Почему же клики упали на 7,3% при росте бюджета?</h3>
   <p>
