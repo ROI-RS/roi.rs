@@ -5,23 +5,34 @@
       <form name="loginForm" ng-submit="send(login)">
         {% include logo.html %}
         <label for="email">Электронная почта</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          ng-model="login.email"
-        />
+        <div class="input">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="example@roi.rs"
+            ng-model="login.email"
+            ng-required="true"
+            ng-disabled="get('busy')"
+          />
+          {% include icons/success.svg %}
+        </div>
         <label for="password">Пароль</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          ng-model="login.password"
-        />
+        <div class="input">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            ng-model="login.password"
+            ng-required="true"
+            ng-disabled="get('busy')"
+          />
+          {% include icons/success.svg %}
+        </div>
         <p><a href="#">Забыли пароль?</a></p>
         <footer>
-          <section ng-class="{busy: busy}">
-            <input type="submit" value="Войти" />
+          <section ng-class="{busy: get('busy')}">
+            <input type="submit" value="Войти" ng-disabled="loginForm.$invalid" />
             {% include icons/logo_single.svg %}
           </section>
         </footer>

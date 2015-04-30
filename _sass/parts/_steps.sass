@@ -25,37 +25,41 @@ body > .steps-wrapper > .steps-top-wrapper
             :top $baseline * 0.05
             :bottom $baseline * 0.05
           +children-inline
-  
-          > span
-            :margin
-              :top $baseline * 0.2
-              :bottom $baseline * 0.2
-            :font
-              :size $baseline * 0.9
-            +scale(1)
-            +opacity(1)
-            :visibility visible
-            :color $grey
-            +transition(all .5s ease-out)
-            +transition-property(opacity, -webkit-transform, transform, visibility)
-    
-            & + *
-              :margin
-                :left $ninesixty_gutter_width
-  
+          
           > a
-            :text-align center
-            :width $baseline * 2.4
-            :height $baseline * 2.4
-            :line-height $baseline * 2.4
-            :line-height calc(#{$baseline * 2.4} - 2px)
-            :color $grey
-            :text-indent -1px
-            :background $white
-            :border 1px solid $white
-            +border-radius($baseline * 1.2)
-            +transition(all .5s ease-out)
-            +transition-property(background, border, color)
+            +children-inline
+            
+            > span
+              :margin
+                :top $baseline * 0.3
+                :bottom $baseline * 0.3
+              :font
+                :size $baseline * 0.7
+              :line-height $baseline * 0.8
+              +scale(1)
+              +opacity(1)
+              :visibility visible
+              :color $grey
+              +transition(all .5s ease-out)
+              +transition-property(opacity, -webkit-transform, transform, visibility)
+    
+              & + *
+                :margin
+                  :left $ninesixty_gutter_width
+  
+            > b
+              :text-align center
+              :width $baseline * 2.4
+              :height $baseline * 2.4
+              :line-height $baseline * 2.4
+              :line-height calc(#{$baseline * 2.4} - 2px)
+              :color $grey
+              :text-indent -1px
+              :background $white
+              :border 1px solid $white
+              +border-radius($baseline * 1.2)
+              +transition(all .5s ease-out)
+              +transition-property(background, border, color)
     
           &:before
             :display none
@@ -80,31 +84,33 @@ body > .steps-wrapper > .steps-top-wrapper
           +translate-x(0)
     
           > .step1, > .step2, > .step3
-            > span
-              +scale(1)
-              +opacity(1)
-              :visibility visible
-              :color $grey
-
             > a
-              :border-color $white
-              :background $white
-              :color $grey
+              > span
+                +scale(1)
+                +opacity(0.5)
+                :visibility visible
+                :color $grey
+
+              > b
+                :border-color $white
+                :background $white
+                :color $grey
               
             &:before
               :background $white
     
           > .step4
-            > span
-              +scale(1)
-              +opacity(1)
-              :visibility visible
-              :color $white
-
             > a
-              :border-color $white
-              :background $white
-              :color $brown
+              > span
+                +scale(1)
+                +opacity(1)
+                :visibility visible
+                :color $white
+
+              > b
+                :border-color $white
+                :background $white
+                :color $brown
               
             &:before
               :background $white
@@ -114,45 +120,48 @@ body > .steps-wrapper > .steps-top-wrapper
         +translate-x(0)
     
         > .step1, > .step2
-          > span
-            +scale(1)
-            +opacity(1)
-            :visibility visible
-            :color $grey
-
           > a
-            :border-color $white
-            :background $white
-            :color $grey
+            > span
+              +scale(1)
+              +opacity(0.5)
+              :visibility visible
+              :color $grey
+
+            > b
+              :border-color $white
+              :background $white
+              :color $grey
               
           &:before
             :background $white
     
         > .step3
-          > span
-            +scale(1)
-            +opacity(1)
-            :visibility visible
-            :color $white
-
           > a
-            :border-color $white
-            :background $white
-            :color $brown
+            > span
+              +scale(1)
+              +opacity(1)
+              :visibility visible
+              :color $white
+
+            > b
+              :border-color $white
+              :background $white
+              :color $brown
               
           &:before
             :background $white
 
           & ~ *
-            > span
-              +scale(0)
-              +opacity(0)
-              :visibility hidden
-
             > a
-              :color $grey
-              :background none
-              :border-color $grey
+              > span
+                +scale(0)
+                +opacity(0)
+                :visibility hidden
+
+              > b
+                :color $grey
+                :background none
+                :border-color $grey
 
             &:before
               :background $grey
@@ -162,42 +171,45 @@ body > .steps-wrapper > .steps-top-wrapper
       +translate-x(0)
     
       > .step1
-        > span
-          +scale(1)
-          +opacity(1)
-          :visibility visible
-          :color $grey
-
         > a
-          :border-color $white
-          :background $white
-          :color $grey
+          > span
+            +scale(1)
+            +opacity(0.5)
+            :visibility visible
+            :color $grey
+
+          > b
+            :border-color $white
+            :background $white
+            :color $grey
     
       > .step2
-        > span
-          +scale(1)
-          +opacity(1)
-          :visibility visible
-          :color $white
-
         > a
-          :border-color $white
-          :background $white
-          :color $brown
+          > span
+            +scale(1)
+            +opacity(1)
+            :visibility visible
+            :color $white
+
+          > b
+            :border-color $white
+            :background $white
+            :color $brown
         
         &:before
           :background $white
 
         & ~ *
-          > span
-            +scale(0)
-            +opacity(0)
-            :visibility hidden
-
           > a
-            :color $grey
-            :background none
-            :border-color $grey
+            > span
+              +scale(0)
+              +opacity(0)
+              :visibility hidden
+
+            > b
+              :color $grey
+              :background none
+              :border-color $grey
 
           &:before
             :background $grey
@@ -207,27 +219,29 @@ body > .steps-wrapper > .steps-top-wrapper
     +translate-x(0)
     
     > .step1
-      > span
-        +scale(1)
-        +opacity(1)
-        :visibility visible
-        :color $white
-
       > a
-        :border-color $white
-        :background $white
-        :color $brown
+        > span
+          +scale(1)
+          +opacity(1)
+          :visibility visible
+          :color $white
+
+        > b
+          :border-color $white
+          :background $white
+          :color $brown
 
       & ~ *
-        > span
-          +scale(0)
-          +opacity(0)
-          :visibility hidden
-
         > a
-          :color $grey
-          :background none
-          :border-color $grey
+          > span
+            +scale(0)
+            +opacity(0)
+            :visibility hidden
+
+          > b
+            :color $grey
+            :background none
+            :border-color $grey
 
         &:before
           :background $grey
