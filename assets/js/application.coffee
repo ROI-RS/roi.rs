@@ -24,6 +24,23 @@ ROI.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window)->
   $scope.getOffset = (plus = 0)-> offset + plus - 25
 ]
 
+ROI.directive 'clickOutsideOrClose', ['$document', '$timeout', ($document, $timeout)->
+  scope:
+    fn: '&clickOutsideOrClose'
+  
+  link: (scope, element)->
+    close = element.find('a')
+    
+    $timeout ->
+      $document.bind 'click', (event)->
+        isClickedElementChildOfPopup = element[0].contains event.target
+        isClickedElementCloseOfPopup = close[0].contains event.target
+        if !isClickedElementChildOfPopup || isClickedElementCloseOfPopup
+          $document.unbind 'click'
+          scope.$apply scope.fn()
+]
+    
+
 ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $timeout)->
   $scope.setMessage = ->
     $scope.message =

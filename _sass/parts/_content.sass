@@ -78,7 +78,7 @@
             :top -$baseline / 4
             :bottom -$baseline / 4
             :left 0
-            :width $ninesixty_gutter_width * 72
+            :width $ninesixty_gutter_width * 85
             :background $light_yellow
             :padding $ninesixty_gutter_width * 4
             :color $brown
@@ -198,6 +198,12 @@
                       &:before
                         :border
                           :bottom $ninesixty_gutter_width * 0.6 solid $green
+                      
+                      &.inverse
+                        :color $red
+                        
+                        &:before
+                          :border-bottom-color $red
                   
                     &.minus
                       :color $red
@@ -205,6 +211,12 @@
                       &:before
                         :border
                           :top $ninesixty_gutter_width * 0.6 solid $red
+                      
+                      &.inverse
+                        :color $green
+                        
+                        &:before
+                          :border-top-color $green
                   
                     &.zero
                       :color $grey
@@ -462,6 +474,12 @@
                           :top $baseline * 0.1
                           :bottom $baseline * 0.1
                         :display block
+                        :border
+                          :bottom 1px dashed $white
+                        +transition(border-color .25s ease-out)
+                      
+                      &:hover > span
+                        :border-color $red
             
                   &.orange
                     :background $yellow

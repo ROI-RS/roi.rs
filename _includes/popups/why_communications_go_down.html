@@ -1,5 +1,5 @@
-<section ng-if="get('whyCommunicationsGoDown')" ng-class="{active: get('active')}">
-  <a class="close" ng-click="set('whyCommunicationsGoDown', false)">{% include icons/close.svg %}</a>
+<section ng-if="get('whyCommunicationsGoDown')" ng-class="{active: get('active')}" click-outside-or-close="set('whyCommunicationsGoDown', false)">
+  <a class="close">{% include icons/close.svg %}</a>
   <h3>
     <span>Хорошо. С кликами разобрались.</span>
     Но почему коммуникации упали на 9.3%?
@@ -24,15 +24,15 @@
       <td class="clicks"><span class="minus">15.10%</span></td>
       <td class="conversion"><span class="plus">2.76%</span></td>
       <td class="communication"><span class="minus">12.77%</span></td>
-      <td class="price"><span class="minus">6.26%</span></td>
+      <td class="price"><span class="minus inverse">6.26%</span></td>
     </tr>
     <tr>
       <td class="channels grey">01.10.13 — 31.10.13</td>
       <td class="budget">195 908</td>
-      <td class="clicks">9260</td>
+      <td class="clicks">9 260</td>
       <td class="conversion">2.90%</td>
       <td class="communication">269</td>
-      <td class="price">370</td>
+      <td class="price">730</td>
     </tr>
     <tr>
       <td class="channels grey">01.11.13 — 30.11.13</td>
@@ -48,7 +48,7 @@
       <td class="clicks"><span class="minus">23.60%</span></td>
       <td class="conversion"><span class="minus">34.04%</span></td>
       <td class="communication"><span class="minus">51.86%</span></td>
-      <td class="price"><span class="minus">57.16%</span></td>
+      <td class="price"><span class="plus inverse">57.16%</span></td>
     </tr>
     <tr>
       <td class="channels grey">01.10.13 — 31.10.13</td>

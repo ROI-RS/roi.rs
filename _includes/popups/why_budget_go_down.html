@@ -1,5 +1,5 @@
-<section ng-if="get('whyBudgetGoDown')" ng-class="{active: get('active')}">
-  <a class="close" ng-click="set('whyBudgetGoDown', false)">{% include icons/close.svg %}</a>
+<section ng-if="get('whyBudgetGoDown')" ng-class="{active: get('active')}" click-outside-or-close="set('whyBudgetGoDown', false)">
+  <a class="close">{% include icons/close.svg %}</a>
   <h3>Если оборот вырос на 5,2%, почему же снизился доход?</h3>
   <p>
     Кто-то из менеджеров по продажам стал давать слишком большие скидки,<br />

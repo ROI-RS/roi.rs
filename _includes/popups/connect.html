@@ -4,7 +4,7 @@
     <div>
       <form name="contactForm" ng-submit="send(message)">
         {% include logo.html %}
-        <label for="name">Ваше имя</label>
+        <label for="name">Ваше имя *</label>
         <div class="input">
           <input
             type="text"
@@ -23,10 +23,8 @@
             name="company"
             id="company"
             ng-model="message.company"
-            ng-required="true"
             ng-disabled="get('busy')"
           />
-          {% include icons/success.svg %}
         </div>
         <label for="phone">Номер телефона</label>
         <div class="input">
@@ -35,18 +33,15 @@
             name="phone"
             id="phone"
             ng-model="message.phone"
-            ng-required="true"
             ng-disabled="get('busy')"
           />
-          {% include icons/success.svg %}
         </div>
-        <label for="email">Адрес электронной почты</label>
+        <label for="email">Адрес электронной почты *</label>
         <div class="input">
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="example@roi.rs"
             ng-model="message.email"
             ng-required="true"
             ng-disabled="get('busy')"

@@ -1,5 +1,5 @@
-<section ng-if="get('whyClicksGoDown')" ng-class="{active: get('active')}">
-  <a class="close" ng-click="set('whyClicksGoDown', false)">{% include icons/close.svg %}</a>
+<section ng-if="get('whyClicksGoDown')" ng-class="{active: get('active')}" click-outside-or-close="set('whyClicksGoDown', false)">
+  <a class="close">{% include icons/close.svg %}</a>
   <h3>Почему же клики упали на 7,3% при росте бюджета?</h3>
   <p>
     Упал трафик по SEO. В отчете по позициям мы видим отрицательную<br />
