@@ -16,14 +16,14 @@ task :deploy do
     invoke 'git:clone'
     # invoke 'deploy:link_shared_paths'
     invoke 'bundle:install'
-    
+    queue 'bundle exec jekyll build'
     
     
     #Assets
-    queue 'bower install --force-latest'
-    queue 'coffee -c -b -o vendor/javascripts app/javascripts'
-    queue 'browserify vendor/javascripts/application.js --debug | exorcist public/javascripts/application.js.map > public/javascripts/application.js'
-    queue 'bundle exec compass compile'
-    queue 'gzip -r -k --best ./public'
+    # queue 'bower install --force-latest'
+    # queue 'coffee -c -b -o vendor/javascripts app/javascripts'
+    # queue 'browserify vendor/javascripts/application.js --debug | exorcist public/javascripts/application.js.map > public/javascripts/application.js'
+    # queue 'bundle exec compass compile'
+    # queue 'gzip -r -k --best ./public'
   end
 end
