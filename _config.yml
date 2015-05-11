@@ -2,8 +2,8 @@
 title: ROI-RS
 email: info@roi.rs
 description: 
-baseurl: "/roi.rs/" # the subpath of your site, e.g. /blog/
-url: "http://roi.rs" # the base hostname & protocol for your site
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "https://roi.rs" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
