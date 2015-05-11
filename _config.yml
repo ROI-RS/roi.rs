@@ -7,3 +7,4 @@ url: "http://roi.rs" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+exclude: ['vendor']
