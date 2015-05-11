@@ -17,7 +17,7 @@ task :deploy do
     # invoke 'deploy:link_shared_paths'
     invoke 'bundle:install'
     queue 'bundle exec jekyll build'
-    
+    queue 'gzip -r -k --best ./_site'
     
     #Assets
     # queue 'bower install --force-latest'
