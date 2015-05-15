@@ -56,7 +56,7 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
     url = ""
     for field, value of msg then url += "#{field}=#{encodeURIComponent(value)}&"
     url += "sbjs_current=#{encodeURIComponent(get_cookie 'sbjs_current')}"
-    $http.jsonp("http://umark.realto.be/?#{url}").success (uid)->
+    $http.jsonp("https://umark.roi.rs/?#{url}").success (uid)->
       $scope.setMessage()
       $scope.set('busy', false)
       $scope.set('showConnect', false)
