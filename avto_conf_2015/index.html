@@ -17,7 +17,7 @@ layout: conf
     </section>
     <b>30 июля 2015</b>
     <nav>
-      <a>Записаться</a>
+      <a href='#form'>Записаться</a>
     </nav>
     <span>Количество мест ограничено</span>
   </header>
@@ -126,7 +126,7 @@ layout: conf
         </span>
       </h2>
       <p>а также данные ведущих отраслевых площадок.</p>
-      <p>
+      <p id='form'>
         Для записи на конференцию
         <br />
         заполните форму, пожалуйста.
@@ -134,7 +134,7 @@ layout: conf
       <form name="confForm" ng-submit="send(message)">
         <section>
           <div>
-            <label for="name">Имя</label>
+            <label for="name">Имя*</label>
             <input
               type="text"
               name="name"
@@ -145,7 +145,7 @@ layout: conf
             />
           </div>
           <div>
-            <label for="email">Почта</label>
+            <label for="email">Почта*</label>
             <input
               type="email"
               name="email"
@@ -156,7 +156,7 @@ layout: conf
             />
           </div>
           <div>
-            <label for="company">Компания</label>
+            <label for="company">Компания*</label>
             <input
               type="text"
               name="company"
@@ -167,7 +167,7 @@ layout: conf
             />
           </div>
           <div>
-            <label for="position">Должность</label>
+            <label for="position">Должность*</label>
             <input
               type="text"
               name="position"
