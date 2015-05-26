@@ -16,6 +16,7 @@ ROI.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window)->
   $scope.showLogin = false
   $scope.showConnect = false
   $scope.showThankYou = false
+  $scope.confThankYou = false
   $scope.busy = false
   $scope.get = (name)-> $scope[name]
   $scope.set = (name, state)-> $scope[name] = state
@@ -85,6 +86,7 @@ ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $
     $http.jsonp("https://umarker.roi.rs/?#{url}").success (uid)->
       $scope.setMessage()
       $scope.set('busy', false)
+      $scope.set('confThankYou', true)
 ]
 
 ROI.controller 'LoginFormCtrl', ['$scope', '$timeout', ($scope, $timeout)->

@@ -238,9 +238,51 @@
       
         > form
           > section
+            :position relative
             :background #FAFCFC
-            :border 1px solid $light_grey
-          
+            :border 1px solid #BDC3C7
+            
+            > section
+              +absoluted
+              :background #FAFCFC
+              :padding $baseline * 3
+              :display none
+              
+              > div
+                :position absolute
+                :left $baseline * 3
+                :top 50%
+                :margin
+                  :top -$baseline * 5
+                :height $baseline * 10
+                
+                > h2
+                  :font
+                    :size $baseline * 1.8
+                  :line-height $baseline * 2
+                
+                  & + *
+                    :margin
+                      :top $baseline
+              
+                > h3
+                  :font
+                    :size $baseline * 1.2
+                  :line-height $baseline * 1.5
+                
+                  & + *
+                    :margin
+                      :top $baseline
+              
+                > p
+                  :color #666
+                  :font
+                    :size $baseline * 1.2
+                  :line-height $baseline * 1.5
+              
+              &.active
+                :display block
+            
             > div
               > label
                 :display block
@@ -267,14 +309,15 @@
               > textarea
                 :height $baseline * 6.5
           
-              & + *
+              & + div
                 :border-top 1px solid $light_grey
           
-            & + *
+            & ~ *
               :margin
                 :top $baseline * 2
           
           > input
+            :cursor pointer
             +inline-block
             :font
               :size $baseline * 1.2
@@ -288,4 +331,24 @@
             +transition(opacity .3s ease-out)
           
             &[disabled]
+              :cursor default
               +opacity(0.5)
+            
+            &.hidden
+              :display none
+          
+          > span
+            :display none
+            :font
+              :size $baseline * 1.2
+            :height $baseline * 3
+            :line-height calc(#{$baseline * 3} - 2px)
+            :padding
+              :left $ninesixty_gutter_width * 3
+              :right $ninesixty_gutter_width * 3
+            :background $white
+            :color #999
+            :border 1px solid #BDC3C7
+            
+            &.active
+              +inline-block
