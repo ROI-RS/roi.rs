@@ -85,7 +85,7 @@ $logo: $ninesixty_gutter_width * 11
         :top -$header
   
   > section
-    +gradient(rgba(23, 18, 14, 1), rgba(23, 18, 14, 0))
+    +transition(opacity .3s ease-out)
     
     > h1
       :width $logo
@@ -122,3 +122,16 @@ $logo: $ninesixty_gutter_width * 11
   & + *
     :margin
       :top -$header
+
+@media only screen and (max-width: 1024px)
+  #container > header
+    :margin
+      :left 0
+      :right 0
+    :padding
+      :left $ninesixty_gutter_width * 4
+      :right $ninesixty_gutter_width * 4
+    
+    > section > nav
+      +opacity(0)
+      :visibility hidden

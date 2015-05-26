@@ -38,7 +38,9 @@
             :width $baseline * 4
             :height $baseline * 4
             :left 0
-            :top 0
+            :top 50%
+            :margin
+              :top -$baseline * 2
             :border 2px solid $yellow
             +border-radius($baseline * 2)
         
@@ -543,7 +545,6 @@
                     :top 100%
                     :left 0
                     :background url(/assets/images/backgrounds/line.png) repeat-x $baseline * 0.3 bottom
-                    :background-image url(/roi.rs/assets/images/backgrounds/line.png)
                     +rotate(180)
           
                 &.cut-top
@@ -560,14 +561,13 @@
                     :top 0%
                     :left 0
                     :background url(/assets/images/backgrounds/line.png) repeat-x left top
-                    :background-image url(/roi.rs/assets/images/backgrounds/line.png)
         
               & + *
                 :margin
                   :left $ninesixty_gutter_width * 4
           
             &.active > li:first-child > ul
-              +opacity(0.5)
+              +opacity(0.15)
         
           > aside
             :position absolute
@@ -669,3 +669,40 @@
         :background -ms-linear-gradient(top, rgba(52,41,32,0) 0%, rgba(52,41,32,0.95) 75%, rgba(52,41,32,1) 100%)
         :background linear-gradient(to bottom, rgba(52,41,32,0) 0%, rgba(52,41,32,0.95) 75%, rgba(52,41,32,1) 100%)
         :filter progid:DXImageTransform.Microsoft.gradient(startColorstr='#00342920', endColorstr='#342920', GradientType=0)
+
+@media only screen and (max-width: 1024px)
+  #container > #steps > .step-wrapper > .step > section
+    :width $ninesixty_gutter_width * 64
+    
+    > h2, > p, > .funnels
+      :width $ninesixty_gutter_width * 48
+    
+    > p
+      span
+        :display block
+        
+        br
+          :display none
+    
+    > .funnels
+      > ul
+        > li + *
+          :margin
+            :left -$ninesixty_gutter_width * 20
+          
+        &.active > li:first-child
+          +opacity(0.15)
+          
+          > ul
+            +opacity(1)
+        
+        & ~ aside
+          :margin
+            :top $baseline * 2 !important
+      
+      > section
+        :width $ninesixty_gutter_width * 64
+        :left -$ninesixty_gutter_width * 8
+      
+      > aside
+        :position static

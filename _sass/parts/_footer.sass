@@ -1,5 +1,6 @@
 /* footer
 $footer: $baseline * 4.5
+$footer_big: $baseline * 7.5
 $logo_small: $ninesixty_gutter_width * 7.5
 
 #container > footer
@@ -120,3 +121,43 @@ $logo_small: $ninesixty_gutter_width * 7.5
   
   > div
     :text-align center
+
+@media only screen and (max-width: 1024px)
+  #container > footer
+    :height $footer_big
+    :margin
+      :top -$footer_big
+      :left 0
+      :right 0
+    :padding
+      :left $ninesixty_gutter_width * 4
+      :right $ninesixty_gutter_width * 4
+    
+    > section, > aside, > div
+      :height $footer_big
+      
+      & + *
+        :margin
+          :top -$footer_big
+    
+    > section
+      > h1, > p
+        :display block
+        :height ($footer_big - $baseline * 3) / 2
+        :line-height ($footer_big - $baseline * 4) / 2
+      
+      > h1 + *
+        :margin
+          :left 0
+    
+    > aside, > div
+      > nav
+        :height ($footer_big - $baseline * 3) / 2
+        :line-height ($footer_big - $baseline * 4) / 2
+    
+    > div
+      :text-align right
+      
+      > nav
+        :margin
+          :top ($footer_big - $baseline * 3) / 2
