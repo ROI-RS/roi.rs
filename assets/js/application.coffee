@@ -70,7 +70,7 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
 ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $timeout)->
   $scope.setMessage = ->
     $scope.message =
-      form: 0
+      form: 'conference'
       config: 28
       callback: 'JSON_CALLBACK'
       token: 'nQ7LBMohbPwy1tjLIw'
