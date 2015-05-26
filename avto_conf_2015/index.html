@@ -1,0 +1,195 @@
+---
+layout: conf
+---
+
+<div id="conf" ng-controller="ConfFormCtrl">
+  <header>
+    <p>
+      Закрытая конференция
+      <br />
+      для автодилеров и импортеров.
+    </p>
+    <section>
+      <div>
+        <p>Авторынок:</p>
+        <span>Автоматизация реальна</span>
+      </div>
+    </section>
+    <b>30 июля 2015</b>
+    <nav>
+      <a>Записаться</a>
+    </nav>
+    <span>Количество мест ограничено</span>
+  </header>
+  <p>Только для руководителей и сотрудников отдела маркетинга автодилеров и импортеров.</p>
+  <div class="program">
+    <section>
+      <h2>Программа</h2>
+      <ul>
+        <li>
+          <span>11:00 — 12:00</span>
+          <h3>Доклад Яндекса</h3>
+          <p>
+            Цифры по динамике спроса с ноября
+            <br />
+            2014 года. Статистика по изменению
+            <br />
+            цены клика, конкуренции в контексте.
+            <br />
+            Рекомендации по размещению
+            <br />
+            контекстной рекламы для дилеров.
+          </p>
+        </li>
+        <li>
+          <span>12:30 — 13:00</span>
+          <h3>Доклад Auto.ru</h3>
+          <p>
+            Ситуация на рынке новых авто.
+            <br />
+            Информация о продажах и спросе
+            <br />
+            в 2015 году, с детализацией по маркам.
+            <br />
+            Прогнозы на лето-осень 2015.
+          </p>
+        </li>
+        <li>
+          <span>12:30 — 13:00</span>
+          <h3>Доклад Auto.ru</h3>
+          <p>
+            Ситуация на рынке новых авто.
+            <br />
+            Информация о продажах и спросе
+            <br />
+            в 2015 году, с детализацией по маркам.
+            <br />
+            Прогнозы на лето-осень 2015.
+          </p>
+        </li>
+        <li>
+          <span>13:00 — 14:00</span>
+          <h3>Кофе-брейк</h3>
+        </li>
+        <li>
+          <span>14:00 — 16:00</span>
+          <h3>Кейс дилера «Независимость»</h3>
+          <p>
+            Полная автоматизация управления
+            <br />
+            интернет-маркетингом.
+            <br />
+            Все инструменты в одном кейсе.
+          </p>
+          <ul>
+            <li>Директор по маркетингу</li>
+            <li>Calltouch</li>
+            <li>Callbackhunter</li>
+            <li>RO!RS</li>
+            <li>K50</li>
+          </ul>
+          <i>Выступления по 20 минут.</i>
+        </li>
+        <li>
+          <span>16:40 — 17:10</span>
+          <h3>
+            Доклад «Рейтинг медийных
+            <br />
+            размещений в авто тематике»
+          </h3>
+          <p>
+            Самые эффективные медийные
+            <br />
+            размещения, с точки зрения конверсии
+            <br />
+            в звонок и ROI. Рейтинг за 2015 год,
+            <br />
+            по статистике CallTouch и RO!RS.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <aside>
+      <div class="icons"></div>
+      <p>
+        Будем обсуждать инструменты автоматизации
+        <br />
+        и аналитики в автомобильном сегменте,
+        <br />
+        кейс от ГК «Независимость»,
+      </p>
+      <h2>
+        <span>
+          РОСТ ПРОДАЖ НА ФОНЕ
+          <br />
+          ПАДАЮЩЕГО РЫНКА
+        </span>
+      </h2>
+      <p>а также данные ведущих отраслевых площадок.</p>
+      <p>
+        Для записи на конференцию
+        <br />
+        заполните форму, пожалуйста.
+      </p>
+      <form name="confForm" ng-submit="send(message)">
+        <section>
+          <div>
+            <label for="name">Имя</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              ng-model="message.name"
+              ng-required="true"
+              ng-disabled="get('busy')"
+            />
+          </div>
+          <div>
+            <label for="email">Почта</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              ng-model="message.email"
+              ng-required="true"
+              ng-disabled="get('busy')"
+            />
+          </div>
+          <div>
+            <label for="company">Компания</label>
+            <input
+              type="text"
+              name="company"
+              id="company"
+              ng-model="message.company"
+              ng-required="true"
+              ng-disabled="get('busy')"
+            />
+          </div>
+          <div>
+            <label for="position">Должность</label>
+            <input
+              type="text"
+              name="position"
+              id="position"
+              ng-model="message.position"
+              ng-required="true"
+              ng-disabled="get('busy')"
+            />
+          </div>
+          <div>
+            <label for="comment">Комментарий</label>
+            <textarea
+              name="comment"
+              id="comment"
+              ng-model="message.comment"
+              ng-disabled="get('busy')"
+            >
+            </textarea>
+          </div>
+        </section>
+        <input type="submit" value="Отправить заявку" ng-disabled="confForm.$invalid" />
+      </form>
+    </aside>
+  </div>
+</div>

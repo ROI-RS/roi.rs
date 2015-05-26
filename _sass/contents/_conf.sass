@@ -1,0 +1,273 @@
+/* conf
+
+#container > #conf
+  :background $white
+  :text-align center
+  
+  > header
+    :padding
+      :top $baseline * 2
+      :bottom $baseline * 4
+    :background url(/assets/images/backgrounds/conf.png) no-repeat center
+    +background-size(cover)
+    
+    > p
+      :font
+        :size $baseline * 1.4
+      :line-height $baseline * 1.5
+      
+      & + *
+        :margin
+          :top $baseline * 2
+    
+    > section
+      +children-inline
+      
+      > div
+        :width $ninesixty_gutter_width * 29
+        :height $baseline * 5
+        :text-align center
+        :border 1px solid $yellow
+        :padding
+          :top $baseline / 2
+          :bottom $baseline / 2
+      
+        > p
+          :line-height $baseline * 2
+          :font
+            :family "Lato Light", sans-serif
+            :size $baseline * 1.9
+          :text-transform uppercase
+      
+        > span
+          :line-height $baseline * 2
+          :font
+            :size $baseline * 0.9
+          :text-transform uppercase
+          :color $yellow
+      
+      & + *
+        :margin
+          :top $baseline * 2
+    
+    > b
+      :display block
+      :font
+        :size $baseline * 1.8
+        :weight normal
+      :line-height $baseline * 2
+      :color $yellow
+      
+      & + *
+        :margin
+          :top $baseline * 2
+    
+    > nav
+      +children-inline
+      
+      > a
+        :font
+          :size $baseline * 1.2
+        :line-height $baseline * 3
+        :border 1px solid $white
+        :padding
+          :left $ninesixty_gutter_width * 6
+          :right $ninesixty_gutter_width * 6
+      
+      & + *
+        :margin
+          :top $baseline / 2
+    
+    > span
+      :display block
+      :font
+        :size $baseline * 0.9
+      :color $light_grey
+  
+  > p
+    :height $baseline * 3
+    :line-height $baseline * 3
+    :font
+      :size $baseline * 1.2
+    :color #000
+    :background $light_grey
+  
+  > .program
+    +grid-container($ninesixty_gutter_width * 90)
+    :padding
+      :top $baseline * 2.5
+      :bottom $baseline * 5
+    :color #000
+    :text-align left
+    +children-inline
+    
+    > section
+      :width $ninesixty_gutter_width * 40
+      :padding $baseline
+      :border 1px solid $light_grey
+      :font
+        :size $baseline * 0.9
+      
+      > h2
+        :text-transform uppercase
+        
+        & + *
+          :margin
+            :top $baseline
+      
+      > ul
+        > li
+          > span
+            :display block
+            :color $grey
+            
+            & + *
+              :margin
+                :top $baseline / 2
+          
+          > h3
+            :font
+              :size $baseline * 1.2
+            :line-height $baseline * 1.5
+            
+            & + *
+              :margin
+                :top $baseline / 2
+          
+          > p + *
+            :margin
+              :top $baseline / 2
+          
+          > ul
+            > li
+              :position relative
+              :padding
+                :left $ninesixty_gutter_width * 2
+              
+              &:before
+                :content ''
+                :position absolute
+                :left ($baseline - $ninesixty_gutter_width * 0.8) / 2
+                :top ($baseline - $ninesixty_gutter_width * 0.6) / 2
+                :width $ninesixty_gutter_width * 0.6
+                :height $ninesixty_gutter_width * 0.6
+                :background $grey
+                +border-radius($ninesixty_gutter_width * 0.3)
+              
+              & + *
+                :margin
+                  :top $baseline / 2
+            
+            & + *
+              :margin
+                :top $baseline / 2
+          
+          > i
+            :display block
+            :color $grey
+            :font
+              :style normal
+          
+          & + *
+            :margin
+              :top $baseline * 1.25
+            :padding
+              :top $baseline * 1.25
+            :border
+              :top 1px solid $light_grey
+      
+      & + *
+        :margin
+          :left $ninesixty_gutter_width * 4
+    
+    > aside
+      :width $ninesixty_gutter_width * 46
+      :text
+        :align left
+      
+      > .icons
+        :height $baseline * 4
+        :background url(/assets/images/backgrounds/conf_icons.png) no-repeat left center
+        +background-size(contain)
+        
+        & + *
+          :margin
+            :top $baseline * 2
+      
+      > p
+        :font
+          :size $baseline
+        :line-height $baseline * 1.5
+        
+        & + *
+          :margin
+            :top $baseline * 2
+      
+      > h2
+        :font
+          :size $baseline * 1.2
+        :line-height $baseline * 1.5
+        :letter-spacing $ninesixty_gutter_width * 0.4
+        +children-inline
+        
+        > span
+          :padding
+            :top $baseline / 2
+            :left $ninesixty_gutter_width * 3
+            :right $ninesixty_gutter_width * 3
+            :bottom $baseline / 2
+          :background $yellow
+        
+        & + *
+          :margin
+            :top $baseline * 2
+      
+      > form
+        > section
+          :background #FAFCFC
+          :border 1px solid $light_grey
+          
+          > div
+            > label
+              :display block
+              :height $baseline * 2.25
+              :line-height $baseline * 2.25
+              :font
+                :size $baseline * 0.9
+              :padding
+                :left $ninesixty_gutter_width
+                :right $ninesixty_gutter_width
+              :color $grey
+          
+            > input, > textarea
+              :display block
+              :width 100%
+              :height $baseline * 2.25
+              :padding
+                :left $ninesixty_gutter_width
+                :right $ninesixty_gutter_width
+              :font
+                :size $baseline * 1.2
+              :background none
+          
+            & + *
+              :border-top 1px solid $light_grey
+          
+          & + *
+            :margin
+              :top $baseline * 2
+          
+        > input
+          +inline-block
+          :font
+            :size $baseline * 1.2
+          :height $baseline * 3
+          :line-height $baseline * 3
+          :padding
+            :left $ninesixty_gutter_width * 3
+            :right $ninesixty_gutter_width * 3
+          :background $yellow
+          :color #000
+          
+          &[disabled]
+            +opacity(0.5)

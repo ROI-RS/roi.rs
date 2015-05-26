@@ -66,6 +66,27 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
       , 3000
 ]
 
+
+ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $timeout)->
+  $scope.setMessage = ->
+    $scope.message =
+      form: 0
+      config: 28
+      callback: 'JSON_CALLBACK'
+      token: 'nQ7LBMohbPwy1tjLIw'
+  
+  $scope.setMessage()
+  
+  $scope.send = (msg)->
+    $scope.set('busy', true)
+    url = ""
+    for field, value of msg then url += "#{field}=#{encodeURIComponent(value)}&"
+    url += "sbjs_current=#{encodeURIComponent(get_cookie 'sbjs_current')}"
+    $http.jsonp("http://umark.realto.be/?#{url}").success (uid)->
+      $scope.setMessage()
+      $scope.set('busy', false)
+]
+
 ROI.controller 'LoginFormCtrl', ['$scope', '$timeout', ($scope, $timeout)->
   $scope.login = {}
   $scope.send = ->
