@@ -28,3 +28,18 @@
       > span
         :font
           :size $baseline * 1.2
+
+@media only screen and (max-width: 1024px)
+  #container > #steps > .step-wrapper > .step.first > section
+    > h2
+      :height $baseline * 4.5
+      :padding
+        :top 0
+        :bottom 0
+      
+      > span
+        span
+          :display block
+        
+        br
+          :display none

@@ -1,0 +1,107 @@
+/* banner
+
+#container > #banner
+  :padding
+    :top $baseline * 1.5
+    :bottom $baseline * 1.5
+  :background #000
+  
+  > section
+    +grid-container($ninesixty_gutter_width * 90)
+    
+    > section
+      +children-inline
+      
+      > p
+        :display block
+        :font
+          :size $baseline * 0.9
+        
+        > span
+          :color $yellow
+        
+        & + *
+          :margin
+            :top -$baseline * 2
+      
+      > nav
+        :display block
+        :height $baseline * 2
+        :line-height $baseline * 2
+        :text-align right
+        +children-inline
+        
+        > a
+          :border 1px solid $white
+          :padding
+            :left $ninesixty_gutter_width * 2.5
+            :right $ninesixty_gutter_width * 2.5
+          :font
+            :size $baseline * 0.9
+          +hover-opacity
+      
+      > div
+        :width $ninesixty_gutter_width * 29
+        :height $baseline * 5
+        :text-align center
+        :border 1px solid $yellow
+        :padding
+          :top $baseline / 2
+          :bottom $baseline / 2
+        
+        > p
+          :line-height $baseline * 2
+          :font
+            :family "Lato Light", sans-serif
+            :size $baseline * 1.9
+          :text-transform uppercase
+        
+        > span
+          :line-height $baseline * 2
+          :font
+            :size $baseline * 0.9
+          :text-transform uppercase
+          :color $yellow
+        
+        & + *
+          :margin
+            :left $ninesixty_gutter_width * 4
+      
+      > aside
+        :font
+          :size $baseline * 0.9
+        :text
+          :align left
+        
+        > h1
+          :text-transform uppercase
+          :color $yellow
+          
+          & + *
+            :margin
+              :top $baseline
+        
+        > p > span
+          :color $yellow
+      
+      & + *
+        :margin
+          :top $baseline * 1.5
+
+
+@media only screen and (max-width: 1024px)
+  #container > #banner > section
+    :width $ninesixty_gutter_width * 64
+    
+    > section
+      :text-align center
+    
+      > aside
+        :display none
+      
+      > p + *
+        :margin
+          :top $baseline * 1.5
+      
+      > nav
+        :text-align center

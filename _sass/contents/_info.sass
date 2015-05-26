@@ -20,6 +20,9 @@
       :size $baseline * 1.8
     :color $yellow
     
+    > br
+      :display none
+    
     & + *
       :margin
         :top $baseline
@@ -90,7 +93,11 @@
       :size $baseline * 1.2
     :color $grey
     
-    > span
+    b
+      :font
+        :weight normal
+    
+    span
       :color $yellow
   
   > *:not(ul)
@@ -102,3 +109,36 @@
     &.active
       +opacity(1)
       +scale(1)
+
+@media only screen and (max-width: 1024px)
+  #container > .info
+    > h2 > br
+      :display block
+    
+    > p
+      span
+        :display block
+      
+      br
+        :display none
+  
+    > ul
+      :margin
+        :top $baseline * 1.5
+      :width $ninesixty_gutter_width * 42.5
+      
+      > li
+        :width 100%
+        :margin
+          :top $baseline * 1.5
+    
+    > h3
+      b
+        :display block
+        
+        &.top
+          :margin
+            :top $baseline * 1.5
+      
+      br
+        :display none

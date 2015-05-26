@@ -81,6 +81,10 @@
         :animation-delay 0.5s
         :-webkit-animation-fill-mode backwards
         :animation-fill-mode backwards
+        
+        b
+          :font
+            :weight normal
       
         > span
           :color $yellow
@@ -178,3 +182,24 @@
     &.active
       +scale(1)
       +opacity(1)
+
+@media only screen and (max-width: 1024px)
+  #container
+    > .welcome > section
+      :margin
+        :top -$baseline * 10.5
+      :height $baseline * 21
+    
+      > h2
+        br
+          :display none
+      
+        b
+          :display block
+    
+    > nav
+      :height $baseline * 22.5
+      :padding
+        :bottom $baseline * 13.5
+      :margin
+        :top -$baseline * 22.5
