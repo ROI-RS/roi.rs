@@ -64,10 +64,6 @@
         :display block
         :height $baseline * 1.5
         :padding
-          :top $baseline / 4
-          :top calc(#{$baseline / 4} - 1px)
-          :bottom $baseline / 4
-          :bottom calc(#{$baseline / 4} - 1px)
           :left $ninesixty_gutter_width * 1.5
           :left calc(#{$ninesixty_gutter_width * 1.5} - 1px)
           :right $ninesixty_gutter_width * 1.5
@@ -78,6 +74,14 @@
         :border 1px solid $grey
         +border-radius($baseline * 0.75)
         +hover-opacity
+        
+        > span
+          :display block
+          :height $baseline * 1.5
+          :line-height $baseline * 1.5
+          :width 100%
+          :margin
+            :top -1px
       
         &.active
           :color $brown
@@ -99,5 +103,13 @@
     > h2
       :width $ninesixty_gutter_width * 64
       
+      > span
+        +opacity(1)
+        +scale(1)
+      
       &:before, &:after
         :width $ninesixty_gutter_width * 12
+    
+    > nav > li
+      +opacity(1)
+      +scale(1)

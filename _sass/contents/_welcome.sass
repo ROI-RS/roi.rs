@@ -172,12 +172,6 @@
         :background $yellow
         +border-radius($baseline * 1.5)
         +hover-opacity
-        :-webkit-animation zoomIn 0.4s linear
-        :animation zoomIn 0.4s linear
-        :-webkit-animation-delay 1.2s
-        :animation-delay 1.2s
-        :-webkit-animation-fill-mode backwards
-        :animation-fill-mode backwards
     
     &.active
       +scale(1)
@@ -191,11 +185,18 @@
       :height $baseline * 21
     
       > h2
+        :-webkit-animation none
+        :animation none
+        
         br
           :display none
       
         b
           :display block
+      
+      > p > a
+        :-webkit-animation none
+        :animation none
     
     > nav
       :height $baseline * 22.5
@@ -203,3 +204,5 @@
         :bottom $baseline * 13.5
       :margin
         :top -$baseline * 22.5
+      +scale(1)
+      +opacity(1)

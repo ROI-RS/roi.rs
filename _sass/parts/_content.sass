@@ -545,6 +545,7 @@
                     :top 100%
                     :left 0
                     :background url(/assets/images/backgrounds/line.png) repeat-x $baseline * 0.3 bottom
+                    +background-size(4% 100%)
                     +rotate(180)
           
                 &.cut-top
@@ -561,6 +562,7 @@
                     :top 0%
                     :left 0
                     :background url(/assets/images/backgrounds/line.png) repeat-x left top
+                    +background-size(4% 100%)
         
               & + *
                 :margin
@@ -674,6 +676,10 @@
   #container > #steps > .step-wrapper > .step > section
     :width $ninesixty_gutter_width * 64
     
+    > h2, > p, > .funnels > ul > li, > .funnels > ul > li > ul > li > i, > .funnels > ul > li > ul > li > .button, > .funnels > aside > h3, > .funnels > aside > .list > li
+      +opacity(1)
+      +scale(1)
+    
     > h2, > p, > .funnels
       :width $ninesixty_gutter_width * 48
     
@@ -690,7 +696,7 @@
           :margin
             :left -$ninesixty_gutter_width * 20
           
-        &.active > li:first-child
+        &[du-scrollspy] > li:first-child
           +opacity(0.15)
           
           > ul

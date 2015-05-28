@@ -112,6 +112,14 @@
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container > .info
+    > ul > li
+      +opacity(1)
+      +scale(1)
+    
+    > *:not(ul)
+      +opacity(1)
+      +scale(1)
+    
     > h2 > br
       :display block
     
