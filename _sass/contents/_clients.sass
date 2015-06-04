@@ -21,6 +21,14 @@
         :size $baseline * 1.4
         :family "Lato Light", sans-serif
       :color $yellow
+      +opacity(0)
+      +scale(0.7)
+      +transition(all .5s ease-out)
+      +transition-property(opacity, -webkit-transform, transform)
+      
+      &.active
+        +opacity(1)
+        +scale(1)
     
       & + *
         :margin
@@ -28,6 +36,10 @@
     
     > .icons
       +grid-container(90%)
+      +opacity(0)
+      +scale(0.7)
+      +transition(all .5s ease-out)
+      +transition-property(opacity, -webkit-transform, transform)
       
       > img
         :display block
@@ -36,11 +48,19 @@
         &.mobile
           :display none
       
+      &.active
+        +opacity(1)
+        +scale(1)
+      
       & + *
         :margin
           :top $baseline * 4
     
     > nav
+      +opacity(0)
+      +scale(0.7)
+      +transition(all .5s ease-out)
+      +transition-property(opacity, -webkit-transform, transform)
       +children-inline
       
       > p
@@ -76,12 +96,20 @@
         & + *
           :margin
             :left $ninesixty_gutter_width * 2.5
+      
+      &.active
+        +opacity(1)
+        +scale(1)
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container > .clients > section
     :width $ninesixty_gutter_width * 64
     :padding
       :bottom $baseline * 9.5
+    
+    > h2, > .icons, > nav
+      +opacity(1)
+      +scale(1)
     
     > .icons
       > img
