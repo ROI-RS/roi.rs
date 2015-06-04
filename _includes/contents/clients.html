@@ -1,0 +1,24 @@
+<div class="clients">
+  <section>
+    <h2 id="clients-header1" du-scrollspy="clients-header1" du-spy-context offset="//getOffset()//">Наши клиенты</h2>
+    <div class="icons">
+      <img class="desktop" src="{{"/assets/images/icons/clients.png" | prepend: site.baseurl}}" />
+      <img class="mobile" src="{{"/assets/images/icons/clients_mobile.png" | prepend: site.baseurl}}" />
+    </div>
+    <nav>
+      <p>Мы в социальных сетях</p>
+      <a href="https://vk.com/roirs" target="_blank">
+        {% include icons/vk.svg %}
+        <span>Вконтакте</span>
+      </a>
+      <a href="https://www.facebook.com/roi.reporting?fref=photo" target="_blank">
+        {% include icons/fb.svg %}
+        <span>Фэйсбук</span>
+      </a>
+      <a>
+        {% include icons/twitter.svg %}
+        <span>Твиттер</span>
+      </a>
+    </nav>
+  </section>
+</div>
