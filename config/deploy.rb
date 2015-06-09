@@ -6,7 +6,7 @@ set :domain, ENV['srv'] || 'roi.rs'
 set :user, 'deploy'
 set :repository, '/home/deploy/repo/roi.rs.git'
 set :deploy_to, '/home/deploy/apps/roi.rs'
-
+set :branch, 'master'
 
 task :deploy do
   invoke 'rbenv:load'
