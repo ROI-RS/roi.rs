@@ -73,6 +73,11 @@
   input[type="file"]
     +opacity(0)
     :cursor pointer
+  input, select, textarea
+    :-webkit-appearance none
+    :-moz-appearance none
+    :appearance none
+    +border-radius(0)
 
 = global-reset
   html, body

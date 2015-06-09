@@ -123,7 +123,7 @@ $logo: $ninesixty_gutter_width * 11
     :margin
       :top -$header
 
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container > header
     :margin
       :left 0
@@ -131,6 +131,8 @@ $logo: $ninesixty_gutter_width * 11
     :padding
       :left $ninesixty_gutter_width * 4
       :right $ninesixty_gutter_width * 4
+    :-webkit-animation none
+    :animation none
     
     > section > nav
       +opacity(0)

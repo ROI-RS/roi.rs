@@ -4,7 +4,7 @@
   > .steps-middle-wrapper
     > .steps-bottom-wrapper
       > .steps
-        :position absolute
+        :position fixed
         :z-index 70
         :line-height $baseline
         :height $baseline * 19
@@ -235,6 +235,6 @@
         &:before
           :background $grey
 
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container-wrapper > .steps-wrapper > .steps-top-wrapper > .steps-middle-wrapper > .steps-bottom-wrapper > .steps
     :display none

@@ -143,12 +143,12 @@
   > nav
     :position relative
     :z-index 2
-    :height $baseline * 19.5
+    :height $baseline * 15
     :padding
       :top $baseline * 6
-      :bottom $baseline * 10.5
+      :bottom $baseline * 6
     :margin
-      :top -$baseline * 19.5
+      :top -$baseline * 15
     :text-align center
     +scale(0.7)
     +opacity(0)
@@ -172,18 +172,12 @@
         :background $yellow
         +border-radius($baseline * 1.5)
         +hover-opacity
-        :-webkit-animation zoomIn 0.4s linear
-        :animation zoomIn 0.4s linear
-        :-webkit-animation-delay 1.2s
-        :animation-delay 1.2s
-        :-webkit-animation-fill-mode backwards
-        :animation-fill-mode backwards
     
     &.active
       +scale(1)
       +opacity(1)
 
-@media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container
     > .welcome > section
       :margin
@@ -191,15 +185,19 @@
       :height $baseline * 21
     
       > h2
+        :-webkit-animation none
+        :animation none
+        
         br
           :display none
       
         b
           :display block
+      
+      > p > a
+        :-webkit-animation none
+        :animation none
     
     > nav
-      :height $baseline * 22.5
-      :padding
-        :bottom $baseline * 13.5
-      :margin
-        :top -$baseline * 22.5
+      +scale(1)
+      +opacity(1)

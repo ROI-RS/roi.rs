@@ -1,0 +1,120 @@
+/* clients
+
+#container > .clients
+  :position relative
+  :z-index 55
+  :text-align center
+  :background #17120E
+  
+  > section
+    +grid-container($ninesixty_gutter_width * 90)
+    :border
+      :top 1px solid rgba(151, 151, 151, .25)
+    :padding
+      :top $baseline * 2
+      :bottom $baseline * 6.5
+  
+    > h2
+      :position relative
+      :line-height $baseline * 2
+      :font
+        :size $baseline * 1.4
+        :family "Lato Light", sans-serif
+      :color $yellow
+      +opacity(0)
+      +scale(0.7)
+      +transition(all .5s ease-out)
+      +transition-property(opacity, -webkit-transform, transform)
+      
+      &.active
+        +opacity(1)
+        +scale(1)
+    
+      & + *
+        :margin
+          :top $baseline * 2
+    
+    > .icons
+      +grid-container(90%)
+      +opacity(0)
+      +scale(0.7)
+      +transition(all .5s ease-out)
+      +transition-property(opacity, -webkit-transform, transform)
+      
+      > img
+        :display block
+        :width 100%
+        
+        &.mobile
+          :display none
+      
+      &.active
+        +opacity(1)
+        +scale(1)
+      
+      & + *
+        :margin
+          :top $baseline * 4
+    
+    > nav
+      +opacity(0)
+      +scale(0.7)
+      +transition(all .5s ease-out)
+      +transition-property(opacity, -webkit-transform, transform)
+      +children-inline
+      
+      > p
+        :font
+          :size $baseline * 0.9
+        :color $grey
+        
+        & + *
+          :margin
+            :left $ninesixty_gutter_width * 2.5
+      
+      > a
+        :font
+          :size $baseline * 0.9
+        :position relative
+        :color $yellow
+        :padding
+          :left $ninesixty_gutter_width * 2.5
+        +hover-opacity
+        
+        > svg
+          :position absolute
+          :left 0
+          :top 50%
+          :width $ninesixty_gutter_width * 2
+          :height $baseline
+          :margin
+            :top -$baseline / 2
+          
+          path
+            :fill $yellow
+        
+        & + *
+          :margin
+            :left $ninesixty_gutter_width * 2.5
+      
+      &.active
+        +opacity(1)
+        +scale(1)
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  #container > .clients > section
+    :width $ninesixty_gutter_width * 64
+    :padding
+      :bottom $baseline * 9.5
+    
+    > h2, > .icons, > nav
+      +opacity(1)
+      +scale(1)
+    
+    > .icons
+      > img
+        &.desktop
+          :display none
+        
+        &.mobile
+          :display block
