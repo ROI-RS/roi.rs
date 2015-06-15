@@ -53,7 +53,7 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
   $scope.setMessage()
   
   $scope.readCookie = ->
-    cookies = documen.cookie.split(';')
+    cookies = document.cookie.split(';')
     for cookie in cookies
       [key, value] = cookie.split('=')
       if key = 'sbjs_current' then return value
@@ -86,7 +86,7 @@ ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $
   $scope.setMessage()
   
   $scope.readCookie = ->
-    cookies = documen.cookie.split(';')
+    cookies = document.cookie.split(';')
     for cookie in cookies
       [key, value] = cookie.split('=')
       if key = 'sbjs_current' then return value
