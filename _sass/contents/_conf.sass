@@ -10,12 +10,26 @@
   > header
     :position relative
     :height calc(100% - #{$baseline * 3})
-    :min-height $baseline * 30
+    :min-height $baseline * 36
     :padding
       :top $baseline * 2
       :bottom $baseline * 4
     :background #000 url(/assets/images/backgrounds/conf.jpg) no-repeat center
     +background-size(cover)
+    
+    > .icons
+      :position absolute
+      :left 0
+      :bottom 0
+      :width 100%
+      :padding
+        :top $baseline
+        :bottom $baseline
+      +gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))
+      
+      > img
+        +grid-container($ninesixty_gutter_width * 96)
+        :display block
     
     > section
       :position absolute
@@ -193,6 +207,8 @@
     
       > aside
         :width $ninesixty_gutter_width * 52
+        :padding
+          :top $baseline * 2
         :text
           :align left
       
@@ -216,6 +232,10 @@
           & + *
             :margin
               :top $baseline * 2
+          
+          &#form
+            :margin
+              :top $baseline * 5
       
         > h2
           :font
@@ -354,8 +374,11 @@
               +inline-block
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
-  #container > #conf > .program
-    > section
+  #container > #conf
+    > header > .icons > img
+      :width $ninesixty_gutter_width * 64
+    
+    > .program > section
       :width $ninesixty_gutter_width * 64
       :text-align center
       

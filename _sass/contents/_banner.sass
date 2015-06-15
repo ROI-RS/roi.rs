@@ -11,6 +11,24 @@
   > section
     +grid-container($ninesixty_gutter_width * 93)
     
+    > .icons
+      :width $ninesixty_gutter_width * 96
+      :margin
+        :left -$ninesixty_gutter_width * 1.5
+        :right -$ninesixty_gutter_width * 1.5
+      :padding
+        :bottom $baseline
+      :border
+        :bottom 1px solid rgba(151, 151, 151, 0.15)
+      
+      > img
+        +grid-container($ninesixty_gutter_width * 93)
+        :display block
+      
+      & + *
+        :margin
+          :top $baseline * 1.5
+    
     > section
       +children-inline
       
@@ -87,6 +105,15 @@
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container > #banner > section
     :width $ninesixty_gutter_width * 64
+    
+    > .icons
+      :width $ninesixty_gutter_width * 64
+      :margin
+        :left 0
+        :right 0
+      
+      > img
+        :width $ninesixty_gutter_width * 64
     
     > section
       :text-align center
