@@ -52,18 +52,17 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
   
   $scope.setMessage()
   
-  $scope.readCookie = ->
-    cookies = document.cookie.split(';')
-    for cookie in cookies
-      [key, value] = cookie.split('=')
-      if key = 'sbjs_current' then return value
-  
+  $scope.getCookie = (name)->
+    matches = document.cookie.match(new RegExp(
+      "(?:^|; )#{name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)"
+    ))
+    matches ? decodeURIComponent(matches[1]) : undefined  
   
   $scope.send = (msg)->
     $scope.set('busy', true)
     url = ""
     for field, value of msg then url += "#{field}=#{encodeURIComponent(value)}&"
-    url += "sbjs_current=#{encodeURIComponent($scope.readCookie())}"
+    url += "sbjs_current=#{encodeURIComponent($scope.getCookie('sbjs_current'))}"
     $http.jsonp("https://umarker.roi.rs/?#{url}").success (uid)->
       $scope.setMessage()
       $scope.set('busy', false)
@@ -85,17 +84,17 @@ ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $
   
   $scope.setMessage()
   
-  $scope.readCookie = ->
-    cookies = document.cookie.split(';')
-    for cookie in cookies
-      [key, value] = cookie.split('=')
-      if key = 'sbjs_current' then return value
+  $scope.getCookie = (name)->
+    matches = document.cookie.match(new RegExp(
+      "(?:^|; )#{name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)"
+    ))
+    matches ? decodeURIComponent(matches[1]) : undefined  
   
   $scope.send = (msg)->
     $scope.set('busy', true)
     url = ""
     for field, value of msg then url += "#{field}=#{encodeURIComponent(value)}&"
-    url += "sbjs_current=#{encodeURIComponent($scope.readCookie())}"
+    url += "sbjs_current=#{encodeURIComponent($scope.getCookie('sbjs_current'))}"
     $http.jsonp("https://umarker.roi.rs/?#{url}").success (uid)->
       $scope.setMessage()
       $scope.set('busy', false)
