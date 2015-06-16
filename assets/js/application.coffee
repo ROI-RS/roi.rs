@@ -56,7 +56,7 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
     matches = document.cookie.match(new RegExp(
       "(?:^|; )#{name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)"
     ))
-    matches ? decodeURIComponent(matches[1]) : undefined  
+    if matches then decodeURIComponent(matches[1]) else undefined  
   
   $scope.send = (msg)->
     $scope.set('busy', true)
@@ -88,7 +88,7 @@ ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $
     matches = document.cookie.match(new RegExp(
       "(?:^|; )#{name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)"
     ))
-    matches ? decodeURIComponent(matches[1]) : undefined  
+    if matches then decodeURIComponent(matches[1]) else undefined  
   
   $scope.send = (msg)->
     $scope.set('busy', true)
