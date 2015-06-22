@@ -16,25 +16,30 @@
           />
           {% include icons/success.svg %}
         </div>
-        <label for="company">Компания</label>
+        <label for="company">Компания *</label>
         <div class="input">
           <input
             type="text"
             name="company"
             id="company"
             ng-model="message.company"
+            ng-required="true"
             ng-disabled="get('busy')"
           />
+          {% include icons/success.svg %}
         </div>
-        <label for="phone">Номер телефона</label>
+        <label for="phone">Номер телефона *</label>
         <div class="input">
           <input
-            type="text"
+            type="tel"
             name="phone"
             id="phone"
+            pattern="[0-9]*"
             ng-model="message.phone"
+            ng-required="true"
             ng-disabled="get('busy')"
           />
+          {% include icons/success.svg %}
         </div>
         <label for="email">Адрес электронной почты *</label>
         <div class="input">
@@ -47,15 +52,6 @@
             ng-disabled="get('busy')"
           />
           {% include icons/success.svg %}
-        </div>
-        <label for="comment">Комментарий</label>
-        <div class="input">
-          <textarea
-            name="comment"
-            id="comment"
-            ng-model="message.comment"
-            ng-disabled="get('busy')"
-          ></textarea>
         </div>
         <footer>
           <section ng-class="{busy: get('busy')}">
