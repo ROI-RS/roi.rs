@@ -4,7 +4,7 @@ require 'mina/rbenv'
 
 set :domain, ENV['srv'] || 'roi.rs'
 set :user, 'deploy'
-set :repository, '/home/deploy/repo/roi.rs.git'
+set :repository, 'git@github.com:ROI-RS/roi.rs.git'
 set :deploy_to, '/home/deploy/apps/roi.rs'
 set :branch, 'master'
 
@@ -17,13 +17,6 @@ task :deploy do
     # invoke 'deploy:link_shared_paths'
     invoke 'bundle:install'
     queue 'bundle exec jekyll build'
-    queue 'gzip -r -k --best ./_site'
-    
-    #Assets
-    # queue 'bower install --force-latest'
-    # queue 'coffee -c -b -o vendor/javascripts app/javascripts'
-    # queue 'browserify vendor/javascripts/application.js --debug | exorcist public/javascripts/application.js.map > public/javascripts/application.js'
-    # queue 'bundle exec compass compile'
-    # queue 'gzip -r -k --best ./public'
+    queue 'gzip -r -k --best ./_site'    
   end
 end
