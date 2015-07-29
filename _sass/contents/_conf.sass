@@ -14,7 +14,7 @@
     :padding
       :top $baseline * 2
       :bottom $baseline * 4
-    :background #000 url(/assets/images/backgrounds/conf.jpg) no-repeat center
+    :background $brown url(/assets/images/backgrounds/conf.jpg) no-repeat center
     +background-size(cover)
     
     > .icons
@@ -25,7 +25,6 @@
       :padding
         :top $baseline
         :bottom $baseline
-      +gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))
       
       > img
         +grid-container($ninesixty_gutter_width * 96)
@@ -228,6 +227,10 @@
           :font
             :size $baseline * 1.2
           :line-height $baseline * 1.8
+          
+          > a
+            :color $black
+            +inverse-hover-underline
         
           & + *
             :margin
@@ -327,7 +330,7 @@
                 :background none
               
               > textarea
-                :height $baseline * 19
+                :height $baseline * 10.25
           
               & + div
                 :border-top 1px solid $light_grey
