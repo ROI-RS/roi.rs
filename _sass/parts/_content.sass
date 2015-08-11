@@ -635,13 +635,11 @@
       
         > h2, > p, > .funnels > ul > li, > .funnels > ul > li > ul > li > i, > .funnels > ul > li > ul > li > .button, > .funnels > aside > h3, > .funnels > aside > .list > li
           +opacity(0)
-          +scale(0.7)
           +transition(all .5s ease-out)
           +transition-property(opacity, -webkit-transform, transform)
         
           &.active
             +opacity(1)
-            +scale(1)
 
       &:before, &:after
         :content ''
@@ -678,7 +676,6 @@
     
     > h2, > p, > .funnels > ul > li, > .funnels > ul > li > ul > li > i, > .funnels > ul > li > ul > li > .button, > .funnels > aside > h3, > .funnels > aside > .list > li
       +opacity(1)
-      +scale(1)
     
     > h2, > p, > .funnels
       :width $ninesixty_gutter_width * 48

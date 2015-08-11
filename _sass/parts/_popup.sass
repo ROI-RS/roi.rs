@@ -218,7 +218,6 @@
             :right 0
             :width $baseline * 3
             :height $baseline * 3
-            +scale(0.7)
             +opacity(0)
             +transition(all .4s ease-out)
             +transition-property(opacity, -webkit-transform, transform)
@@ -276,11 +275,9 @@
             
             &.ng-valid
               &[disabled] + svg
-                +scale(1)
                 +opacity(0.5)
               
               & + svg
-                +scale(1)
                 +opacity(1)
       
           > textarea
@@ -349,12 +346,12 @@
                 +animation(loading 1.5s linear infinite .2s)
     
     &.big > div
-      :min-height $ninesixty_gutter_width * 64
+      :min-height $ninesixty_gutter_width * 78
       
       > form
         :margin
-          :top -$ninesixty_gutter_width * 34
-        :height $ninesixty_gutter_width * 68
+          :top -$ninesixty_gutter_width * 39
+        :height $ninesixty_gutter_width * 78
     
     &.small > div
       :min-height $baseline * 3

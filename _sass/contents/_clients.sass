@@ -22,13 +22,11 @@
         :family "Lato Light", sans-serif
       :color $yellow
       +opacity(0)
-      +scale(0.7)
       +transition(all .5s ease-out)
       +transition-property(opacity, -webkit-transform, transform)
       
       &.active
         +opacity(1)
-        +scale(1)
     
       & + *
         :margin
@@ -37,7 +35,6 @@
     > .icons
       +grid-container(90%)
       +opacity(0)
-      +scale(0.7)
       +transition(all .5s ease-out)
       +transition-property(opacity, -webkit-transform, transform)
       
@@ -50,7 +47,6 @@
       
       &.active
         +opacity(1)
-        +scale(1)
       
       & + *
         :margin
@@ -58,7 +54,6 @@
     
     > nav
       +opacity(0)
-      +scale(0.7)
       +transition(all .5s ease-out)
       +transition-property(opacity, -webkit-transform, transform)
       +children-inline
@@ -99,7 +94,6 @@
       
       &.active
         +opacity(1)
-        +scale(1)
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container > .clients > section
@@ -109,7 +103,6 @@
     
     > h2, > .icons, > nav
       +opacity(1)
-      +scale(1)
     
     > .icons
       > img

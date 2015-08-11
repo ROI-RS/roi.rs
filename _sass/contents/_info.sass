@@ -53,7 +53,6 @@
         :top $baseline / 2
         :bottom $baseline / 2
       +opacity(0)
-      +scale(0.7)
       +transition(all .5s ease-out)
       +transition-property(opacity, -webkit-transform, transform)
       
@@ -81,7 +80,6 @@
       
       &.active
         +opacity(1)
-        +scale(1)
     
     & + *
       :margin
@@ -102,23 +100,19 @@
   
   > *:not(ul)
     +opacity(0)
-    +scale(0.7)
     +transition(all .5s ease-out)
     +transition-property(opacity, -webkit-transform, transform)
   
     &.active
       +opacity(1)
-      +scale(1)
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container > .info
     > ul > li
       +opacity(1)
-      +scale(1)
     
     > *:not(ul)
       +opacity(1)
-      +scale(1)
     
     > h2 > br
       :display block

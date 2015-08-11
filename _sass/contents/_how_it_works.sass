@@ -22,13 +22,11 @@
       :font
         :size $baseline * 1.8
       +opacity(0)
-      +scale(0.7)
       +transition(all .5s ease-out)
       +transition-property(opacity, -webkit-transform, transform)
       
       &.active
         +opacity(1)
-        +scale(1)
       
     &:before, &:after
       :content ''
@@ -56,7 +54,6 @@
         :left $ninesixty_gutter_width / 2
         :right $ninesixty_gutter_width / 2
       +opacity(0)
-      +scale(0.7)
       +transition(all .5s ease-out)
       +transition-property(opacity, -webkit-transform, transform)
       
@@ -92,7 +89,6 @@
         
       &.active
         +opacity(1)
-        +scale(1)
   
   & + *
     :margin
@@ -105,11 +101,9 @@
       
       > span
         +opacity(1)
-        +scale(1)
       
       &:before, &:after
         :width $ninesixty_gutter_width * 12
     
     > nav > li
       +opacity(1)
-      +scale(1)

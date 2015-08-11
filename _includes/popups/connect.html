@@ -16,6 +16,18 @@
           />
           {% include icons/success.svg %}
         </div>
+        <label for="name">Фамилия *</label>
+        <div class="input">
+          <input
+            type="text"
+            name="surname"
+            id="surname"
+            ng-model="message.surname"
+            ng-required="true"
+            ng-disabled="get('busy')"
+          />
+          {% include icons/success.svg %}
+        </div>
         <label for="company">Компания *</label>
         <div class="input">
           <input

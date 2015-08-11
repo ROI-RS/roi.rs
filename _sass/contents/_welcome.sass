@@ -27,26 +27,16 @@
 @-webkit-keyframes zoomIn
   0%
     +opacity(0)
-    +scale(0.7)
-  
-  75%
-    +opacity(1)
-    +scale(1.2)
   
   100%
-    +scale(1)
+    +opacity(1)
 
 @keyframes zoomIn
   0%
     +opacity(0)
-    +scale(0.7)
-  
-  75%
-    +opacity(1)
-    +scale(1.2)
   
   100%
-    +scale(1)
+    +opacity(1)
 
 #container
   > .welcome
@@ -150,7 +140,6 @@
     :margin
       :top -$baseline * 15
     :text-align center
-    +scale(0.7)
     +opacity(0)
     +transition(all .5s ease-out)
     +transition-property(opacity, -webkit-transform, transform)
@@ -174,7 +163,6 @@
         +hover-opacity
     
     &.active
-      +scale(1)
       +opacity(1)
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
@@ -199,5 +187,4 @@
         :animation none
     
     > nav
-      +scale(1)
       +opacity(1)
