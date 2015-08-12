@@ -114,6 +114,10 @@ ROI.controller 'MedConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
       $scope.setMessage()
       $scope.set('busy', false)
       $scope.set('medConfThankYou', true)
+      $timeout ->
+        $scope.set('showMedForm', false)
+        $scope.set('medConfThankYou', false)
+      , 3000
 ]
 
 ROI.controller 'LoginFormCtrl', ['$scope', '$timeout', ($scope, $timeout)->

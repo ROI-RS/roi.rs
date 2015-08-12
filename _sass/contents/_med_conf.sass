@@ -29,26 +29,70 @@
     :text-align right
     :color $white
     :background #1E8C76 url(/medconference2015/bg.jpg) no-repeat left center
+    +transition(background .5s ease-out)
     +background-size(cover)
     
     > div
-      :position relative
       :height 100%
       :min-height $baseline * 30
+      :overflow hidden
+      :white-space nowrap
+      +transition(all .5s ease-out)
+      +children-inline
       
-      > h1
-        :font
-          :size $baseline * 3.6
-          :weight bold
-        :line-height $baseline * 3
-      
-        & + *
-          :margin
-            :top $baseline / 2
+      > div
+        :white-space normal
+        :width 100%
+        +transition(all .5s ease-out)
         
-        & + p + *
+        & + div
           :margin
-            :top $baseline * 2
+            :left 50%
+      
+      > .welcome
+        :position relative
+        :height 100%
+        
+        > h1
+          :font
+            :size $baseline * 3.6
+            :weight bold
+          :line-height $baseline * 3
+      
+          & + *
+            :margin
+              :top $baseline / 2
+        
+          & + p + *
+            :margin
+              :top $baseline * 2
+      
+        > footer
+          :position absolute
+          :left 0
+          :right 0
+          :bottom 0
+      
+          > .connect
+            +inline-block
+            :color $brown
+            :font
+              :size $baseline * 1.8
+            :background $white
+            :height $baseline * 4
+            :line-height $baseline * 4
+            :padding
+              :left $ninesixty_gutter_width * 3
+              :right $ninesixty_gutter_width * 3
+            +hover-opacity
+          
+            & + *
+              :margin
+                :top $baseline * 3
+      
+          > img
+            :display block
+            :width 100%
   
       p
         :font
@@ -60,9 +104,12 @@
             :top $baseline
       
       > .form
-        :display none
+        :visibility hidden
+        +opacity(0)
+        +transition(all .5s ease-out)
         
         section
+          :height $baseline * 30
           :position relative
           :border 1px solid rgba(255, 255, 255, 0.5)
         
@@ -102,12 +149,14 @@
               :color $white
           
             > textarea
-              :height $baseline * 10.25
+              :height $baseline * 4.5
       
             & + div
               :border-top 1px solid rgba(255, 255, 255, 0.5)
           
           &.thank-you
+            :margin
+              :top $baseline * 2.5
             :padding
               :top $baseline * 6
               :bottom $baseline * 5
@@ -140,12 +189,9 @@
           &[disabled]
             :cursor default
             +opacity(0.5)
-        
-          &.hidden
-            :display none
       
         span
-          :display none
+          +inline-block
           :font
             :size $baseline * 1.2
           :height $baseline * 3
@@ -156,44 +202,23 @@
           :color $white
           :border 1px solid $white
         
-          &.active
-            +inline-block
-        
         &.active
-          :display block
-      
-      > footer
-        :position absolute
-        :left 0
-        :right 0
-        :bottom 0
-      
-        > .connect
-          +inline-block
-          :color $brown
-          :font
-            :size $baseline * 1.8
-          :background $white
-          :height $baseline * 4
-          :line-height $baseline * 4
-          :padding
-            :left $ninesixty_gutter_width * 3
-            :right $ninesixty_gutter_width * 3
-          +hover-opacity
-          
-          & + *
-            :margin
-              :top $baseline * 3
-      
-        > img
-          :display block
-          :width 100%
-      
-      &.middle
-        :min-height $baseline * 38
+          :visibility visible
+          +opacity(1)
+        
+        & + .form
+          :margin
+            :left -100%
       
       &.big
-        :min-height $baseline * 50
+        :min-height $baseline * 38
+        
+        > .welcome
+          :margin-left -150%
+          +opacity(0)
+    
+    &.right
+      :background-position right center
   
   > section
     :padding

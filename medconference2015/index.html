@@ -3,18 +3,20 @@ layout: conf
 ---
 
 <div id="med-conf" ng-controller="MedConfFormCtrl">
-  <aside>
-    <div ng-class="{big: showMedForm && !medConfThankYou, middle: medConfThankYou}">
-      <h1>
-        Медицина<br />
-        будущего
-      </h1>
-      <p>Автоматизация продаж реальна</p>
-      <footer ng-if="!showMedForm">
-        <a href="#" class="connect" ng-click="set('showMedForm', true)">Запишитесь cейчас</a>
-        <img src="/medconference2015/icons.png" />
-      </footer>
-      <div class="form" ng-if="showMedForm && !medConfThankYou" ng-class="{active: showMedForm && !medConfThankYou}">
+  <aside ng-class="{right: showMedForm}">
+    <div ng-class="{big: showMedForm}">
+      <div class="welcome">
+        <h1>
+          Медицина<br />
+          будущего
+        </h1>
+        <p>Автоматизация продаж реальна</p>
+        <footer>
+          <a href="#" class="connect" ng-click="set('showMedForm', true)">Запишитесь cейчас</a>
+          <img src="/medconference2015/icons.png" />
+        </footer>
+      </div>
+      <div class="form" ng-class="{active: showMedForm && !medConfThankYou}">
         <p>Заполните форму, пожалуйста.</p>
         <form name="medConfForm" ng-submit="send(message)">
           <section>
@@ -36,6 +38,17 @@ layout: conf
                 name="email"
                 id="email"
                 ng-model="message.email"
+                ng-required="true"
+                ng-disabled="get('busy')"
+              />
+            </div>
+            <div>
+              <label for="phone">Телефон *</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                ng-model="message.phone"
                 ng-required="true"
                 ng-disabled="get('busy')"
               />
@@ -76,7 +89,7 @@ layout: conf
           <input type="submit" value="Записаться" ng-disabled="medConfForm.$invalid" />
         </form>
       </div>
-      <div class="form" ng-if="medConfThankYou" ng-class="{active: medConfThankYou}">
+      <div class="form" ng-class="{active: medConfThankYou}">
         <section class="thank-you">
           <div>
             <h2>Спасибо.</h2>
@@ -88,7 +101,7 @@ layout: conf
             </p>
           </div>
         </section>
-        <span ng-class="{active: medConfThankYou}">Записаны</span>
+        <span>Записаны</span>
       </div>
     </div>
   </aside>
