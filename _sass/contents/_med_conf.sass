@@ -77,6 +77,9 @@
           :width 100%
   
   > section
+    :padding
+      :bottom $baseline * 7.5
+    
     > div
       > h1
         :font
@@ -206,7 +209,7 @@
           
           &.break
             :padding
-              :left $ninesixty_gutter_width * 10
+              :left $ninesixty_gutter_width * 16
             :position relative
             
             > svg
@@ -214,8 +217,8 @@
               :left 0
               :top 50%
               :margin
-                :top -$baseline * 1.25
-              :height $baseline * 2.5
+                :top -$baseline * 2.5
+              :height $baseline * 4
           
           & + *
             :margin
