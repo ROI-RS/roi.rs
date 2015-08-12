@@ -18,11 +18,15 @@
       :right $ninesixty_gutter_width * 3
       :top $baseline * 1.5
       :bottom $baseline * 1.5
+    
+    > div
+      +inline-block
+      :width $ninesixty_gutter_width * 42
   
   > aside
-    :text-align left
+    :text-align right
     :color $white
-    :background #1E8C76 url(/medconference2015/bg.jpg) no-repeat center
+    :background #1E8C76 url(/medconference2015/bg.jpg) no-repeat left center
     +background-size(cover)
     
     > div
@@ -30,49 +34,43 @@
       :height 100%
       :min-height $baseline * 30
       
-      > header
-        :border
-          :bottom 1px solid rgba(255, 255, 255, 0.25)
-        :padding
-          :bottom $baseline
-      
-        > h1
-          :font
-            :size $baseline * 2.4
-            :weight bold
-          :line-height $baseline * 2.5
-        
-          & + p
-            :margin
-              :top $baseline / 2
-    
-        > p
-          :font
-            :size $baseline * 1.2
-          :line-height $baseline * 1.5
-      
-      > .connect
-        :position absolute
-        :top 50%
-        :left 0
-        :margin
-          :top -$baseline * 2
-        :color $brown
+      > h1
         :font
-          :size $baseline * 1.8
-        :background $white
-        :height $baseline * 4
+          :size $baseline * 3.6
+          :weight bold
         :line-height $baseline * 4
-        :padding
-          :left $ninesixty_gutter_width * 3
-          :right $ninesixty_gutter_width * 3
-        +hover-opacity
       
-      > .icons
+        & + *
+          :margin
+            :top $baseline / 2
+  
+      > p
+        :font
+          :size $baseline * 1.2
+        :line-height $baseline * 1.5
+      
+      > footer
         :position absolute
         :left 0
         :right 0
         :bottom 0
+      
+        > .connect
+          +inline-block
+          :color $brown
+          :font
+            :size $baseline * 1.8
+          :background $white
+          :height $baseline * 4
+          :line-height $baseline * 4
+          :padding
+            :left $ninesixty_gutter_width * 3
+            :right $ninesixty_gutter_width * 3
+          +hover-opacity
+          
+          & + *
+            :margin
+              :top $baseline * 3
       
         > img
           :display block
@@ -132,6 +130,14 @@
         & + ul
           :margin
             :top $baseline * 2
+      
+      > a
+        :display block
+        +hover-opacity
+        
+        > img
+          :display block
+          :width 100%
       
       > .desc
         > li
