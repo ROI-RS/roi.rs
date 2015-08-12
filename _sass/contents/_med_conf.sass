@@ -1,0 +1,231 @@
+/* med conf
+
+#container > #med-conf
+  :height 100%
+  :background $white
+  :color $brown
+  :font
+    :family Merel
+  +children-inline
+  
+  > aside, > section
+    :width 50%
+    :height 100%
+    :overflow auto
+    :overflow overlay
+    :padding
+      :left $ninesixty_gutter_width * 3
+      :right $ninesixty_gutter_width * 3
+      :top $baseline * 1.5
+      :bottom $baseline * 1.5
+  
+  > aside
+    :text-align left
+    :color $white
+    :background #1E8C76 url(/med_conf_2015/bg.jpg) no-repeat center
+    +background-size(cover)
+    
+    > div
+      :position relative
+      :height 100%
+      :min-height $baseline * 30
+      
+      > header
+        :border
+          :bottom 1px solid rgba(255, 255, 255, 0.25)
+        :padding
+          :bottom $baseline
+      
+        > h1
+          :font
+            :size $baseline * 2.4
+            :weight bold
+          :line-height $baseline * 2.5
+        
+          & + p
+            :margin
+              :top $baseline / 2
+    
+        > p
+          :font
+            :size $baseline * 1.2
+          :line-height $baseline * 1.5
+      
+      > .connect
+        :position absolute
+        :top 50%
+        :left 0
+        :margin
+          :top -$baseline * 2
+        :color $brown
+        :font
+          :size $baseline * 1.8
+        :background $white
+        :height $baseline * 4
+        :line-height $baseline * 4
+        :padding
+          :left $ninesixty_gutter_width * 3
+          :right $ninesixty_gutter_width * 3
+        +hover-opacity
+      
+      > .icons
+        :position absolute
+        :left 0
+        :right 0
+        :bottom 0
+      
+        > img
+          :display block
+          :width 100%
+  
+  > section
+    > div
+      > h1
+        :font
+          :size $baseline * 1.8
+        :line-height $baseline * 2
+        
+        > span
+          :display block
+          :color #1E8C76
+          :position relative
+          :padding
+            :left $ninesixty_gutter_width * 7
+          
+          > svg
+            :position absolute
+            :left 0
+            :top 50%
+            :height $baseline * 3
+            :margin
+              :top -$baseline * 1.5
+        
+        & + *
+          :margin
+            :top $baseline
+        
+        & + ul
+          :margin
+            :top $baseline * 2
+      
+      > p
+        :font
+          :size $baseline * 1.2
+        :line-height $baseline * 1.5
+        
+        > span
+          :color #1E8C76
+        
+        > i
+          :font
+            :style normal
+          :color #9F9183
+        
+        a
+          :color #1E8C76
+          +inverse-hover-underline
+        
+        & + *
+          :margin
+            :top $baseline
+        
+        & + ul
+          :margin
+            :top $baseline * 2
+      
+      > .desc
+        > li
+          :position relative
+          :padding
+            :left $ninesixty_gutter_width * 7
+          
+          > svg
+            :position absolute
+            :left 0
+            :top 50%
+            :height $baseline * 2.5
+            :margin
+              :top -$baseline * 1.25
+          
+          > p
+            :font
+              :size $baseline * 1.2
+            :line-height $baseline * 1.5
+            
+            & + *
+              :margin
+                :top $baseline / 4
+          
+          > span
+            :display block
+            :font
+              :size $baseline * 0.9
+            :color #9F9183
+          
+          & + *
+            :margin
+              :top $baseline * 1.5
+        
+        & + *
+          :margin
+            :top $baseline * 2
+      
+      > .program
+        > li
+          > span
+            :display block
+            :font
+              :size $baseline * 0.9
+            :color #9F9183
+            
+            & + *
+              :margin
+                :top $baseline / 2
+          
+          > p
+            :font
+              :size $baseline * 1.2
+            :line-height $baseline * 1.5
+            
+            & + *
+              :margin
+                :top $baseline / 4
+          
+          > i
+            :display block
+            :font
+              :size $baseline * 0.9
+              :style normal
+            :line-height $baseline * 1.25
+          
+          &.break
+            :padding
+              :left $ninesixty_gutter_width * 10
+            :position relative
+            
+            > svg
+              :position absolute
+              :left 0
+              :top 50%
+              :margin
+                :top -$baseline * 1.25
+              :height $baseline * 2.5
+          
+          & + *
+            :margin
+              :top $baseline * 2
+      
+      > span
+        :display block
+        :font
+          :size $baseline * 0.9
+      
+      > .hr
+        :background #CFC6BC
+        :height 1px
+        :margin
+          :top $baseline * 2
+        
+        & + *
+          :margin
+            :top $baseline * 2
