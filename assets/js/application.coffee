@@ -17,12 +17,20 @@ ROI.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window)->
   $scope.showConnect = false
   $scope.showThankYou = false
   $scope.confThankYou = false
+  $scope.showMedForm = false
+  $scope.medConfThankYou = false
   $scope.busy = false
   $scope.get = (name)-> $scope[name]
   $scope.set = (name, state)-> $scope[name] = state
   
   offset = $window.innerHeight
   $scope.getOffset = (plus = 0)-> offset + plus - 25
+  
+  $scope.getCookie = (name)->
+    matches = document.cookie.match(new RegExp(
+      "(?:^|; )#{name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)"
+    ))
+    if matches then decodeURIComponent(matches[1]) else undefined
 ]
 
 ROI.directive 'clickOutsideOrClose', ['$document', '$timeout', ($document, $timeout)->
@@ -40,7 +48,6 @@ ROI.directive 'clickOutsideOrClose', ['$document', '$timeout', ($document, $time
           $document.unbind 'click'
           scope.$apply scope.fn()
 ]
-    
 
 ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $timeout)->
   $scope.setMessage = ->
@@ -51,12 +58,6 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
       token: 'nQ7LBMohbPwy1tjLIw'
   
   $scope.setMessage()
-  
-  $scope.getCookie = (name)->
-    matches = document.cookie.match(new RegExp(
-      "(?:^|; )#{name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)"
-    ))
-    if matches then decodeURIComponent(matches[1]) else undefined  
   
   $scope.send = (msg)->
     $scope.set('busy', true)
@@ -73,7 +74,6 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
       , 3000
 ]
 
-
 ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $timeout)->
   $scope.setMessage = ->
     $scope.message =
@@ -84,12 +84,6 @@ ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $
   
   $scope.setMessage()
   
-  $scope.getCookie = (name)->
-    matches = document.cookie.match(new RegExp(
-      "(?:^|; )#{name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)"
-    ))
-    if matches then decodeURIComponent(matches[1]) else undefined  
-  
   $scope.send = (msg)->
     $scope.set('busy', true)
     url = ""
@@ -99,6 +93,27 @@ ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $
       $scope.setMessage()
       $scope.set('busy', false)
       $scope.set('confThankYou', true)
+]
+
+ROI.controller 'MedConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $timeout)->
+  $scope.setMessage = ->
+    $scope.message =
+      form: 'med_conference'
+      config: 28
+      callback: 'JSON_CALLBACK'
+      token: 'nQ7LBMohbPwy1tjLIw'
+  
+  $scope.setMessage()
+  
+  $scope.send = (msg)->
+    $scope.set('busy', true)
+    url = ""
+    for field, value of msg then url += "#{field}=#{encodeURIComponent(value)}&"
+    url += "sbjs_current=#{encodeURIComponent($scope.getCookie('sbjs_current'))}"
+    $http.jsonp("https://umarker.roi.rs/?#{url}").success (uid)->
+      $scope.setMessage()
+      $scope.set('busy', false)
+      $scope.set('medConfThankYou', true)
 ]
 
 ROI.controller 'LoginFormCtrl', ['$scope', '$timeout', ($scope, $timeout)->

@@ -2,18 +2,94 @@
 layout: conf
 ---
 
-<div id="med-conf">
+<div id="med-conf" ng-controller="MedConfFormCtrl">
   <aside>
-    <div>
+    <div ng-class="{big: showMedForm && !medConfThankYou, middle: medConfThankYou}">
       <h1>
         Медицина<br />
         будущего
       </h1>
       <p>Автоматизация продаж реальна</p>
-      <footer>
-        <a href="#" class="connect">Запишитесь cейчас</a>
+      <footer ng-if="!showMedForm">
+        <a href="#" class="connect" ng-click="set('showMedForm', true)">Запишитесь cейчас</a>
         <img src="/medconference2015/icons.png" />
       </footer>
+      <div class="form" ng-if="showMedForm && !medConfThankYou" ng-class="{active: showMedForm && !medConfThankYou}">
+        <p>Заполните форму, пожалуйста.</p>
+        <form name="medConfForm" ng-submit="send(message)">
+          <section>
+            <div>
+              <label for="name">Имя *</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                ng-model="message.name"
+                ng-required="true"
+                ng-disabled="get('busy')"
+              />
+            </div>
+            <div>
+              <label for="email">Почта *</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                ng-model="message.email"
+                ng-required="true"
+                ng-disabled="get('busy')"
+              />
+            </div>
+            <div>
+              <label for="company">Компания *</label>
+              <input
+                type="text"
+                name="company"
+                id="company"
+                ng-model="message.company"
+                ng-required="true"
+                ng-disabled="get('busy')"
+              />
+            </div>
+            <div>
+              <label for="position">Должность *</label>
+              <input
+                type="text"
+                name="position"
+                id="position"
+                ng-model="message.position"
+                ng-required="true"
+                ng-disabled="get('busy')"
+              />
+            </div>
+            <div>
+              <label for="comment">Комментарий</label>
+              <textarea
+                name="comment"
+                id="comment"
+                ng-model="message.comment"
+                ng-disabled="get('busy')"
+              >
+              </textarea>
+            </div>
+          </section>
+          <input type="submit" value="Записаться" ng-disabled="medConfForm.$invalid" />
+        </form>
+      </div>
+      <div class="form" ng-if="medConfThankYou" ng-class="{active: medConfThankYou}">
+        <section class="thank-you">
+          <div>
+            <h2>Спасибо.</h2>
+            <p>Мы вас записали.</p>
+            <p>
+              В ближайшее время отправим<br />
+              письмо с подробностями<br />
+              на ваш ящик электронной почты.
+            </p>
+          </div>
+        </section>
+        <span ng-class="{active: medConfThankYou}">Записаны</span>
+      </div>
     </div>
   </aside>
   <section>

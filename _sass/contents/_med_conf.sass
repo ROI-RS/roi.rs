@@ -13,6 +13,8 @@
     :height 100%
     :overflow auto
     :overflow overlay
+    :overflow-scrolling touch
+    :-webkit-overflow-scrolling touch
     :padding
       :left $ninesixty_gutter_width * 3
       :right $ninesixty_gutter_width * 3
@@ -43,11 +45,122 @@
         & + *
           :margin
             :top $baseline / 2
+        
+        & + p + *
+          :margin
+            :top $baseline * 2
   
-      > p
+      p
         :font
           :size $baseline * 1.2
         :line-height $baseline * 1.5
+      
+        & + *
+          :margin
+            :top $baseline
+      
+      > .form
+        :display none
+        
+        section
+          :position relative
+          :border 1px solid rgba(255, 255, 255, 0.5)
+        
+          > div
+            :text-align left
+          
+            > h2
+              :font
+                :size $baseline * 2.4
+              :line-height $baseline * 3
+          
+              & + *
+                :margin
+                  :top $baseline
+            
+            > label
+              :display block
+              :height $baseline * 2.25
+              :line-height $baseline * 2.25
+              :font
+                :size $baseline * 0.9
+              :padding
+                :left $ninesixty_gutter_width
+                :right $ninesixty_gutter_width
+              :color rgba(255, 255, 255, 0.5)
+      
+            > input, > textarea
+              :display block
+              :width 100%
+              :height $baseline * 2.25
+              :padding
+                :left $ninesixty_gutter_width
+                :right $ninesixty_gutter_width
+              :font
+                :size $baseline * 1.2
+              :background none
+              :color $white
+          
+            > textarea
+              :height $baseline * 10.25
+      
+            & + div
+              :border-top 1px solid rgba(255, 255, 255, 0.5)
+          
+          &.thank-you
+            :padding
+              :top $baseline * 6
+              :bottom $baseline * 5
+              :left $ninesixty_gutter_width * 3
+              :right $ninesixty_gutter_width * 3
+            :border-color $white
+            
+            > div
+              :text-align right
+      
+          & ~ *
+            :margin
+              :top $baseline * 2
+      
+        input[type="submit"]
+          :cursor pointer
+          +inline-block
+          :font
+            :size $baseline * 1.2
+          :height $baseline * 3
+          :line-height $baseline * 3
+          :padding
+            :left $ninesixty_gutter_width * 3
+            :right $ninesixty_gutter_width * 3
+          :background $white
+          :color $brown
+          +transition(opacity .3s ease-out)
+          +hover-opacity
+      
+          &[disabled]
+            :cursor default
+            +opacity(0.5)
+        
+          &.hidden
+            :display none
+      
+        span
+          :display none
+          :font
+            :size $baseline * 1.2
+          :height $baseline * 3
+          :line-height calc(#{$baseline * 3} - 2px)
+          :padding
+            :left $ninesixty_gutter_width * 3
+            :right $ninesixty_gutter_width * 3
+          :color $white
+          :border 1px solid $white
+        
+          &.active
+            +inline-block
+        
+        &.active
+          :display block
       
       > footer
         :position absolute
@@ -75,6 +188,12 @@
         > img
           :display block
           :width 100%
+      
+      &.middle
+        :min-height $baseline * 38
+      
+      &.big
+        :min-height $baseline * 50
   
   > section
     :padding
@@ -241,7 +360,10 @@
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container > #med-conf
-    :height auto
+    :overflow auto
+    :overflow overlay
+    :overflow-scrolling touch
+    :-webkit-overflow-scrolling touch
     
     > aside, > section
       :width 100%
@@ -251,3 +373,6 @@
       > div
         :height auto
         :text-align left
+  
+    > aside > div > .form section.thank-you > div
+      :text-align left
