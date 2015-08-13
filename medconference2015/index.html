@@ -86,7 +86,7 @@ layout: conf
               </textarea>
             </div>
           </section>
-          <input type="submit" value="Записаться" ng-disabled="medConfForm.$invalid" />
+          <input type="submit" value="Записаться" ng-disabled="medConfForm.$invalid || get('busy')" />
         </form>
       </div>
       <div class="form" ng-class="{active: medConfThankYou}">

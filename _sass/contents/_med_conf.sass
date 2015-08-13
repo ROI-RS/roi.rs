@@ -52,6 +52,7 @@
       > .welcome
         :position relative
         :height 100%
+        :min-height $baseline * 30
         
         > h1
           :font
@@ -399,5 +400,9 @@
         :height auto
         :text-align left
   
-    > aside > div > .form section.thank-you > div
-      :text-align left
+    > aside > div
+      > .welcome
+        :min-height $baseline * 38
+      
+      > .form section.thank-you > div
+        :text-align left
