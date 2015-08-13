@@ -11,54 +11,53 @@
   <link rel="stylesheet" type="text/css" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   
-  
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
-      (function (d, w, c) {
-          (w[c] = w[c] || []).push(function() {
-              try {
-                  w.yaCounter30093989 = new Ya.Metrika({
-                      id:30093989,
-                      clickmap:true,
-                      trackLinks:true,
-                      accurateTrackBounce:true,
-                      webvisor:true
-                  });
-              } catch(e) { }
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter30093989 = new Ya.Metrika({
+            id:30093989,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
           });
-
-          var n = d.getElementsByTagName("script")[0],
-              s = d.createElement("script"),
-              f = function () { n.parentNode.insertBefore(s, n); };
-          s.type = "text/javascript";
-          s.async = true;
-          s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-          if (w.opera == "[object Opera]") {
-              d.addEventListener("DOMContentLoaded", f, false);
-          } else { f(); }
-      })(document, window, "yandex_metrika_callbacks");
+        } catch(e) { }
+      });
+      
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://mc.yandex.ru/metrika/watch.js";
+      
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/30093989" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
   
-  
-  <!-- Facebook script   -->
-  <script>(function() {
-  var _fbq = window._fbq || (window._fbq = []);
-  if (!_fbq.loaded) {
-  var fbds = document.createElement('script');
-  fbds.async = true;
-  fbds.src = '//connect.facebook.net/en_US/fbds.js';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(fbds, s);
-  _fbq.loaded = true;
-  }
-  _fbq.push(['addPixelId', '1443501655955659']);
-  })();
-  window._fbq = window._fbq || [];
-  window._fbq.push(['track', 'PixelInitialized', {}]);
+  <!-- Facebook script -->
+  <script>
+    (function() {
+      var _fbq = window._fbq || (window._fbq = []);
+      if (!_fbq.loaded) {
+        var fbds = document.createElement('script');
+        fbds.async = true;
+        fbds.src = '//connect.facebook.net/en_US/fbds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fbds, s);
+        _fbq.loaded = true;
+      }
+      _fbq.push(['addPixelId', '1443501655955659']);
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', 'PixelInitialized', {}]);
   </script>
   <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1443501655955659&amp;ev=PixelInitialized" /></noscript>
-  
 </head>

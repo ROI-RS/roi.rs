@@ -95,7 +95,15 @@ ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $
       $scope.set('confThankYou', true)
 ]
 
-ROI.controller 'MedConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $timeout)->
+ROI.controller 'MedConfFormCtrl', ['$scope', '$http', '$timeout', '$location', 'duScrollOffset', ($scope, $http, $timeout, $location, duScrollOffset)->
+  if $location.path() == '/form' then $scope.showMedForm = true
+  if $location.path() == '/program'
+    duScrollOffset = 50
+    medConf = angular.element document.getElementById('med-conf')
+    rightSide = angular.element document.getElementById('right-side')
+    program = angular.element document.getElementById('program')
+    (if document.body.offsetWidth > 1024 then rightSide else medConf).duScrollToElementAnimated program
+  
   $scope.setMessage = ->
     $scope.message =
       form: 'med_conference'
