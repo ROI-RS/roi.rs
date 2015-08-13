@@ -234,6 +234,7 @@
       :background-position right center
   
   > section
+    :background #fff
     :padding
       :bottom $baseline * 7.5
     
@@ -298,6 +299,7 @@
         > img
           :display block
           :width 100%
+          :height $baseline * 12.4
       
       > .desc
         > li
@@ -405,16 +407,24 @@
     
     > aside, > section
       :width 100%
-      :height auto
       :text-align center
       
       > div
-        :height auto
         :text-align left
   
-    > aside > div
-      > .welcome
-        :min-height $baseline * 43
+    > aside
+      :height 50%
+      :min-height $baseline * 46
       
-      > .form > section section.thank-you > div
-        :text-align left
+      > div
+        > .welcome
+          :min-height $baseline * 43
+      
+        > .form > section section.thank-you > div
+          :text-align left
+    
+    > section
+      :height auto
+      
+      > div
+        :height auto

@@ -3,7 +3,7 @@ layout: conf
 ---
 
 <div id="med-conf" ng-controller="MedConfFormCtrl">
-  <aside ng-class="{right: showMedForm}">
+  <aside id="left-side" ng-class="{right: showMedForm}">
     <div ng-class="{big: showMedForm}">
       <div class="welcome">
         <h1>
@@ -12,7 +12,7 @@ layout: conf
         </h1>
         <p>Автоматизация продаж реальна</p>
         <footer>
-          <a href="#" class="connect" ng-click="set('showMedForm', true)">Запишитесь cейчас</a>
+          <a href="#" class="connect" ng-click="set('showMedForm', true); scrollTop()">Запишитесь cейчас</a>
           <img src="/medconference2015/icons.png" />
         </footer>
       </div>

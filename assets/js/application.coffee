@@ -96,13 +96,14 @@ ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $
 ]
 
 ROI.controller 'MedConfFormCtrl', ['$scope', '$http', '$timeout', '$location', ($scope, $http, $timeout, $location)->
+  medConf = angular.element document.getElementById('med-conf')
+  leftSide = angular.element document.getElementById('left-side')
+  rightSide = angular.element document.getElementById('right-side')
+  program = angular.element document.getElementById('program')
+  test = document.body.offsetWidth > 1024
+  
   if $location.path() == '/form' then $scope.showMedForm = true
-  if $location.path() == '/program'
-    medConf = angular.element document.getElementById('med-conf')
-    rightSide = angular.element document.getElementById('right-side')
-    program = angular.element document.getElementById('program')
-    test = document.body.offsetWidth > 1024
-    (if test then rightSide else medConf).duScrollToElementAnimated program, if test then 50 else 25
+  if $location.path() == '/program' then (if test then rightSide else medConf).duScrollToElementAnimated program, if test then 50 else 25
   
   $scope.setMessage = ->
     $scope.message =
@@ -122,10 +123,16 @@ ROI.controller 'MedConfFormCtrl', ['$scope', '$http', '$timeout', '$location', (
       $scope.setMessage()
       $scope.set('busy', false)
       $scope.set('medConfThankYou', true)
+      test = document.body.offsetWidth > 1024
+      (if test then leftSide else medConf).scrollTopAnimated 0
       $timeout ->
         $scope.set('showMedForm', false)
         $scope.set('medConfThankYou', false)
       , 3000
+  
+  $scope.scrollTop = ->
+    test = document.body.offsetWidth > 1024
+    (if test then leftSide else medConf).scrollTopAnimated 0, 300
 ]
 
 ROI.controller 'LoginFormCtrl', ['$scope', '$timeout', ($scope, $timeout)->
