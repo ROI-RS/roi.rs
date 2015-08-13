@@ -17,91 +17,106 @@ layout: conf
         </footer>
       </div>
       <div class="form" ng-class="{active: showMedForm && !medConfThankYou}">
-        <p>Заполните форму, пожалуйста.</p>
-        <form name="medConfForm" ng-submit="send(message)">
-          <section>
-            <div>
-              <label for="name">Имя *</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                ng-model="message.name"
-                ng-required="true"
-                ng-disabled="get('busy')"
-              />
-            </div>
-            <div>
-              <label for="email">Почта *</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                ng-model="message.email"
-                ng-required="true"
-                ng-disabled="get('busy')"
-              />
-            </div>
-            <div>
-              <label for="phone">Телефон *</label>
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                ng-model="message.phone"
-                ng-required="true"
-                ng-disabled="get('busy')"
-              />
-            </div>
-            <div>
-              <label for="company">Компания *</label>
-              <input
-                type="text"
-                name="company"
-                id="company"
-                ng-model="message.company"
-                ng-required="true"
-                ng-disabled="get('busy')"
-              />
-            </div>
-            <div>
-              <label for="position">Должность *</label>
-              <input
-                type="text"
-                name="position"
-                id="position"
-                ng-model="message.position"
-                ng-required="true"
-                ng-disabled="get('busy')"
-              />
-            </div>
-            <div>
-              <label for="comment">Комментарий</label>
-              <textarea
-                name="comment"
-                id="comment"
-                ng-model="message.comment"
-                ng-disabled="get('busy')"
-              >
-              </textarea>
-            </div>
-          </section>
-          <input type="submit" value="Записаться" ng-disabled="medConfForm.$invalid || get('busy')" />
-        </form>
+        <section>
+          <p>Заполните форму, пожалуйста.</p>
+          <form name="medConfForm" ng-submit="send(message)">
+            <section>
+              <div>
+                <label for="name">Имя *</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  ng-model="message.name"
+                  ng-required="true"
+                  ng-disabled="get('busy')"
+                />
+              </div>
+              <div>
+                <label for="surname">Фамилия *</label>
+                <input
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  ng-model="message.surname"
+                  ng-required="true"
+                  ng-disabled="get('busy')"
+                />
+              </div>
+              <div>
+                <label for="email">Почта *</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  ng-model="message.email"
+                  ng-required="true"
+                  ng-disabled="get('busy')"
+                />
+              </div>
+              <div>
+                <label for="phone">Телефон *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  ng-model="message.phone"
+                  ng-required="true"
+                  ng-disabled="get('busy')"
+                />
+              </div>
+              <div>
+                <label for="company">Компания *</label>
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  ng-model="message.company"
+                  ng-required="true"
+                  ng-disabled="get('busy')"
+                />
+              </div>
+              <div>
+                <label for="position">Должность *</label>
+                <input
+                  type="text"
+                  name="position"
+                  id="position"
+                  ng-model="message.position"
+                  ng-required="true"
+                  ng-disabled="get('busy')"
+                />
+              </div>
+              <div>
+                <label for="comment">Комментарий</label>
+                <textarea
+                  name="comment"
+                  id="comment"
+                  ng-model="message.comment"
+                  ng-disabled="get('busy')"
+                >
+                </textarea>
+              </div>
+            </section>
+            <input type="submit" value="Записаться" ng-disabled="medConfForm.$invalid || get('busy')" />
+          </form>
+        </section>
       </div>
       <div class="form" ng-class="{active: medConfThankYou}">
-        <section class="thank-you">
-          <div>
-            <h2>Спасибо.</h2>
-            <p>Мы вас записали.</p>
-            <p>
-              В ближайшее время отправим<br />
-              письмо с подробностями<br />
-              на ваш ящик электронной почты.
-            </p>
-          </div>
+        <section>
+          <section class="thank-you">
+            <div>
+              <h2>Спасибо.</h2>
+              <p>Мы вас записали.</p>
+              <p>
+                В ближайшее время отправим<br />
+                письмо с подробностями<br />
+                на ваш ящик электронной почты.
+              </p>
+            </div>
+          </section>
+          <span>Записаны</span>
         </section>
-        <span>Записаны</span>
       </div>
     </div>
   </aside>

@@ -105,103 +105,115 @@
             :top $baseline
       
       > .form
+        :position relative
+        :height 100%
+        :min-height $baseline * 43
         :visibility hidden
         +opacity(0)
         +transition(all .5s ease-out)
         
-        section
-          :height $baseline * 30
-          :position relative
-          :border 1px solid rgba(255, 255, 255, 0.5)
+        > section
+          :position absolute
+          :top 50%
+          :left 0
+          :height $baseline * 43
+          :width 100%
+          :margin
+            :top -$baseline * 21.5
         
-          > div
-            :text-align left
+          section
+            :height $baseline * 35
+            :position relative
+            :border 1px solid rgba(255, 255, 255, 0.5)
+        
+            > div
+              :text-align left
           
-            > h2
-              :font
-                :size $baseline * 2.4
-              :line-height $baseline * 3
+              > h2
+                :font
+                  :size $baseline * 2.4
+                :line-height $baseline * 3
           
-              & + *
-                :margin
-                  :top $baseline
+                & + *
+                  :margin
+                    :top $baseline
             
-            > label
-              :display block
-              :height $baseline * 2.25
-              :line-height $baseline * 2.25
-              :font
-                :size $baseline * 0.9
-              :padding
-                :left $ninesixty_gutter_width
-                :right $ninesixty_gutter_width
-              :color rgba(255, 255, 255, 0.5)
+              > label
+                :display block
+                :height $baseline * 2.25
+                :line-height $baseline * 2.25
+                :font
+                  :size $baseline * 0.9
+                :padding
+                  :left $ninesixty_gutter_width
+                  :right $ninesixty_gutter_width
+                :color rgba(255, 255, 255, 0.5)
       
-            > input, > textarea
-              :display block
-              :width 100%
-              :height $baseline * 2.25
-              :padding
-                :left $ninesixty_gutter_width
-                :right $ninesixty_gutter_width
-              :font
-                :size $baseline * 1.2
-              :background none
-              :color $white
+              > input, > textarea
+                :display block
+                :width 100%
+                :height $baseline * 2.25
+                :padding
+                  :left $ninesixty_gutter_width
+                  :right $ninesixty_gutter_width
+                :font
+                  :size $baseline * 1.2
+                :background none
+                :color $white
           
-            > textarea
-              :height $baseline * 4.5
+              > textarea
+                :height $baseline * 4.5
       
-            & + div
-              :border-top 1px solid rgba(255, 255, 255, 0.5)
+              & + div
+                :border-top 1px solid rgba(255, 255, 255, 0.5)
           
-          &.thank-you
-            :margin
-              :top $baseline * 2.5
+            &.thank-you
+              :margin
+                :top $baseline * 2.5
+              :padding
+                :top $baseline * 6
+                :bottom $baseline * 5
+                :left $ninesixty_gutter_width * 3
+                :right $ninesixty_gutter_width * 3
+              :border-color $white
+            
+              > div
+                :text-align right
+      
+            & ~ *
+              :margin
+                :top $baseline * 2
+      
+          input[type="submit"]
+            :cursor pointer
+            +inline-block
+            :font
+              :size $baseline * 1.2
+            :height $baseline * 3
+            :line-height $baseline * 3
             :padding
-              :top $baseline * 6
-              :bottom $baseline * 5
               :left $ninesixty_gutter_width * 3
               :right $ninesixty_gutter_width * 3
-            :border-color $white
-            
-            > div
-              :text-align right
+            :background $white
+            :color $brown
+            +transition(opacity .3s ease-out)
+            +hover-opacity
       
-          & ~ *
-            :margin
-              :top $baseline * 2
+            &[disabled]
+              :cursor default
+              +opacity(0.5)
       
-        input[type="submit"]
-          :cursor pointer
-          +inline-block
-          :font
-            :size $baseline * 1.2
-          :height $baseline * 3
-          :line-height $baseline * 3
-          :padding
-            :left $ninesixty_gutter_width * 3
-            :right $ninesixty_gutter_width * 3
-          :background $white
-          :color $brown
-          +transition(opacity .3s ease-out)
-          +hover-opacity
-      
-          &[disabled]
-            :cursor default
-            +opacity(0.5)
-      
-        span
-          +inline-block
-          :font
-            :size $baseline * 1.2
-          :height $baseline * 3
-          :line-height calc(#{$baseline * 3} - 2px)
-          :padding
-            :left $ninesixty_gutter_width * 3
-            :right $ninesixty_gutter_width * 3
-          :color $white
-          :border 1px solid $white
+          span
+            +inline-block
+            :font
+              :size $baseline * 1.2
+            :height $baseline * 3
+            :line-height calc(#{$baseline * 3} - 2px)
+            :padding
+              :left $ninesixty_gutter_width * 3
+              :right $ninesixty_gutter_width * 3
+            :color $white
+            :border 1px solid $white
         
         &.active
           :visibility visible
@@ -212,7 +224,7 @@
             :left -100%
       
       &.big
-        :min-height $baseline * 38
+        :min-height $baseline * 43
         
         > .welcome
           :margin-left -150%
@@ -402,7 +414,7 @@
   
     > aside > div
       > .welcome
-        :min-height $baseline * 38
+        :min-height $baseline * 43
       
-      > .form section.thank-you > div
+      > .form > section section.thank-you > div
         :text-align left
