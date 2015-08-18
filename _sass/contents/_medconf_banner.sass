@@ -1,0 +1,22 @@
+/* medconf banner
+
+#container > #medconf-banner
+  :display block
+  :width 100%
+  :background #13594b
+  +hover-opacity
+  
+  > img
+    :display block
+    :width 100%
+    
+    &.small
+      :display none
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  #container > #medconf-banner > img
+    &.big
+      :display none
+    
+    &.small
+      :display block
