@@ -13,7 +13,10 @@ layout: conf
         <p>Автоматизация продаж реальна</p>
         <footer>
           <a href="#" class="connect" ng-click="set('showMedForm', true); scrollTop()">Запишитесь cейчас</a>
-          <img src="/medconference2015/icons.png" />
+          <div class="icons">
+            <img class="normal" src="/medconference2015/icons.png" />
+            <img class="hover" src="/medconference2015/icons_hover.png" />
+          </div>
         </footer>
       </div>
       <div class="form" ng-class="{active: showMedForm && !medConfThankYou}">

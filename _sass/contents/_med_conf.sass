@@ -90,11 +90,24 @@
             & + *
               :margin
                 :top $baseline * 3
-      
-          > img
-            :display block
-            :width 100%
+          
+          > .icons
             :height $baseline * 7.45
+            
+            > img
+              :display block
+              :width 100%
+              :height $baseline * 7.45
+              
+              &.hover
+                :display none
+            
+            &:hover > img
+              &.normal
+                :display none
+              
+              &.hover
+                :display block
   
       p
         :font
