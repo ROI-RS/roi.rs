@@ -11,43 +11,40 @@
   > aside, > section
     :width 50%
     :height 100%
-    :overflow auto
-    :overflow overlay
-    :overflow-scrolling touch
-    :-webkit-overflow-scrolling touch
+    +children-inline
+  
+  > aside
+    :overflow hidden
+    :text-align left
+    :white-space nowrap
+    :color $white
+    :background #1E8C76 url(/medconference2015/bg.jpg) no-repeat left center
+    +transition(background .7s ease-in-out)
+    +background-size(cover)
+    +children-inline
     
     > div
-      +inline-block
-      :width $ninesixty_gutter_width * 48
+      :width 100%
+      :height 100%
+      +transition(all .7s ease-in-out)
+      +transition-property(margin, opacity, visibility)
+      :white-space normal
+      :text-align right
+      :overflow auto
+      :overflow overlay
+      :overflow-scrolling touch
+      :-webkit-overflow-scrolling touch
       :padding
         :left $ninesixty_gutter_width * 3
         :right $ninesixty_gutter_width * 3
         :top $baseline * 1.5
         :bottom $baseline * 1.5
-  
-  > aside
-    :text-align right
-    :color $white
-    :background #1E8C76 url(/medconference2015/bg.jpg) no-repeat left center
-    +transition(background .7s ease-in)
-    +background-size(cover)
-    
-    > div
-      :height 100%
-      :min-height $baseline * 33
-      :overflow hidden
-      :white-space nowrap
-      +transition(all .7s ease-in)
-      +children-inline
+      :visibility hidden
+      +opacity(0)
       
       > div
-        :white-space normal
-        :width 100%
-        +transition(all .7s ease-in)
-        
-        & + div
-          :margin
-            :left 50%
+        +inline-block
+        :width $ninesixty_gutter_width * 42
       
       > .welcome
         :position relative
@@ -73,51 +70,46 @@
           :left 0
           :right 0
           :bottom 0
-      
-          > .connect
+          
+          > div
+            :position relative
+            :height $baseline * 19
             +inline-block
-            :color $brown
-            :font
-              :size $baseline * 1.8
-            :background $white
-            :height $baseline * 4
-            :line-height $baseline * 4
-            :padding
-              :left $ninesixty_gutter_width * 3
-              :right $ninesixty_gutter_width * 3
-            +hover-opacity
-          
-            & + *
-              :margin
-                :top $baseline * 3
-          
-          > .icons
-            :background #CFC6BC
-            :padding $ninesixty_gutter_width * 3
-            :margin
-              :left -$ninesixty_gutter_width * 3
-              :right -$ninesixty_gutter_width * 3
-              :bottom -$ninesixty_gutter_width * 3
             
-            > p
+            > .connect
+              +inline-block
+              :color $brown
               :font
-                :size $baseline * 0.9
-              :color #3C280D
+                :size $baseline * 1.8
+              :background $white
+              :height $baseline * 4
+              :line-height $baseline * 4
+              :padding
+                :left $ninesixty_gutter_width * 3
+                :right $ninesixty_gutter_width * 3
+              +hover-opacity
+          
+              & + *
+                :margin
+                  :top $baseline * 3
+          
+            > .icons
+              :position absolute
+              :left 0
+              :bottom 0
+              :background #CFC6BC
+              :padding $ninesixty_gutter_width * 3
+              :padding
+                :top $baseline
             
-            > img
-              :display block
-              :width 100%
-              :height $baseline * 7.45
-              
-              &.hover
-                :display none
+              > p
+                :font
+                  :size $baseline * 0.9
+                :color #3C280D
             
-            &:hover > img
-              &.normal
-                :display none
-              
-              &.hover
+              > img
                 :display block
+                :width 100%
   
       p
         :font
@@ -131,19 +123,16 @@
       > .form
         :position relative
         :height 100%
-        :min-height $baseline * 46
-        :visibility hidden
-        +opacity(0)
-        +transition(all .8s ease-in)
+        :min-height $baseline * 43
         
         > section
           :position absolute
           :top 50%
           :left 0
-          :height $baseline * 46
+          :height $baseline * 43
           :width 100%
           :margin
-            :top -$baseline * 23
+            :top -$baseline * 21.5
         
           section
             :height $baseline * 35
@@ -238,21 +227,18 @@
               :right $ninesixty_gutter_width * 3
             :color $white
             :border 1px solid $white
-        
-        &.active
-          :visibility visible
-          +opacity(1)
-        
-        & + .form
-          :margin
-            :left -100%
       
-      &.big
-        :min-height $baseline * 46
+      &.first:not(.active)
+        :margin
+          :left -100%
+      
+      &.active
+        :visibility visible
+        +opacity(1)
         
-        > .welcome
-          :margin-left -150%
-          +opacity(0)
+      &.form-wrapper + .form-wrapper
+        :margin
+          :left -100%
     
     &.right
       :background-position right center
@@ -260,9 +246,18 @@
   > section
     :background #fff
     :padding
+      :left $ninesixty_gutter_width * 3
+      :right $ninesixty_gutter_width * 3
+      :top $baseline * 1.5
       :bottom $baseline * 7.5
+    :overflow auto
+    :overflow overlay
+    :overflow-scrolling touch
+    :-webkit-overflow-scrolling touch
     
     > div
+      :width $ninesixty_gutter_width * 42
+      
       > h1
         :font
           :size $baseline * 1.8
@@ -431,16 +426,17 @@
     
     > aside, > section
       :width 100%
-      :text-align center
-      
-      > div
-        :text-align left
   
     > aside
       :height 50%
       :min-height $baseline * 46
       
       > div
+        :text-align center
+        
+        > div
+          :text-align left
+        
         > .welcome
           :min-height $baseline * 43
       
@@ -449,6 +445,8 @@
     
     > section
       :height auto
+      :text-align center
       
       > div
         :height auto
+        :text-align left
