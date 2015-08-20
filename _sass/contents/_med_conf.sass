@@ -15,35 +15,35 @@
     :overflow overlay
     :overflow-scrolling touch
     :-webkit-overflow-scrolling touch
-    :padding
-      :left $ninesixty_gutter_width * 3
-      :right $ninesixty_gutter_width * 3
-      :top $baseline * 1.5
-      :bottom $baseline * 1.5
     
     > div
       +inline-block
-      :width $ninesixty_gutter_width * 42
+      :width $ninesixty_gutter_width * 48
+      :padding
+        :left $ninesixty_gutter_width * 3
+        :right $ninesixty_gutter_width * 3
+        :top $baseline * 1.5
+        :bottom $baseline * 1.5
   
   > aside
     :text-align right
     :color $white
     :background #1E8C76 url(/medconference2015/bg.jpg) no-repeat left center
-    +transition(background .5s ease-out)
+    +transition(background .7s ease-in)
     +background-size(cover)
     
     > div
       :height 100%
-      :min-height $baseline * 30
+      :min-height $baseline * 33
       :overflow hidden
       :white-space nowrap
-      +transition(all .5s ease-out)
+      +transition(all .7s ease-in)
       +children-inline
       
       > div
         :white-space normal
         :width 100%
-        +transition(all .5s ease-out)
+        +transition(all .7s ease-in)
         
         & + div
           :margin
@@ -52,7 +52,7 @@
       > .welcome
         :position relative
         :height 100%
-        :min-height $baseline * 30
+        :min-height $baseline * 33
         
         > h1
           :font
@@ -92,7 +92,17 @@
                 :top $baseline * 3
           
           > .icons
-            :height $baseline * 7.45
+            :background #CFC6BC
+            :padding $ninesixty_gutter_width * 3
+            :margin
+              :left -$ninesixty_gutter_width * 3
+              :right -$ninesixty_gutter_width * 3
+              :bottom -$ninesixty_gutter_width * 3
+            
+            > p
+              :font
+                :size $baseline * 0.9
+              :color #3C280D
             
             > img
               :display block
@@ -121,19 +131,19 @@
       > .form
         :position relative
         :height 100%
-        :min-height $baseline * 43
+        :min-height $baseline * 46
         :visibility hidden
         +opacity(0)
-        +transition(all .5s ease-out)
+        +transition(all .8s ease-in)
         
         > section
           :position absolute
           :top 50%
           :left 0
-          :height $baseline * 43
+          :height $baseline * 46
           :width 100%
           :margin
-            :top -$baseline * 21.5
+            :top -$baseline * 23
         
           section
             :height $baseline * 35
@@ -238,7 +248,7 @@
             :left -100%
       
       &.big
-        :min-height $baseline * 43
+        :min-height $baseline * 46
         
         > .welcome
           :margin-left -150%
