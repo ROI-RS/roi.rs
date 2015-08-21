@@ -102,7 +102,7 @@ ROI.controller 'MedConfFormCtrl', ['$scope', '$http', '$timeout', '$location', (
   program = angular.element document.getElementById('program')
   test = document.body.offsetWidth > 1024
   
-  if $location.path() == '/form' then $scope.showMedForm = true
+  if $location.path() == '/form' then $scope.set('showMedForm', true)
   if $location.path() == '/program' then (if test then rightSide else medConf).duScrollToElementAnimated program, if test then 50 else 25
   
   $scope.setMessage = ->
