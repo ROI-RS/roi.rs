@@ -13,7 +13,7 @@ layout: conf
         <p>Автоматизация продаж реальна</p>
         <footer>
           <div>
-            <a href="#" class="connect" ng-click="set('showMedForm', true); scrollTop()">Запишитесь cейчас</a>
+            <a href="#" class="connect hidden" ng-click="set('showMedForm', true); scrollTop()">Запишитесь cейчас</a>
             <div class="icons">
               <p>Партнеры и организаторы</p>
               <img src="/medconference2015/icons_brown.png" />
@@ -105,7 +105,7 @@ layout: conf
                 </textarea>
               </div>
             </section>
-            <input type="submit" value="Записаться" ng-disabled="medConfForm.$invalid || get('busy')" />
+            <input type="submit" value="Записаться" ng-disabled="true" />
           </form>
         </section>
       </div>

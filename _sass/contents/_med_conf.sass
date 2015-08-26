@@ -88,6 +88,10 @@
                 :left $ninesixty_gutter_width * 3
                 :right $ninesixty_gutter_width * 3
               +hover-opacity
+              
+              &.hidden
+                +opacity(0)
+                :visibility hidden
           
               & + *
                 :margin
