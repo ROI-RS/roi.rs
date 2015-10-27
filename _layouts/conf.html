@@ -7,10 +7,10 @@
         {{ content }}
       </div>
     </div>
-    <script type='text/javascript' src="{{ "/assets/js/angular.min.js" | prepend: site.baseurl }}"></script>
-    <script type='text/javascript' src="{{ "/assets/js/angular-scroll.min.js" | prepend: site.baseurl }}"></script>
-    <script type='text/javascript' src="{{ "/assets/js/angular-animate.min.js" | prepend: site.baseurl }}"></script>
-    <script type='text/javascript' src="{{ "/assets/js/application.js" | prepend: site.baseurl }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/angular.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/angular-scroll.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/angular-animate.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+    <script type='text/javascript' src="{{ "/assets/js/application.js" | prepend: site.baseurl | prepend: site.url }}"></script>
     <script type='text/javascript' src="https://umarker.roi.rs/28.js" id="umark"></script>
     
     <!-- Google Analytics -->
