@@ -28,7 +28,7 @@
       
       > img
         +inline-block
-        :height $baseline * 2
+        :height $baseline * 2.5
     
     > section
       :position absolute
@@ -64,7 +64,7 @@
           :size $baseline * 1.8
           :weight normal
         :line-height $baseline * 2
-        :color #00bcd4
+        :color #fff
       
         & + *
           :margin
@@ -91,7 +91,7 @@
         :display block
         :font
           :size $baseline * 0.9
-        :color #00bcd4
+        :color #fff
   
   > p
     :padding
@@ -100,8 +100,8 @@
     :line-height $baseline * 1.5
     :font
       :size $baseline * 1.2
-    :color #000
-    :background #00bcd4
+    :color #fff
+    :background #02ACC1
   
   > .program
     :background $white
@@ -118,7 +118,7 @@
       > section
         :width 100%
         :padding $baseline
-        :border 1px solid #E0D8FF
+        :border 1px solid #02ACC1
         :font
           :size $baseline * 0.9
       
@@ -140,8 +140,11 @@
               :bottom calc(#{-$baseline * 1.25} - 1px)
               :right $ninesixty_gutter_width * 2
               
+              g
+                +opacity(1)
+              
               path
-                :fill #E0D8FF
+                :fill #02ACC1
             
             > span
               :display block
@@ -200,7 +203,7 @@
               :padding
                 :top $baseline * 1.25
               :border
-                :top 1px solid #E0D8FF
+                :top 1px solid #02ACC1
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container > #estate-conf
