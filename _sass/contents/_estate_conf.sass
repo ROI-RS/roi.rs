@@ -64,7 +64,7 @@
           :size $baseline * 1.8
           :weight normal
         :line-height $baseline * 2
-        :color #58F1FF
+        :color #00bcd4
       
         & + *
           :margin
@@ -91,7 +91,7 @@
         :display block
         :font
           :size $baseline * 0.9
-        :color #58F1FF
+        :color #00bcd4
   
   > p
     :padding
@@ -101,7 +101,7 @@
     :font
       :size $baseline * 1.2
     :color #000
-    :background #58F1FF
+    :background #00bcd4
   
   > .program
     :background $white
@@ -116,7 +116,7 @@
       +children-inline
     
       > section
-        :width $ninesixty_gutter_width * 40
+        :width 100%
         :padding $baseline
         :border 1px solid #E0D8FF
         :font
@@ -201,183 +201,6 @@
                 :top $baseline * 1.25
               :border
                 :top 1px solid #E0D8FF
-      
-        & + *
-          :margin
-            :left $ninesixty_gutter_width * 4
-    
-      > aside
-        :width $ninesixty_gutter_width * 52
-        :padding
-          :top $baseline * 2
-        :text
-          :align left
-      
-        > .icons
-          :margin
-            :left -$ninesixty_gutter_width * 1.3
-            :top -$baseline
-          :height $baseline * 4
-          :background url(https://roi.rs/assets/images/backgrounds/conf_icons.png) no-repeat left center
-          +background-size(contain)
-        
-          & + *
-            :margin
-              :top $baseline * 2
-      
-        > p
-          :font
-            :size $baseline * 1.2
-          :line-height $baseline * 1.8
-          
-          > a
-            :color $black
-            +inverse-hover-underline
-        
-          & + *
-            :margin
-              :top $baseline * 2
-          
-          &#form
-            :margin
-              :top $baseline * 5
-      
-        > h2
-          :font
-            :size $baseline * 1.2
-          :line-height $baseline * 1.8
-          :letter-spacing $ninesixty_gutter_width * 0.5
-          +children-inline
-        
-          > span
-            :padding
-              :top $baseline * 0.75
-              :left $ninesixty_gutter_width * 3
-              :right $ninesixty_gutter_width * 3
-              :bottom $baseline * 0.75
-            :background #58F1FF
-            :color #2A2058
-        
-          & + *
-            :margin
-              :top $baseline
-      
-        > form
-          > section
-            :position relative
-            :background #F9F7FF
-            :border 1px solid #E0D8FF
-            
-            > section
-              +absoluted
-              :background #F9F7FF
-              :padding $baseline * 3
-              :display none
-              
-              > div
-                :position absolute
-                :left $baseline * 3
-                :top 50%
-                :margin
-                  :top -$baseline * 5
-                :height $baseline * 10
-                
-                > h2
-                  :font
-                    :size $baseline * 1.8
-                  :line-height $baseline * 2
-                
-                  & + *
-                    :margin
-                      :top $baseline
-              
-                > h3
-                  :font
-                    :size $baseline * 1.2
-                  :line-height $baseline * 1.5
-                
-                  & + *
-                    :margin
-                      :top $baseline
-              
-                > p
-                  :color #666
-                  :font
-                    :size $baseline * 1.2
-                  :line-height $baseline * 1.5
-              
-              &.active
-                :display block
-            
-            > div
-              > label
-                :display block
-                :height $baseline * 2.25
-                :line-height $baseline * 2.25
-                :font
-                  :size $baseline * 0.9
-                :padding
-                  :left $ninesixty_gutter_width
-                  :right $ninesixty_gutter_width
-                :color #666666
-          
-              > input, > textarea
-                :display block
-                :width 100%
-                :height $baseline * 2.25
-                :padding
-                  :left $ninesixty_gutter_width
-                  :right $ninesixty_gutter_width
-                :font
-                  :size $baseline * 1.2
-                :background none
-              
-              > textarea
-                :height $baseline * 10.25
-          
-              & + div
-                :border-top 1px solid #E0D8FF
-          
-            & ~ *
-              :margin
-                :top $baseline * 2
-          
-          > input
-            :cursor pointer
-            +inline-block
-            :font
-              :size $baseline * 1.2
-            :height $baseline * 3
-            :line-height $baseline * 3
-            :padding
-              :left $ninesixty_gutter_width * 3
-              :right $ninesixty_gutter_width * 3
-            :background #2A2058
-            :color #58F1FF
-            +transition(opacity .3s ease-out)
-          
-            &[disabled]
-              :cursor default
-              +opacity(0.5)
-            
-            &.hidden
-              :display none
-          
-          > span
-            :display none
-            :font
-              :size $baseline * 1.2
-            :height $baseline * 3
-            :line-height calc(#{$baseline * 3} - 2px)
-            :padding
-              :left $ninesixty_gutter_width * 3
-              :right $ninesixty_gutter_width * 3
-            :background $white
-            :color #999
-            :border 1px solid #BDC3C7
-            
-            &.active
-              +inline-block
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
   #container > #estate-conf
