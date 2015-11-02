@@ -65,7 +65,7 @@ layout: conf
           </li>
           <li>
             <span>13:40 — 14:10</span>
-            <h3>Карфин — Кирилл Ларин</h3>
+            <h3>Кар-Фин — Кирилл Ларин</h3>
             <p>Конвертации «ипотечного» трафика сайта застройщика - как получать больше заявок.</p>
           </li>
           <li>
@@ -123,6 +123,18 @@ layout: conf
                 name="position"
                 id="position"
                 ng-model="message.position"
+                ng-required="true"
+                ng-disabled="get('busy')"
+                autocomplete="off"
+              />
+            </div>
+            <div>
+              <label for="phone">Телефон *</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                ng-model="message.phone"
                 ng-required="true"
                 ng-disabled="get('busy')"
                 autocomplete="off"
