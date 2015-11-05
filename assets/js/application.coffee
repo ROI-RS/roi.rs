@@ -95,27 +95,6 @@ ROI.controller 'ConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $
       $scope.set('confThankYou', true)
 ]
 
-ROI.controller 'EstateConfFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http, $timeout)->
-  $scope.setMessage = ->
-    $scope.message =
-      form: 'estate_conference'
-      config: 28
-      callback: 'JSON_CALLBACK'
-      token: 'nQ7LBMohbPwy1tjLIw'
-  
-  $scope.setMessage()
-  
-  $scope.send = (msg)->
-    $scope.set('busy', true)
-    url = ""
-    for field, value of msg then url += "#{field}=#{encodeURIComponent(value)}&"
-    url += "sbjs_current=#{encodeURIComponent($scope.getCookie('sbjs_current'))}"
-    $http.jsonp("https://umarker.roi.rs/?#{url}").success (uid)->
-      $scope.setMessage()
-      $scope.set('busy', false)
-      $scope.set('confThankYou', true)
-]
-
 ROI.controller 'MedConfFormCtrl', ['$scope', '$http', '$timeout', '$location', ($scope, $http, $timeout, $location)->
   medConf = angular.element document.getElementById('med-conf')
   leftSide = angular.element document.getElementById('left-side')
