@@ -2,14 +2,14 @@
 layout: conf
 ---
 
-<div id="estate-conf" ng-controller="EstateConfFormCtrl">
+<div id="estate-conf">
   <header>
     <section>
       <p>Закрытая конференция для представителей индустрии недвижимости.</p>
       <h1>{% include icons/estate_conf_logo.svg %}</h1>
       <b>19 ноября 2015 </b>
       <nav>
-        <a href="#form" du-smooth-scroll>Записаться</a>
+        <a href="https://corp.mail.ru/ru/press/events/CallDayRealty/" du-smooth-scroll>Записаться</a>
       </nav>
       <span>Количество мест ограничено</span>
     </section>
@@ -75,100 +75,6 @@ layout: conf
           </li>
         </ul>
       </section>
-      <aside>
-        <p>Место проведения: <a href="https://maps.yandex.ru/?z=14&ll=37.54012359790037,55.798376489674126&l=map&origin=jsapi_2_1_29" target="_blank">Москва, Mail.Ru Group, Ленинградский проспект 39, стр. 79</a>.</p>
-        <p id="form">Для записи на конференцию заполните форму, пожалуйста.</p>
-        <form name="confForm" ng-submit="send(message)">
-          <section>
-            <div>
-              <label for="name">Имя *</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                ng-model="message.name"
-                ng-required="true"
-                ng-disabled="get('busy')"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <label for="email">Почта *</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                ng-model="message.email"
-                ng-required="true"
-                ng-disabled="get('busy')"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <label for="company">Компания *</label>
-              <input
-                type="text"
-                name="company"
-                id="company"
-                ng-model="message.company"
-                ng-required="true"
-                ng-disabled="get('busy')"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <label for="position">Должность *</label>
-              <input
-                type="text"
-                name="position"
-                id="position"
-                ng-model="message.position"
-                ng-required="true"
-                ng-disabled="get('busy')"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <label for="phone">Телефон *</label>
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                pattern="[0-9+]{12}"
-                ng-model="message.phone"
-                ng-required="true"
-                ng-disabled="get('busy')"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <label for="comment">Комментарий</label>
-              <textarea
-                name="comment"
-                id="comment"
-                ng-model="message.comment"
-                ng-disabled="get('busy')"
-              >
-              </textarea>
-            </div>
-            <section ng-class="{active: confThankYou}">
-              <div>
-                <h2>Спасибо.</h2>
-                <h3>Мы приняли вашу заявку.</h3>
-                <p>
-                  В ближайшее время отправим
-                  <br />
-                  письмо с подробностями
-                  <br />
-                  на ваш ящик электронной почты.
-                </p>
-              </div>
-            </section>
-          </section>
-          <input type="submit" value="Отправить заявку" ng-disabled="confForm.$invalid" ng-class="{hidden: confThankYou}" />
-          <span ng-class="{active: confThankYou}">Заявка отправлена</span>
-        </form>
-      </aside>
     </section>
   </div>
 </div>
