@@ -214,9 +214,25 @@
                 :top $baseline * 1.25
               :border
                 :top 1px solid #02ACC1      
+    
         & + *
           :margin
             :top $baseline * 2
+
+      > nav
+        :text-align center
+        +children-inline
+
+        > a
+          :font
+            :size $baseline * 1.2
+          :line-height $baseline * 3
+          :padding
+            :left $ninesixty_gutter_width * 6
+            :right $ninesixty_gutter_width * 6
+          :color #fff
+          :background #02ACC1
+          +hover-opacity
     
       > aside
         :text
