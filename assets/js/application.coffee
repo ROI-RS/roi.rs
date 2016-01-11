@@ -2,8 +2,8 @@
 ---
 
 ROI = angular.module 'ROI', ['duScroll', 'ngAnimate'], ($interpolateProvider)->
-  $interpolateProvider.startSymbol('//')
-  $interpolateProvider.endSymbol('//')
+  $interpolateProvider.startSymbol('/*')
+  $interpolateProvider.endSymbol('/*')
 
 ROI.value 'duScrollGreedy', true
 ROI.value 'duScrollDuration', 2000
