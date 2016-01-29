@@ -11,6 +11,7 @@
             name="name"
             id="name"
             ng-model="message.name"
+            ng-pattern="/^[a-zа-яA-ZА-Я\s]{3,200}$/i"
             ng-required="true"
             ng-disabled="get('busy')"
           />
@@ -23,6 +24,7 @@
             name="surname"
             id="surname"
             ng-model="message.surname"
+            ng-pattern="/^[a-zа-яA-ZА-Я\s]{3,200}$/i"
             ng-required="true"
             ng-disabled="get('busy')"
           />
@@ -35,6 +37,7 @@
             name="company"
             id="company"
             ng-model="message.company"
+            ng-pattern="/^.{3,200}$/i"
             ng-required="true"
             ng-disabled="get('busy')"
           />
@@ -46,7 +49,8 @@
             type="tel"
             name="phone"
             id="phone"
-            pattern="[0-9+]*"
+            restrict="reject"
+            mask="+9 (999) 999 9999"
             ng-model="message.phone"
             ng-required="true"
             ng-disabled="get('busy')"
