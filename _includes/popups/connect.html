@@ -3,78 +3,140 @@
   <section class="big">
     <div>
       <form name="contactForm" ng-submit="send(message)">
-        {% include logo.html %}
-        <label for="name">Ваше имя *</label>
-        <div class="input">
-          <input
-            type="text"
-            name="name"
-            id="name"
-            ng-model="message.name"
-            ng-pattern="/^[a-zа-яA-ZА-Я\s]{3,200}$/i"
-            ng-required="true"
-            ng-disabled="get('busy')"
-          />
-          {% include icons/success.svg %}
+        <div class="form-container">
+          <div class="form-header">
+            <div class="line left-line">
+            </div>
+            <div class="line right-line">
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="logo">
+              <h1>
+                <a href="/">
+                  {% include icons/logo.svg %}
+                </a>
+              </h1>
+              <div class="title-container">
+                <div class="title">Регистрация</div>
+              </div>
+            </div>
+          </div>
+          <div ng-class="{focused: focused == 'name'}" class="input-container">
+            <label for="name">Ваше имя</label>
+            <div class="input">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                ng-model="message.name"
+                ng-pattern="/^[a-zа-яA-ZА-Я\s]{3,200}$/i"
+                ng-required="true"
+                ng-disabled="get('busy')"
+                ng-focus="makeFocused('name')"
+                ng-blur="resetFocused()"
+              />
+              {% include icons/success.svg %}
+            </div>
+          </div>
+          
+          <div ng-class="{focused: focused == 'surname'}" class="input-container">
+            <label for="surname">Фамилия</label>
+            <div class="input">
+              <input
+                type="text"
+                name="surname"
+                id="surname"
+                ng-model="message.surname"
+                ng-pattern="/^[a-zа-яA-ZА-Я\s]{3,200}$/i"
+                ng-required="true"
+                ng-disabled="get('busy')"
+                ng-focus="makeFocused('surname')"
+                ng-blur="resetFocused()"
+              />
+              {% include icons/success.svg %}
+            </div>
+          </div>
+          
+          <div ng-class="{focused: focused == 'email'}" class="input-container">
+            <label for="email">Адрес электронной почты</label>
+            <div class="input">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                ng-model="message.email"
+                ng-required="true"
+                ng-disabled="get('busy')"
+                ng-focus="makeFocused('email')"
+                ng-blur="resetFocused()"
+              />
+              {% include icons/success.svg %}
+            </div>
+          </div>
+          
+          <div ng-class="{focused: focused == 'phone'}" class="input-container">
+            <label for="phone">Номер телефона</label>
+            <div class="input">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                restrict="reject"
+                mask="+9 (999) 999 9999"
+                ng-model="message.phone"
+                ng-required="true"
+                ng-disabled="get('busy')"
+                ng-focus="makeFocused('phone')"
+                ng-blur="resetFocused()"
+              />
+              {% include icons/success.svg %}
+            </div>
+          </div>
+        
+          <div ng-class="{focused: focused == 'company'}" class="input-container">
+            <label for="company">Компания</label>
+            <div class="input">
+              <input
+                type="text"
+                name="company"
+                id="company"
+                ng-model="message.company"
+                ng-pattern="/^.{3,200}$/i"
+                ng-required="true"
+                ng-disabled="get('busy')"
+                ng-focus="makeFocused('company')"
+                ng-blur="resetFocused()"
+              />
+              {% include icons/success.svg %}
+            </div>
+          </div>
+          
+          <div class="input-container">
+            <div class="checkbox-container">
+              <input ng-model="message.agency" id="agency" class="checkbox" name="agency" type="checkbox" >
+              <label for="agency" class="checkbox-label">Регистрируем компанию</label>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="optional">
+              необязательно
+            </div>
+            <label for="promocode">Промо код</label>
+            <div class="input">
+              <input
+                type="text"
+                name="promocode"
+                id="promocode"
+                ng-model="message.promocode"
+                ng-disabled="get('busy')"
+              />
+            </div>
+            <section ng-class="{busy: get('busy')}">
+              <input type="submit" value="Регистрация" ng-disabled="contactForm.$invalid" />
+            </section>
+          </div>
         </div>
-        <label for="name">Фамилия *</label>
-        <div class="input">
-          <input
-            type="text"
-            name="surname"
-            id="surname"
-            ng-model="message.surname"
-            ng-pattern="/^[a-zа-яA-ZА-Я\s]{3,200}$/i"
-            ng-required="true"
-            ng-disabled="get('busy')"
-          />
-          {% include icons/success.svg %}
-        </div>
-        <label for="company">Компания *</label>
-        <div class="input">
-          <input
-            type="text"
-            name="company"
-            id="company"
-            ng-model="message.company"
-            ng-pattern="/^.{3,200}$/i"
-            ng-required="true"
-            ng-disabled="get('busy')"
-          />
-          {% include icons/success.svg %}
-        </div>
-        <label for="phone">Номер телефона *</label>
-        <div class="input">
-          <input
-            type="tel"
-            name="phone"
-            id="phone"
-            restrict="reject"
-            mask="+9 (999) 999 9999"
-            ng-model="message.phone"
-            ng-required="true"
-            ng-disabled="get('busy')"
-          />
-          {% include icons/success.svg %}
-        </div>
-        <label for="email">Адрес электронной почты *</label>
-        <div class="input">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            ng-model="message.email"
-            ng-required="true"
-            ng-disabled="get('busy')"
-          />
-          {% include icons/success.svg %}
-        </div>
-        <footer>
-          <section ng-class="{busy: get('busy')}">
-            <input type="submit" value="Регистрация" ng-disabled="contactForm.$invalid" />
-            {% include icons/logo_single.svg %}
-          </section>
-        </footer>
       </form>
     </div>
   </section>

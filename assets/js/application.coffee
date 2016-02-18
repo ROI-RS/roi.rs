@@ -56,8 +56,16 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
       config: 28
       callback: 'JSON_CALLBACK'
       token: 'nQ7LBMohbPwy1tjLIw'
+      agency: false
   
   $scope.setMessage()
+  $scope.focused = null
+  
+  $scope.makeFocused = (field)->
+    $scope.focused = field
+    
+  $scope.resetFocused = ()->
+    $scope.focused = null
   
   $scope.send = (msg)->
     $scope.set('busy', true)
