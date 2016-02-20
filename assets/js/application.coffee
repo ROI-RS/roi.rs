@@ -31,6 +31,12 @@ ROI.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window)->
       "(?:^|; )#{name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)"
     ))
     if matches then decodeURIComponent(matches[1]) else undefined
+  $scope.displayConnect = () ->
+    $scope.showConnect = !$scope.showConnect
+    ga 'send',
+      hitType: 'event'
+      eventCategory: 'forms'
+      eventAction: 'open_form'
 ]
 
 ROI.directive 'clickOutsideOrClose', ['$document', '$timeout', ($document, $timeout)->
@@ -73,6 +79,10 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
     for field, value of msg then url += "#{field}=#{encodeURIComponent(value)}&"
     url += "sbjs_current=#{encodeURIComponent($scope.getCookie('sbjs_current'))}"
     $http.jsonp("https://umarker.roi.rs/?#{url}").success (uid)->
+      ga 'send',
+        hitType: 'event'
+        eventCategory: 'forms'
+        eventAction: 'send_form'
       $scope.setMessage()
       $scope.set('busy', false)
       $scope.set('showConnect', false)
