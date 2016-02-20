@@ -37,6 +37,7 @@ ROI.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window)->
       hitType: 'event'
       eventCategory: 'forms'
       eventAction: 'open_form'
+    yaCounter30093989.reachGoal('open_form')
 ]
 
 ROI.directive 'clickOutsideOrClose', ['$document', '$timeout', ($document, $timeout)->
@@ -83,6 +84,7 @@ ROI.controller 'ContactFormCtrl', ['$scope', '$http', '$timeout', ($scope, $http
         hitType: 'event'
         eventCategory: 'forms'
         eventAction: 'send_form'
+      yaCounter30093989.reachGoal('send_form')
       $scope.setMessage()
       $scope.set('busy', false)
       $scope.set('showConnect', false)
