@@ -1,7 +1,7 @@
 /* popup
 
 .checkbox-container
-  :margin-top 20px
+  :margin-top 1rem
   :text-align left
   
   .checkbox
@@ -15,7 +15,7 @@
     :cursor pointer
 
   .checkbox-label
-    :line-height 12px
+    :line-height 0.65rem
     :display inline-block
     :vertical-align middle
     :cursor pointer
@@ -31,17 +31,17 @@
       :border 1px solid $popup_input_border
       :display inline-block
       :vertical-align middle
-      :width 20px
-      :height 20px
-      :padding 2px
-      :margin-right 10px
+      :width 1rem
+      :height 1rem
+      :padding 0.1rem
+      :margin-right 0.5rem
       :text-align center
     &:checked + .checkbox-label:before
       :content "✔"
       :background transparent
       :color #fff
       :font
-        :size 12px
+        :size 0.7rem
     &:focus + .checkbox-label
       :outline 1px solid #ddd
 
@@ -428,7 +428,7 @@
       
       > form
         :margin
-          :top -$ninesixty_gutter_width * 39
+          :top -$ninesixty_gutter_width * 37
         :height $ninesixty_gutter_width * 78
     
     &.small > div
@@ -454,3 +454,16 @@
     &.ng-enter-active
       +opacity(1)
       +scale(1)
+      
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  #container-wrapper > .popup
+    > section
+      > div
+        > form
+          :width $ninesixty_gutter_width * 53
+          
+          > .form-container
+            > .input-container
+              > .optional
+                :margin-right $baseline / 2.2
+                
