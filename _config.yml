@@ -6,6 +6,8 @@ description:
 url: "https://roi.rs" # the base hostname & protocol for your site
 gems:
   - jekyll-coffeescript
+sass:
+  style: compressed
 # Build settings
 markdown: kramdown
 exclude: ['vendor', 'config', 'Gemfile', 'Gemfile.lock', '.ruby-version']
