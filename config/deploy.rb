@@ -16,6 +16,7 @@ task :deploy do
     invoke 'git:clone'
     # invoke 'deploy:link_shared_paths'
     invoke 'bundle:install'
+    queue 'bower install'
     # queue 'bundle exec jekyll build'
     queue 'rm -rf .asset-cache/sprockets/*'
     queue 'JEKYLL_ENV=production bundle exec jekyll build --destination _site2'
