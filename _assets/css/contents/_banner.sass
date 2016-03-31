@@ -1,0 +1,130 @@
+/* banner
+
+#container > #banner
+  :padding
+    :top $baseline * 1.5
+    :bottom $baseline * 1.5
+  :background $brown url(asset_path('backgrounds/conf.jpg')) no-repeat center
+  +background-size(cover)
+  :font
+    :family Merel
+  
+  > section
+    +grid-container($ninesixty_gutter_width * 93)
+    
+    > .icons
+      :width $ninesixty_gutter_width * 96
+      :margin
+        :left -$ninesixty_gutter_width * 1.5
+        :right -$ninesixty_gutter_width * 1.5
+      :padding
+        :bottom $baseline
+      :border
+        :bottom 1px solid rgba(151, 151, 151, 0.15)
+      
+      > img
+        +grid-container($ninesixty_gutter_width * 93)
+        :display block
+      
+      & + *
+        :margin
+          :top $baseline * 1.5
+    
+    > section
+      +children-inline
+      
+      > p
+        :display block
+        :font
+          :size $baseline * 0.9
+        :line-height $baseline * 1.1
+        
+        > span
+          :color #F9C838
+        
+        & + *
+          :margin
+            :top -$baseline * 2.2
+      
+      > nav
+        :display block
+        :height $baseline * 2.2
+        :line-height calc(#{$baseline * 2.2} - 2px)
+        :text-align right
+        +children-inline
+        
+        > a
+          :height $baseline * 2.2
+          :border 1px solid $white
+          :padding
+            :left $ninesixty_gutter_width * 2.5
+            :right $ninesixty_gutter_width * 2.5
+          :font
+            :size $baseline * 0.9
+          +hover-opacity
+      
+      > h1
+        :width $ninesixty_gutter_width * 29
+        :height $baseline * 5
+        
+        > svg
+          :width 100%
+          :height 100%
+        
+        & + *
+          :margin
+            :left $ninesixty_gutter_width * 4
+      
+      > aside
+        :width $ninesixty_gutter_width * 60
+        :font
+          :size $baseline * 0.9
+        :text
+          :align left
+        
+        > h1
+          :text-transform uppercase
+          :color #F9C838
+          :line-height $baseline * 1.1
+          :letter-spacing $ninesixty_gutter_width * 0.5
+          :white-space nowrap
+          
+          & + *
+            :margin
+              :top $baseline * 0.6
+        
+        > p
+          :line-height $baseline * 1.1
+          
+          > span
+            :color #F9C838
+      
+      & + *
+        :margin
+          :top $baseline * 1.5
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  #container > #banner > section
+    :width $ninesixty_gutter_width * 64
+    
+    > .icons
+      :width $ninesixty_gutter_width * 64
+      :margin
+        :left 0
+        :right 0
+      
+      > img
+        :width $ninesixty_gutter_width * 64
+    
+    > section
+      :text-align center
+    
+      > aside
+        :display none
+      
+      > p + *
+        :margin
+          :top $baseline * 1.5
+      
+      > nav
+        :text-align center

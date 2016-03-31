@@ -16,7 +16,12 @@ task :deploy do
     invoke 'git:clone'
     # invoke 'deploy:link_shared_paths'
     invoke 'bundle:install'
-    queue 'bundle exec jekyll build'
-    queue 'gzip -r -k --best ./_site'    
+    # queue 'bundle exec jekyll build'
+    queue 'rm -rf .asset-cache/sprockets/*'
+    queue 'JEKYLL_ENV=production bundle exec jekyll build --destination _site2'
+    queue 'rm -rf _site_backup/*'
+    queue 'mv _site _site_backup && mv _site2 _site'
+    # queue 'cp _site/index.html _site/index2.html'
+    queue 'gzip -r -k --best ./_site'
   end
 end

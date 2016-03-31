@@ -1,0 +1,109 @@
+@import "components/extras"
+@import "components/colors"
+
+/* fonts
+
+@font-face
+  :font-family "Lato"
+  :font-style normal
+  :font-weight normal
+  :src local("Lato") , url(asset_path('Lato-Regular.eot')) format("oet"), local("Lato"), url(asset_path('Lato-Regular.woff')) format("woff"), local("Lato"), url(asset_path('Lato-Regular.ttf')) format("truetype"), url(asset_path('Lato-Regular.svg')) format('svg')
+
+@font-face
+  :font-family "Lato Light"
+  :font-style normal
+  :font-weight light
+  :src local("Lato Light") , url(asset_path('Lato-Light.eot')) format("oet"), local("Lato Light"), url(asset_path('Lato-Light.woff')) format("woff"), local("Lato Light"), url(asset_path('Lato-Light.ttf')) format("truetype"), url(asset_path('Lato-Light.svg')) format('svg')
+
+@font-face
+  :font-family "Lato Bold"
+  :font-style normal
+  :font-weight bold
+  :src local("Lato Bold") , url(asset_path('Lato-Bold.eot')) format("oet"), local("Lato Bold"), url(asset_path('Lato-Bold.woff')) format("woff"), local("Lato Bold"), url(asset_path('Lato-Bold.ttf')) format("truetype"), url(asset_path('Lato-Bold.svg')) format('svg')
+
+@font-face
+  :font-family "Merel"
+  :font-style normal
+  :font-weight normal
+  :src local("Merel") , url(asset_path('Merel-Regular.eot')) format("oet"), local("Merel"), url(asset_path('Merel-Regular.woff')) format("woff"), local("Merel"), url(asset_path('Merel-Regular.ttf')) format("truetype"), url(asset_path('Merel-Regular.svg')) format('svg')
+
+@font-face
+  :font-family "PF BeauSans Pro"
+  :font-style normal
+  :font-weight normal
+  :src local("PF BeauSans Pro") , url(asset_path('pfbeausanspro-reg.eot')) format("oet"), local("PF BeauSans Pro"), url(asset_path('pfbeausanspro-reg.woff')) format("woff"), local("PF BeauSans Pro"), url(asset_path('pfbeausanspro-reg.ttf')) format("truetype"), url(asset_path('pfbeausanspro-reg.svg')) format('svg')
+
+$base: 1.25em
+$baseline: 1rem
+
+$ninesixty_gutter_width: $baseline / 2
+$ninesixty_grid_width: 100%
+$ninesixty_columns: 8
+
+$min_width: $ninesixty_gutter_width * 64
+$max_width: $ninesixty_gutter_width * 144
+
+html
+  :min-height 100%
+  :height 100%
+  :background $brown
+  :font
+    :size $base
+    :family Lato, sans-serif
+  
+html, html a
+  :color $white
+
+*
+  :outline none !important
+  +children-list-fix
+
+*, *:before, *:after
+  +box-sizing
+  :-webkit-font-smoothing antialiased
+
+body
+  :position relative
+  :font
+    :size $baseline
+  :height 100%
+  :min-width $min_width
+  :min-height 100%
+
+#container-wrapper
+  :position relative
+  :min-width $min_width
+  :height 100%
+  :line-height $baseline
+
+#container
+  :position relative
+  :min-width $min_width
+  :height 100%
+  :line-height $baseline
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)
+  html
+    :font
+      :size $base / 2
+
+@import "parts/header"
+@import "parts/footer"
+@import "parts/content"
+@import "parts/popup"
+@import "parts/steps"
+
+@import "contents/banner"
+@import "contents/medconf_banner"
+@import "contents/estateconf_banner"
+@import "contents/conf"
+@import "contents/med_conf"
+@import "contents/estate_conf"
+@import "contents/welcome"
+@import "contents/info"
+@import "contents/how_it_works"
+@import "contents/step1"
+@import "contents/step2"
+@import "contents/step3"
+@import "contents/step4"
+@import "contents/clients"
