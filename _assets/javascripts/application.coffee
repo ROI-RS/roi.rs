@@ -1,7 +1,7 @@
-#= require vendor/angular/angular
-#= require vendor/angular-animate/angular-animate
-#= require vendor/angular-scroll/angular-scroll
-#= require vendor/ngMask/dist/ngMask
+#= require vendor/angular/angular.min
+#= require vendor/angular-animate/angular-animate.min
+#= require vendor/angular-scroll/angular-scroll.min
+#= require vendor/ngMask/dist/ngMask.min
 
 ROI = angular.module 'ROI', ['duScroll', 'ngAnimate', 'ngMask'], ($interpolateProvider)->
   $interpolateProvider.startSymbol('/*')
