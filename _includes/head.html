@@ -6,8 +6,15 @@
   
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:title" content="ROI.RS - сквозная бизнес аналитика вашего бизнеса">
+  <meta property="og:description" content="Прозрачная эффективность каждого этапа воронки продаж вашего бизнеса. BI-решение для вашего бизнеса, как основа автоматизации маркетинга и построения воронок продаж.">
+  <meta property="go:image" content="{% asset_path 'icons/facebook_icon.png' %}">
   
   <link rel="icon" type="image/png" href="{% asset_path 'icons/favicon.png' %}">
+  <link rel="apple-touch-icon" href="{% asset_path 'icons/touch-icon-iphone.png %}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% asset_path 'icons/touch-icon-ipad.png %}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{% asset_path 'icons/touch-icon-iphone-retina.png %}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{% asset_path 'icons/touch-icon-ipad-retina.png %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   
   <!-- Yandex.Metrika counter -->
