@@ -9,7 +9,6 @@ gems:
   - jekyll-assets
 # Build settings
 assets:
-  digest: true
   compress:
     js: false
 markdown: kramdown
