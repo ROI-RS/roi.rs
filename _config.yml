@@ -10,6 +10,6 @@ gems:
 # Build settings
 assets:
   compress:
-    js: false
+    js: my_uglifier
 markdown: kramdown
 exclude: ['vendor', 'config', 'Gemfile', 'Gemfile.lock', '.ruby-version']
