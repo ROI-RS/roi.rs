@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  {% include may2016/head.html %}
+  <body>
+    <div id="main">
+      {{ content }}
+    </div>
+    <script type='text/javascript' src="https://umarker.roi.rs/28.js" id="umark"></script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-63392302-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!-- CallTouch -->
+    <script>
+      (function(w, d, e) {
+        var a = 'all', b = 'tou'; var src = b + 'c' +'h'; src = 'm' + 'o' + 'd.c' + a + src;
+        var jsHost = (("https:" == d.location.protocol) ? "https://" : "http://")+ src;
+        s = d.createElement(e); p = d.getElementsByTagName(e)[0]; s.async = 1; s.src = jsHost +"."+"r"+"u/d_client.js?param;ref"+escape(d.referrer)+";url"+escape(d.URL)+";cook"+escape(d.cookie);
+        p.parentNode.insertBefore(s, p);
+      }(window, document, 'script'));
+    </script>
+  </body>
+</html>
