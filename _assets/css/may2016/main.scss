@@ -83,6 +83,28 @@ table {
   display: inline-block;
 }
 
+.button-callback {
+  background: #3C280D;
+  border: 2px solid #FFFFFF;
+  -webkit-border-radius: 24;
+  -moz-border-radius: 24;
+  border-radius: 24px;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  color: #3C280D;
+  padding: 13px 15px 13px 15px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  > span {
+    color: #FFFFFF;
+  }
+  > svg {
+    margin-top: 2px;
+  }
+}
+
+
 .button {
   > svg {
     position: absolute;
@@ -113,7 +135,8 @@ table {
   margin-left: auto;
   margin-right: auto;
   //    width: 980px;
-  max-width: 1034px;
+  max-width: 1000px;
+  width: 80%;
   h2 {
     font-size: 48px;
     font-family: "Lato Light", sans-serif;
@@ -168,7 +191,8 @@ table {
   margin-left: auto;
   margin-right: auto;
   //    width: 980px;
-  max-width: 1034px;
+  max-width: 1000px;
+  width: 80%;
   h2 {
     font-size: 48px;
     font-family: "Lato Light", sans-serif;
@@ -201,6 +225,7 @@ table {
       }
     }
   }
+  
   > ul {
     padding: 0;
     > li {
@@ -228,6 +253,79 @@ table {
         font-size: 36px;
         color: #E3DDD4;
         line-height: 40px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 446px) {
+    > ul {
+      padding: 0;
+      > li {
+        padding-left: 0px;
+        padding-top: 168px;
+        > svg {
+          height: 150px;
+          width: 150px;
+        }
+      }
+    }
+  }
+
+}
+
+.section-slice1 {
+  position: relative;
+//  border-top: solid 1px #9F9381;
+  > svg { 
+    max-height: 100%; 
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1;
+  }
+  > .background-overlay {
+    background-color: #F4EDE4;
+    max-height: 100%; 
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -2;
+  }
+}
+
+.slice1 {
+//  padding-top: 120px;
+  padding-bottom: 132px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  width: 80%;
+  h2 {
+    font-size: 48px;
+    font-family: "Lato Light", sans-serif;
+    line-height: 48px;
+    color: #3C280D;
+    margin-bottom: 60px;
+  }
+  
+  @media screen and (min-width: 56em) {
+    > .pattern {
+      overflow: hidden;
+      > .c {
+        > .main {
+          width: 50%;
+          margin-left: 25%;
+          float: left;
+        }
+        > .sb {
+          float: left;
+          width: 25%;
+          margin-left: -75%;
+        }
+        > .sb-2 {
+          float: right;
+          width: 25%;
+        }
       }
     }
   }
@@ -272,7 +370,8 @@ table {
   margin-left: auto;
   margin-right: auto;
   //    width: 980px;
-  max-width: 1034px;
+  max-width: 1000px;
+  width: 80%;
   h2 {
     font-size: 48px;
     font-family: "Lato Light", sans-serif;
@@ -284,6 +383,10 @@ table {
     > svg {
       margin-bottom: 60px;
     }
+    p:nth-of-type(1) {
+      height: 90px;
+    }
+    
     > p {
       font-size: 24px;
       font-family: "Lato Light", sans-serif;
@@ -331,8 +434,8 @@ table {
   padding-bottom: 132px;
   margin-left: auto;
   margin-right: auto;
-  //    width: 980px;
-  max-width: 1034px;
+  max-width: 1000px;
+  width: 80%;
   h2 {
     font-size: 48px;
     font-family: "Lato Light", sans-serif;
@@ -351,6 +454,7 @@ table {
         left: 0;
       }
       h3 {
+        word-wrap: break-word;
         font-size: 34.47px;
         font-family: "Lato Light", sans-serif;
         color: #3C280D;
@@ -382,10 +486,13 @@ table {
   padding-bottom: 90px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1034px;
+  max-width: 1000px;
+  width: 80%;
   h2 {
     font-size: 48px;
     font-family: "Lato Light", sans-serif;
+//    word-break: break-all;
+    word-wrap: break-word;
   }
   p.wiki-reference {
     font-size: 18px;
@@ -444,6 +551,307 @@ table {
     > .col-group > div {
       float: left;
       width: 50%;
+    }
+  }
+}
+
+.section-clients {
+    border-top: solid 1px #9F9381;
+    background-color: #FFF;
+}
+
+.clients {
+  padding-top: 120px;
+  padding-bottom: 132px;
+  margin-left: auto;
+  margin-right: auto;
+  //    width: 980px;
+  max-width: 1000px;
+  width: 80%;
+  h2 {
+    font-size: 48px;
+    font-family: "Lato Light", sans-serif;
+  }
+  
+  > .icons {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    > img {
+      margin-top: 57px;
+      display: block;
+      width: 100%
+    }
+  }
+
+}
+
+.section-where {
+    border-top: solid 1px #9F9381;
+    background-color: #3C280D;
+}
+
+.where {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  width: 80%;
+  h2 {
+    font-size: 48px;
+    font-family: "Lato Light", sans-serif;
+    color: #FFFFFF;
+    padding-bottom: 48px;
+  }
+  
+  > .col-group {
+    margin-bottom: 102px;
+  }
+  
+  > .col-group > div:nth-of-type(2) {
+//    padding-left: 108px;
+  }
+  
+  > .col-group > div {
+    margin-bottom: 1em;
+    > h3 {
+      margin-top: 46px;
+      font-size: 48px;
+      font-family: "Lato Light", sans-serif;
+    }
+    
+    > h4 {
+      margin-top: 19px;
+      font-size: 24px;
+      font-family: "Lato Light", sans-serif;
+      color: #FFA706;
+    }
+    
+    > .contact-us {
+      font-size: 18px;
+      font-family: "Lato", sans-serif;
+      color: #E3DDD4;
+      line-height: 18px;
+      opacity: 0.5;
+      margin-bottom: 12px;
+    }
+    
+    > .phone {
+      font-size: 36px;
+      font-family: "Lato", sans-serif;
+      color: #FFFFFF;
+      line-height: 48px;
+    }
+    
+    > .email {
+      font-size: 36px;
+      font-family: "Lato", sans-serif;
+      color: #FFFFFF;
+      line-height: 48px;
+    }
+    
+    > .download {
+      opacity: 0.5;
+      font-size: 18px;
+      font-family: "Lato", sans-serif;
+      color: #E3DDD4;
+      line-height: 18px;
+      margin-bottom: 22px;
+    }
+    
+    > .pdf {
+      font-size: 18px;
+      font-family: "Lato", sans-serif;
+      color: #9F9381;
+      line-height: 24px;
+      margin-bottom: 21px;
+      position: relative;
+      > svg {
+        position: absolute;
+        
+      }
+      
+      > b {
+        margin-left: 40px;
+        font-size: 24px;
+        font-family: "Lato", sans-serif;
+        color: #FFF;
+        line-height: 24px;
+      }
+    }
+    
+    > .zip {
+      font-size: 18px;
+      font-family: "Lato", sans-serif;
+      color: #9F9381;
+      line-height: 24px;
+      position: relative;
+      > svg {
+        position: absolute;
+        
+      }
+      > b {
+        margin-left: 40px;
+        font-size: 24px;
+        font-family: "Lato", sans-serif;
+        color: #FFF;
+        line-height: 24px;
+      }
+    }
+    
+    > .realworld {
+      opacity: 0.5;
+      font-size: 18px;
+      font-family: "Lato", sans-serif;
+      color: #E3DDD4;
+      line-height: 18px;
+      margin-bottom: 12px;
+    }
+    
+    > .address1 {
+      font-size: 24px;
+      font-family: "Lato", sans-serif;
+      color: #FFFFFF;
+      line-height: 30px;
+    }
+    
+    > .address2 {
+      font-size: 24px;
+      font-family: "Lato", sans-serif;
+      color: #FFFFFF;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+    
+    > .map {
+      opacity: 0.5;
+      font-size: 18px;
+      font-family: "Lato", sans-serif;
+      color: #E3DDD4;
+      line-height: 18px;
+      margin-bottom: 50px;
+    }
+    
+    > .social {
+      opacity: 0.5;
+      font-size: 18px;
+      font-family: "Lato", sans-serif;
+      color: #E3DDD4;
+      line-height: 18px;
+      margin-bottom: 15px;
+    }
+    
+    > .vk {
+      margin-bottom: 17px;
+      position: relative;
+      > svg {
+        position: absolute;
+      }
+      > p {
+        margin-left: 34px;
+        font-size: 24px;
+        font-family: "Lato", sans-serif;
+        color: #FFF;
+        line-height: 24px;
+      }
+    }
+    
+    > .facebook {
+      font-size: 24px;
+      font-family: "Lato", sans-serif;
+      color: #FFF;
+      line-height: 24px;
+      margin-bottom: 17px;
+      position: relative;
+      > svg {
+        position: absolute;
+      }
+      > p {
+        margin-left: 34px;
+        font-size: 24px;
+        font-family: "Lato", sans-serif;
+        color: #FFF;
+        line-height: 24px;
+      }
+    }
+    
+    > .twitter {
+      font-size: 24px;
+      font-family: "Lato", sans-serif;
+      color: #FFF;
+      line-height: 24px;
+      margin-bottom: 17px;
+      position: relative;
+      > svg {
+        position: absolute;
+      }
+      > p {
+        margin-left: 34px;
+        font-size: 24px;
+        font-family: "Lato", sans-serif;
+        color: #FFF;
+        line-height: 24px;
+      }
+    }
+    
+//    > p {
+//      margin-top: 35px;
+//      font-size: 18px;
+//      font-family: "Lato", sans-serif;
+//      color: #9F9381;
+//      line-height: 30px;
+//      padding-right: 48px;
+//      > b {
+//        color: #3C280D;
+//      }
+//    }
+  }
+  
+  > .col-group > div {
+    > .col-group {
+      margin-top: 49px;
+      margin-bottom: 46px;
+    }
+    > .col-group > div {
+      .button-callback {
+        width: 210px !important;
+      }
+      .text {
+        margin-top: 13px;
+        display: block;
+        font-size: 18px;
+        font-family: "Lato", sans-serif;
+        color: #E3DDD4;
+        line-height: 18px;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  @media screen and (min-width: 44em) {
+    > .col-group {
+      overflow: hidden;
+    }
+    > .col-group > div {
+      float: left;
+      width: 50%;
+      > .col-group {
+        overflow: hidden;
+      }
+      > .col-group > div:nth-of-type(1) {
+        float: left;
+        width: 52%;
+        min-width: 244px;
+      }
+      > .col-group > div:nth-of-type(2) {
+        float: left;
+        width: 48%;
+      }
+//      > .col-group > div {
+//        float: left;
+//        width: 50%;
+//      }
     }
   }
 }
