@@ -8,12 +8,7 @@
         {{ content }}
         {% include footer.html %}
       </div>
-      {% include steps.html %}
-      {% include popups/connect.html %}
-      {% include popups/login.html %}
-      {% include popups/thank_you.html %}
     </div>   
-    {% javascript application %}
     <script type='text/javascript' src="https://umarker.roi.rs/28.js" id="umark"></script>
 
     <!-- Google Analytics -->
@@ -26,16 +21,6 @@
       ga('create', 'UA-63392302-1', 'auto');
       ga('send', 'pageview');
 
-    </script>
-
-    <!-- CallTouch -->
-    <script>
-      (function(w, d, e) {
-        var a = 'all', b = 'tou'; var src = b + 'c' +'h'; src = 'm' + 'o' + 'd.c' + a + src;
-        var jsHost = (("https:" == d.location.protocol) ? "https://" : "http://")+ src;
-        s = d.createElement(e); p = d.getElementsByTagName(e)[0]; s.async = 1; s.src = jsHost +"."+"r"+"u/d_client.js?param;ref"+escape(d.referrer)+";url"+escape(d.URL)+";cook"+escape(d.cookie);
-        p.parentNode.insertBefore(s, p);
-      }(window, document, 'script'));
     </script>
   </body>
 </html>
