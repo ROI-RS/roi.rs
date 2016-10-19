@@ -7,6 +7,7 @@ set :user, 'deploy'
 set :repository, 'git@github.com:ROI-RS/roi.rs.git'
 set :deploy_to, '/home/deploy/apps/roi.rs'
 set :branch, 'master'
+set :term_mode, nil
 
 task :deploy do
   invoke 'rbenv:load'
